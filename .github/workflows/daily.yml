@@ -1,0 +1,42 @@
+name: Fetch word of the day
+
+on:
+  schedule:
+    - cron: '0 3 * * *'  # iga päev kell 03:00 UTC (06:00 Eesti aeg)
+  workflow_dispatch:      # käivitamine käsitsi
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout public repo
+        uses: actions/checkout@v4
+
+      - name: Checkout private data repo
+        uses: actions/checkout@v4
+        with:
+          repository: estakaad/paevasona-data
+          token: ${{ secrets.DATA_REPO_TOKEN }}
+          path: data
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Fetch today's word
+        env:
+          EKILEX_API_KEY: ${{ secrets.EKILEX_API_KEY }}
+          EKILEX_API_URL: https://ekilex.ee
+        run: node scripts/fetch-word.mjs
+
+      - name: Commit cache if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add cache/
+          git diff --cached --quiet || git commit -m "cache: $(date +%Y-%m-%d)"
+          git push

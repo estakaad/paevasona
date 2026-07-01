@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Päevasõna</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;1,9..144,400&family=EB+Garamond:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'EB Garamond', Georgia, serif;
+      background: #C85F72;
+      color: #F5EDE5;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem 1rem;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    header h1 {
+      font-size: 1rem;
+      font-weight: normal;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #F5EDE5;
+    }
+
+    .date {
+      font-size: 0.85rem;
+      color: #F5EDE5;
+      margin-top: 0.4rem;
+    }
+
+    main {
+      width: 100%;
+      max-width: 640px;
+    }
+
+    .word-card {
+      background: #F5EDE5;
+      border: none;
+      border-radius: 2px;
+      padding: 2.5rem 2rem;
+      margin-bottom: 2rem;
+      position: relative;
+    }
+
+    .word-card-share {
+      display: none;
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.3rem;
+      color: #C8A898;
+      transition: color 0.15s;
+    }
+
+    .word-card-share:hover {
+      color: #3D7A52;
+    }
+
+    .word-title {
+      font-family: 'Fraunces', serif;
+      font-size: 5rem;
+      font-weight: normal;
+      margin-bottom: 1.5rem;
+      line-height: 1.1;
+    }
+
+    .word-title a {
+      color: #2B1810;
+      text-decoration: none;
+      border-bottom: 3px solid #C85F72;
+    }
+
+    .word-title a:hover {
+      color: #3D7A52;
+      border-bottom-color: #3D7A52;
+    }
+
+    .lexeme {
+      margin-bottom: 1.5rem;
+    }
+
+    .lexeme:last-child {
+      margin-bottom: 0;
+    }
+
+    .pos {
+      font-size: 0.8rem;
+      color: #3D7A52;
+      font-style: italic;
+      margin-bottom: 0.5rem;
+      font-family: system-ui, sans-serif;
+    }
+
+    .definitions {
+      list-style: none;
+    }
+
+    .definitions li {
+      padding: 0.4rem 0;
+      line-height: 1.6;
+      color: #2B1810;
+      border-bottom: 1px solid #E8D8CC;
+    }
+
+    .definitions li:last-child {
+      border-bottom: none;
+    }
+
+    .definitions li::before {
+      content: counter(def-counter) ". ";
+      counter-increment: def-counter;
+      color: #C85F72;
+      font-size: 0.85rem;
+      font-family: system-ui, sans-serif;
+    }
+
+    .definitions {
+      counter-reset: def-counter;
+    }
+
+    .usages {
+      margin-top: 0.6rem;
+      padding-left: 1rem;
+      border-left: 2px solid #C85F72;
+    }
+
+    .usage {
+      font-style: italic;
+      font-size: 0.95rem;
+      color: #5A3A30;
+      line-height: 1.5;
+      margin: 0.3rem 0;
+    }
+
+    .no-data {
+      color: #C8A898;
+      font-style: italic;
+    }
+
+    nav {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    nav button {
+      background: none;
+      border: 1px solid #F5EDE5;
+      color: #F5EDE5;
+      padding: 0.5rem 1.2rem;
+      border-radius: 2px;
+      cursor: pointer;
+      font-family: inherit;
+      font-size: 0.9rem;
+      transition: background 0.15s, border-color 0.15s;
+    }
+
+    nav button:hover:not(:disabled) {
+      background: rgba(245, 237, 229, 0.25);
+      border-color: #F5EDE5;
+    }
+
+    nav button:disabled {
+      opacity: 0.25;
+      cursor: default;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 2rem;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+
+    .footer-links a {
+      font-size: 0.85rem;
+      font-family: system-ui, sans-serif;
+      color: #F5EDE5;
+      text-decoration: none;
+      letter-spacing: 0.05em;
+    }
+
+    .footer-links a:hover {
+      color: #F5EDE5;
+    }
+
+.share-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.6);
+      z-index: 100;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .share-overlay.open {
+      display: flex;
+    }
+
+    .share-card {
+      background: #C85F72;
+      width: min(420px, 90vw);
+      aspect-ratio: 1 / 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 3rem;
+      text-align: center;
+      position: relative;
+    }
+
+    .share-card .share-word {
+      font-family: 'Fraunces', serif;
+      font-size: 4rem;
+      font-weight: normal;
+      color: #F5EDE5;
+      line-height: 1.1;
+      margin-bottom: 1rem;
+    }
+
+    .share-card .share-date {
+      font-family: system-ui, sans-serif;
+      font-size: 0.8rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #F5EDE5;
+    }
+
+    .share-card .share-site {
+      position: absolute;
+      bottom: 1.5rem;
+      font-family: system-ui, sans-serif;
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #3D7A52;
+    }
+
+    .share-card .share-accent {
+      width: 40px;
+      height: 3px;
+      background: #3D7A52;
+      margin-bottom: 1.5rem;
+    }
+
+    .share-close {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: none;
+      border: none;
+      font-size: 1.2rem;
+      cursor: pointer;
+      color: #8FA89B;
+      font-family: system-ui, sans-serif;
+    }
+
+    .share-hint {
+      margin-top: 1rem;
+      font-size: 0.8rem;
+      font-family: system-ui, sans-serif;
+      color: rgba(255,255,255,0.6);
+      text-align: center;
+    }
+
+    @media (max-width: 480px) {
+      body {
+        padding: 1.5rem 1rem;
+      }
+
+      header {
+        margin-bottom: 2rem;
+      }
+
+      .word-card {
+        padding: 1.5rem 1.2rem;
+      }
+
+      .word-title {
+        font-size: 3.2rem;
+      }
+
+      .share-card .share-word {
+        font-size: 2.8rem;
+      }
+
+      nav {
+        gap: 0.6rem;
+      }
+
+      nav button {
+        padding: 0.5rem 0.9rem;
+        font-size: 0.85rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Päeva sõna</h1>
+    <div class="date" id="date-display"></div>
+  </header>
+
+  <main>
+    <div class="word-card" id="word-card">
+      <button class="word-card-share" id="share-icon-btn" onclick="openShare()" title="Jaga">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/>
+          <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
+        </svg>
+      </button>
+      <div id="word-content"><div class="no-data">Laadimine...</div></div>
+    </div>
+
+    <nav>
+      <button id="btn-prev" onclick="navigate(-1)">&#8592; Eelmine</button>
+      <button id="btn-next" onclick="navigate(1)">Järgmine &#8594;</button>
+    </nav>
+  </main>
+
+  <div class="share-overlay" id="share-overlay" onclick="closeShare(event)">
+    <div>
+      <div class="share-card" id="share-card">
+        <button class="share-close" onclick="closeShareBtn()">&#x2715;</button>
+        <div class="share-accent"></div>
+        <div class="share-word" id="share-word"></div>
+        <div class="share-date" id="share-date-text"></div>
+        <div class="share-site">paevasona</div>
+      </div>
+      <div class="share-hint">Tee screenshot või kasuta allpool jagamisnuppu</div>
+    </div>
+  </div>
+
+  <div class="footer-links">
+    <a href="archive.html">Arhiiv</a>
+    <a href="info.html">Info</a>
+  </div>
+
+  <script>
+    const START_DATE = '2026-07-01';
+
+    function parseDate(str) {
+      const [y, m, d] = str.split('-').map(Number);
+      return new Date(y, m - 1, d);
+    }
+
+    function formatDate(str) {
+      const d = parseDate(str);
+      return d.toLocaleDateString('et-EE', { day: 'numeric', month: 'long', year: 'numeric' });
+    }
+
+    function addDays(dateStr, n) {
+      const d = parseDate(dateStr);
+      d.setDate(d.getDate() + n);
+      return d.toISOString().slice(0, 10);
+    }
+
+    function todayStr() {
+      return new Date().toISOString().slice(0, 10);
+    }
+
+    const params = new URLSearchParams(window.location.search);
+    let currentDate = params.get('date') || todayStr();
+
+    async function loadWord(date) {
+      const content = document.getElementById('word-content');
+      const dateDisplay = document.getElementById('date-display');
+      dateDisplay.textContent = formatDate(date);
+
+      const btnPrev = document.getElementById('btn-prev');
+      const btnNext = document.getElementById('btn-next');
+      btnPrev.disabled = date <= START_DATE;
+      btnNext.disabled = date >= todayStr();
+
+      content.innerHTML = '<div class="no-data">Laadimine...</div>';
+      document.getElementById('share-icon-btn').style.display = 'none';
+
+      try {
+        const res = await fetch(`./cache/${date}.json`);
+        if (!res.ok) throw new Error('not found');
+        const data = await res.json();
+        renderWord(data, content);
+      } catch {
+        content.innerHTML = '<div class="no-data">Selle päeva sõna pole veel saadaval.</div>';
+      }
+    }
+
+    function renderWord(data, content) {
+      const sonaveebiUrl = `https://sonaveeb.ee/search/unif/est/eki/${encodeURIComponent(data.word)}/1/est`;
+
+      let html = `<div class="word-title"><a href="${sonaveebiUrl}" target="_blank" rel="noopener">${escapeHtml(data.word)}</a></div>`;
+
+      const lexemes = data.lexemes || [];
+      if (!lexemes.length) {
+        html += '<div class="no-data">Definitsioone ei leitud.</div>';
+      } else {
+        for (const lex of lexemes) {
+          html += '<div class="lexeme">';
+          if (lex.pos && lex.pos.length) {
+            html += `<div class="pos">${escapeHtml(lex.pos.join(', '))}</div>`;
+          }
+          if (lex.definitions && lex.definitions.length) {
+            html += '<ol class="definitions">';
+            for (const def of lex.definitions) {
+              html += `<li>${def}</li>`;
+            }
+            html += '</ol>';
+          }
+          if (lex.usages && lex.usages.length) {
+            html += '<div class="usages">';
+            for (const u of lex.usages) {
+              html += `<div class="usage">${u}</div>`;
+            }
+            html += '</div>';
+          }
+          html += '</div>';
+        }
+      }
+
+      content.innerHTML = html;
+      document.getElementById('share-icon-btn').style.display = 'block';
+      document.getElementById('share-word').textContent = data.word;
+      document.getElementById('share-date-text').textContent = formatDate(data.date);
+    }
+
+    function escapeHtml(str) {
+      return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+    }
+
+    function navigate(n) {
+      const next = addDays(currentDate, n);
+      if (next < START_DATE || next > todayStr()) return;
+      currentDate = next;
+      loadWord(currentDate);
+    }
+
+    function openShare() {
+      const word = document.getElementById('share-word').textContent;
+      if (!word) return;
+      if (navigator.share) {
+        navigator.share({ title: 'Päeva sõna', text: word, url: window.location.href });
+      } else {
+        document.getElementById('share-overlay').classList.add('open');
+      }
+    }
+
+    function closeShareBtn() {
+      document.getElementById('share-overlay').classList.remove('open');
+    }
+
+    function closeShare(e) {
+      if (e.target === document.getElementById('share-overlay')) {
+        document.getElementById('share-overlay').classList.remove('open');
+      }
+    }
+
+    loadWord(currentDate);
+  </script>
+</body>
+</html>

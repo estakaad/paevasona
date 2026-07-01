@@ -1,0 +1,7 @@
+{
+  "name": "paevasona",
+  "type": "module",
+  "scripts": {
+    "fetch": "node scripts/fetch-word.mjs"
+  }
+}
