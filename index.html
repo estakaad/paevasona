@@ -88,7 +88,8 @@
     let availableDates = new Set();
 
     const params = new URLSearchParams(window.location.search);
-    let currentDate = params.get('date') || todayStr();
+    const rawDate = params.get('date') || '';
+    let currentDate = /^\d{4}-\d{2}-\d{2}$/.test(rawDate) ? rawDate : todayStr();
 
     async function loadWord(date) {
       const content = document.getElementById('word-content');
@@ -137,8 +138,9 @@
           }
           if (lex.definitions && lex.definitions.length) {
             html += '<ol class="definitions">';
-            for (const def of lex.definitions) {
-              html += `<li>${def}</li>`;
+            for (const rawDef of lex.definitions) {
+              const def = rawDef.replace(/<eki-foreign>/g, '<em>').replace(/<\/eki-foreign>/g, '</em>');
+              html += `<li><span>${def}</span></li>`;
             }
             html += '</ol>';
           }

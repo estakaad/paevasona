@@ -1,0 +1,24 @@
+{
+  "date": "2026-06-06",
+  "word": "ööd ega mütsi",
+  "wordId": 262265,
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [],
+      "definitions": [
+        "(teadmise, taipamise kohta:) üldse mitte midagi, mitte kõige vähematki"
+      ],
+      "usages": [
+        {
+          "text": "Keegi ei teadnud ööd ega mütsi.",
+          "sources": []
+        },
+        {
+          "text": "Arvustuse on kirjutanud inimene, kes ei taipa energeetikast ööd ega mütsi.",
+          "sources": []
+        }
+      ]
+    }
+  ]
+}

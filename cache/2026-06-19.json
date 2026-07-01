@@ -1,0 +1,32 @@
+{
+  "date": "2026-06-19",
+  "word": "imb",
+  "wordId": 1470142,
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "nimisõna, substantiiv"
+      ],
+      "definitions": [
+        "noor naine (kes pole veel abielus) või naissoost laps",
+        "(kõnetlussõnana pöördumisel (vallaliste) noorte naiste poole)",
+        "noor naine (kes pole veel abielus)"
+      ],
+      "usages": [
+        {
+          "text": "Neiud tantsisid murulla, / Pääd kaharad kargelesid, / Immed kõik ilu pidasid.",
+          "sources": [
+            "Villem Grüntal-Ridala 1930"
+          ]
+        },
+        {
+          "text": "Ise, immed ilusad, / lippame kõik laiali ..",
+          "sources": [
+            "Betti Alver (tõlkija)"
+          ]
+        }
+      ]
+    }
+  ]
+}

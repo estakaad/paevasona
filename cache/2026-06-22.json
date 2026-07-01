@@ -1,0 +1,26 @@
+{
+  "date": "2026-06-22",
+  "word": "kanäe",
+  "wordId": 177810,
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "hüüdsõna, interjektsioon"
+      ],
+      "definitions": [
+        "esineb imestust, üllatust, vahel ka pahameelt väljendavates ütlustes"
+      ],
+      "usages": [
+        {
+          "text": "Ma mõtlesin, et kanäe kui suured portsud siin majas on.",
+          "sources": []
+        },
+        {
+          "text": "Aga kanäe, asjad hakkavad muutuma.",
+          "sources": []
+        }
+      ]
+    }
+  ]
+}

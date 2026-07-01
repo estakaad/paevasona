@@ -1,0 +1,20 @@
+{
+  "date": "2026-06-05",
+  "word": "sepik seljas",
+  "wordId": 232731,
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [],
+      "definitions": [
+        "(kühmus kehahoiu kohta)"
+      ],
+      "usages": [
+        {
+          "text": "Kui sa harjutusi ei tee, käid varsti ringi, sepik seljas.",
+          "sources": []
+        }
+      ]
+    }
+  ]
+}

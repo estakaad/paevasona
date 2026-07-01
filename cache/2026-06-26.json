@@ -1,0 +1,22 @@
+{
+  "date": "2026-06-26",
+  "word": "küdi",
+  "wordId": 190836,
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "nimisõna, substantiiv"
+      ],
+      "definitions": [
+        "abikaasa vend (naise seisukohast)"
+      ],
+      "usages": [
+        {
+          "text": "Tädi elab Türil, nõbu Albus, nadu Annas ja küdi Väätsa kandis.",
+          "sources": []
+        }
+      ]
+    }
+  ]
+}

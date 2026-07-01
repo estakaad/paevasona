@@ -1,0 +1,57 @@
+{
+  "date": "2026-06-20",
+  "word": "pudulojus",
+  "wordId": 220723,
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "nimisõna, substantiiv"
+      ],
+      "definitions": [
+        "(väiksem) koduloom",
+        "(väike) koduloom"
+      ],
+      "usages": [
+        {
+          "text": "Igas majapidamises on pudulojused ning väike maalapike, mis annab söögi lauale.",
+          "sources": []
+        },
+        {
+          "text": "Mul pole lambaid ega muid pudulojuseid.",
+          "sources": []
+        }
+      ]
+    },
+    {
+      "dataset": "eki",
+      "pos": [
+        "nimisõna, substantiiv"
+      ],
+      "definitions": [
+        "(inimese kohta, ka halvustavalt)"
+      ],
+      "usages": [
+        {
+          "text": "Asi on aegunud, mida need pudulojused sealt inkassost enam tahavad?",
+          "sources": []
+        }
+      ]
+    },
+    {
+      "dataset": "eki",
+      "pos": [
+        "nimisõna, substantiiv"
+      ],
+      "definitions": [
+        "(täi vm parasiitputuka kohta)"
+      ],
+      "usages": [
+        {
+          "text": "Ajagu räbalad seljast maha ja viigu sauna, teab mis pudulojuseid nende sees võib olla.",
+          "sources": []
+        }
+      ]
+    }
+  ]
+}

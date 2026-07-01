@@ -1,27 +1,29 @@
 {
   "date": "2026-06-30",
-  "word": "helepala",
-  "wordId": 1413272,
+  "word": "nääl",
+  "wordId": 210295,
   "lexemes": [
     {
       "dataset": "eki",
       "pos": [
-        "omadussõna, adjektiiv"
+        "nimisõna, substantiiv"
       ],
       "definitions": [
-        "liiga elav, kärsitu"
+        "abikaasa vend (mehe seisukohast)"
       ],
       "usages": [
         {
-          "text": "„See on lihtsalt hirmus, kui helepala sa oled! hüüdis pr. Malmberg pahaselt. „Nüüd lõhkusid uue tassi ära.“",
-          "sources": [
-            "A. H. Tammsaare"
-          ]
+          "text": "Otepääl elab mu nääl ja Rõngus nõbu.",
+          "sources": []
         },
         {
-          "text": "See inimene oli küll juba sündides helepala.",
+          "text": "Korvpalli meistriliigas mängib maailmakuulsa filmirežissööri näälu ehk naisevenna poeg.",
+          "sources": []
+        },
+        {
+          "text": "Viimaseks kaalusin veel pesamunast näälu telefoninumbri valimist, aga see tundus liiast, nii et lõpetasin.",
           "sources": [
-            "Aet Varik 2022"
+            "Anni Arukask 2025, lk 22"
           ]
         }
       ]

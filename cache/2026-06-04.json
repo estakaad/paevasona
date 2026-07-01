@@ -1,0 +1,20 @@
+{
+  "date": "2026-06-04",
+  "word": "vedel leib",
+  "wordId": 255005,
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [],
+      "definitions": [
+        "(õlle kohta)"
+      ],
+      "usages": [
+        {
+          "text": "Loodame, et eelroad saabuvad ruttu ega tule suurest näljast vedela leivaga kõhtu täitma asuda.",
+          "sources": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "date": "2026-06-15",
+  "word": "tseugma",
+  "wordId": 2173788,
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "nimisõna, substantiiv"
+      ],
+      "definitions": [
+        "kõnekujund, hrl öeldise kasutamine mitme omavahel semantilises või süntaktilises mõttes ebavõrdse lauseliikme kohta, nt <eki-foreign>ma söön õunu ja oma sõnu</eki-foreign>"
+      ],
+      "usages": [
+        {
+          "text": "Retoorilistest kujunditest armastab Ahi kasutada eelkõige tseugmat („püsigem veel elus, koos ja kõrval”, lk. 27) ja antiteesi ..",
+          "sources": [
+            "Mariliin Vassenin 2015"
+          ]
+        }
+      ]
+    }
+  ]
+}

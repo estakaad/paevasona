@@ -1,0 +1,24 @@
+{
+  "date": "2026-06-27",
+  "word": "tondipiibel",
+  "wordId": 437417,
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "nimisõna, substantiiv"
+      ],
+      "definitions": [
+        "(kaardimängu, mängukaartide kohta)"
+      ],
+      "usages": [
+        {
+          "text": "Oma lapsepõlisele armastusele, tondipiiblile, olnud diplomaat nimelt kogu teenistusajagi truu.",
+          "sources": [
+            "Eduard Vilde 2016 [1916], lk 8"
+          ]
+        }
+      ]
+    }
+  ]
+}
