@@ -1,7 +1,7 @@
 {
   "date": "2026-07-01",
-  "word": "prouhjen",
-  "wordId": 2229470,
+  "word": "imb",
+  "wordId": 1470142,
   "lexemes": [
     {
       "dataset": "eki",
@@ -9,12 +9,23 @@
         "nimisõna, substantiiv"
       ],
       "definitions": [
-        "(naljatlevalt, irooniliselt naise, proua kohta)"
+        "noor naine (kes pole veel abielus) või naissoost laps",
+        "(kõnetlussõnana pöördumisel (vallaliste) noorte naiste poole)",
+        "noor naine (kes pole veel abielus)"
       ],
       "usages": [
-        "\"Aih!\" hüüatas prouhjen.",
-        "Oh jeerum jeerum, mida kõike me selle prouhjeni sulest küll veel lugeda saame!",
-        "See oli Rosie Sneddon, vana Pete Sneddoni prouhjen."
+        {
+          "text": "Neiud tantsisid murulla, / Pääd kaharad kargelesid, / Immed kõik ilu pidasid.",
+          "sources": [
+            "Villem Grüntal-Ridala 1930"
+          ]
+        },
+        {
+          "text": "Ise, immed ilusad, / lippame kõik laiali ..",
+          "sources": [
+            "Betti Alver (tõlkija)"
+          ]
+        }
       ]
     }
   ]

@@ -1,0 +1,499 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Lora', Georgia, serif;
+  background: #3D7A52;
+  color: #F5EDE5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2.5rem 1rem 3rem;
+}
+
+/* ── HEADER ────────────────────────────────────── */
+
+header {
+  width: 100%;
+  max-width: 640px;
+  margin-bottom: 1.75rem;
+}
+
+header h1 {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 1.3rem;
+  font-weight: 400;
+  font-style: italic;
+  color: #F5EDE5;
+  opacity: 0.9;
+}
+
+header a {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 1.3rem;
+  font-weight: 400;
+  font-style: italic;
+  color: #F5EDE5;
+  text-decoration: none;
+  opacity: 0.9;
+  transition: opacity 0.15s;
+}
+
+header .page-title {
+  display: none;
+}
+
+header a:hover {
+  opacity: 1;
+}
+
+header h1 + h1,
+header a + h1 {
+  margin-top: 0.4rem;
+}
+
+/* ── LAYOUT ────────────────────────────────────── */
+
+main {
+  width: 100%;
+  max-width: 640px;
+}
+
+/* ── WORD CARD ─────────────────────────────────── */
+
+.word-card {
+  background: #F5EDE5;
+  border-radius: 2px;
+  padding: 1.5rem 2.5rem 3rem;
+  margin-bottom: 1.5rem;
+  counter-reset: def-counter;
+}
+
+.word-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.75rem;
+}
+
+.word-card-date {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 0.9rem;
+  font-style: italic;
+  color: #B09585;
+}
+
+.word-card-share {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.25rem;
+  color: #C8A898;
+  transition: color 0.15s;
+  line-height: 1;
+}
+
+.word-card-share:hover {
+  color: #3D7A52;
+}
+
+/* ── WORD TITLE ────────────────────────────────── */
+
+.word-title {
+  font-family: 'Fraunces', serif;
+  font-size: 5rem;
+  font-weight: 700;
+  font-variation-settings: 'opsz' 72;
+  line-height: 1.05;
+  margin-bottom: 2.25rem;
+}
+
+.word-title a {
+  color: #2B1810;
+  text-decoration: none;
+  border-bottom: 3px solid transparent;
+  transition: color 0.15s, border-bottom-color 0.15s;
+}
+
+.word-title a:hover {
+  color: #C85F72;
+  border-bottom-color: #C85F72;
+}
+
+/* ── LEXEME ────────────────────────────────────── */
+
+.lexeme {
+  margin-bottom: 2.25rem;
+}
+
+.lexeme:last-child {
+  margin-bottom: 0;
+}
+
+.pos {
+  display: none;
+}
+
+/* ── DEFINITIONS ───────────────────────────────── */
+
+.definitions {
+  list-style: none;
+}
+
+.definitions li {
+  counter-increment: def-counter;
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  padding: 0.65rem 0;
+  line-height: 1.6;
+  color: #2B1810;
+  border-bottom: 1px solid #E0CDBE;
+  font-family: 'Lora', Georgia, serif;
+  font-size: 1.05rem;
+}
+
+.definitions li:last-child {
+  border-bottom: none;
+}
+
+.definitions li::before {
+  content: counter(def-counter);
+  font-family: 'Lora', Georgia, serif;
+  font-size: 1.05rem;
+  color: #3D7A52;
+  min-width: 1rem;
+  flex-shrink: 0;
+}
+
+/* ── EXAMPLES ──────────────────────────────────── */
+
+.word-examples {
+  margin-top: 1.25rem;
+  padding-left: 1.25rem;
+  border-left: 2px solid #D4A0A8;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.usage {
+  font-family: 'Lora', Georgia, serif;
+  font-style: italic;
+  font-size: 1rem;
+  color: #6B4A3E;
+  line-height: 1.55;
+}
+
+.usage-source {
+  display: block;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-style: normal;
+  font-size: 0.7rem;
+  color: #B09585;
+  margin-top: 0.2rem;
+}
+
+/* ── SOURCE CITATION ───────────────────────────── */
+
+.word-source {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #E0CDBE;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 0.72rem;
+  line-height: 1.6;
+  color: #B09585;
+}
+
+.word-source a {
+  color: #B09585;
+  border-bottom: 1px solid rgba(176, 149, 133, 0.4);
+  word-break: break-all;
+}
+
+.word-source a:hover {
+  color: #3D7A52;
+}
+
+/* ── NO DATA ───────────────────────────────────── */
+
+.no-data {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 0.85rem;
+  color: rgba(245, 237, 229, 0.65);
+  font-style: italic;
+}
+
+.word-card .no-data {
+  color: #C8A898;
+}
+
+/* ── NAV BUTTONS ───────────────────────────────── */
+
+nav {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+nav button {
+  background: none;
+  border: none;
+  color: #F5EDE5;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-family: 'Lora', Georgia, serif;
+  font-size: 1.4rem;
+  line-height: 1;
+  opacity: 0.7;
+  transition: opacity 0.15s;
+}
+
+nav button:hover {
+  opacity: 1;
+}
+
+/* ── FOOTER LINKS ──────────────────────────────── */
+
+.footer-links {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 1.75rem;
+}
+
+.footer-links a {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 1.1rem;
+  font-style: italic;
+  color: #F5EDE5;
+  text-decoration: none;
+  opacity: 0.7;
+  transition: opacity 0.15s;
+}
+
+.footer-links a:hover {
+  opacity: 1;
+}
+
+/* ── SHARE OVERLAY ─────────────────────────────── */
+
+.share-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  z-index: 100;
+  align-items: center;
+  justify-content: center;
+}
+
+.share-overlay.open {
+  display: flex;
+}
+
+.share-card {
+  background: #3D7A52;
+  width: min(420px, 90vw);
+  aspect-ratio: 1 / 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  text-align: center;
+  position: relative;
+}
+
+.share-card .share-word {
+  font-family: 'Fraunces', serif;
+  font-size: 4rem;
+  font-weight: 700;
+  font-variation-settings: 'opsz' 72;
+  color: #F5EDE5;
+  line-height: 1.05;
+  margin-bottom: 1rem;
+}
+
+.share-card .share-date {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(245, 237, 229, 0.7);
+}
+
+.share-card .share-site {
+  position: absolute;
+  bottom: 1.5rem;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #3D7A52;
+}
+
+.share-card .share-accent {
+  width: 36px;
+  height: 2px;
+  background: #3D7A52;
+  margin-bottom: 1.5rem;
+}
+
+.share-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  color: rgba(245, 237, 229, 0.45);
+  font-family: system-ui, sans-serif;
+  transition: color 0.15s;
+}
+
+.share-close:hover {
+  color: #F5EDE5;
+}
+
+.share-hint {
+  margin-top: 1rem;
+  font-size: 0.72rem;
+  font-family: 'Inter', system-ui, sans-serif;
+  color: rgba(255,255,255,0.45);
+  text-align: center;
+  letter-spacing: 0.04em;
+}
+
+/* ── ARCHIVE PAGE ──────────────────────────────── */
+
+.archive-month {
+  margin-top: 1.75rem;
+}
+
+.archive-month--first {
+  margin-top: 0;
+}
+
+.archive-month-header {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 0.8rem;
+  font-style: italic;
+  color: #B09585;
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.25rem;
+  border-bottom: 1px solid #E0CDBE;
+}
+
+.archive-list {
+  list-style: none;
+}
+
+.archive-list li {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  padding: 0.55rem 0;
+  border-bottom: 1px solid #EDE0D4;
+}
+
+.archive-list li:last-child {
+  border-bottom: none;
+}
+
+.archive-list a {
+  font-family: 'Fraunces', serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #2B1810;
+  text-decoration: none;
+}
+
+.archive-list a:hover {
+  color: #C85F72;
+}
+
+.archive-date {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 0.85rem;
+  font-style: italic;
+  color: #B09585;
+  flex-shrink: 0;
+  min-width: 1.5rem;
+}
+
+/* ── INFO PAGE ─────────────────────────────────── */
+
+section {
+  margin-bottom: 2rem;
+}
+
+section:last-child {
+  margin-bottom: 0;
+}
+
+h2 {
+  font-family: 'Fraunces', serif;
+  font-size: 1.3rem;
+  font-weight: 400;
+  margin-bottom: 0.6rem;
+  color: #2B1810;
+}
+
+p {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 1rem;
+  line-height: 1.75;
+  color: #5A4A40;
+}
+
+p + p {
+  margin-top: 0.8rem;
+}
+
+.word-card a {
+  color: #2B1810;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(43, 24, 16, 0.25);
+}
+
+.word-card a:hover {
+  color: #C85F72;
+}
+
+/* ── RESPONSIVE ────────────────────────────────── */
+
+@media (max-width: 480px) {
+  body {
+    padding: 1.5rem 1rem 2rem;
+  }
+
+  header {
+    margin-bottom: 1.25rem;
+  }
+
+  .word-card {
+    padding: 1.25rem 1.25rem 2rem;
+  }
+
+  .word-title {
+    font-size: 3rem;
+    margin-bottom: 1.75rem;
+  }
+
+  .share-card .share-word {
+    font-size: 2.8rem;
+  }
+
+  nav button {
+    padding: 0.55rem 1rem;
+  }
+
+  .archive-list a {
+    font-size: 1.1rem;
+  }
+}

@@ -12,8 +12,18 @@
         "liiga elav, kärsitu"
       ],
       "usages": [
-        "„See on lihtsalt hirmus, kui helepala sa oled! hüüdis pr. Malmberg pahaselt. „Nüüd lõhkusid uue tassi ära.“",
-        "See inimene oli küll juba sündides helepala."
+        {
+          "text": "„See on lihtsalt hirmus, kui helepala sa oled! hüüdis pr. Malmberg pahaselt. „Nüüd lõhkusid uue tassi ära.“",
+          "sources": [
+            "A. H. Tammsaare"
+          ]
+        },
+        {
+          "text": "See inimene oli küll juba sündides helepala.",
+          "sources": [
+            "Aet Varik 2022"
+          ]
+        }
       ]
     }
   ]

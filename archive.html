@@ -6,111 +6,25 @@
   <title>Arhiiv — Päevasõna</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;1,9..144,400&family=EB+Garamond:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    body {
-      font-family: 'EB Garamond', Georgia, serif;
-      background: #C85F72;
-      color: #F5EDE5;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 2rem 1rem;
-    }
-
-    header {
-      text-align: center;
-      margin-bottom: 3rem;
-    }
-
-    header a {
-      font-size: 1rem;
-      font-weight: normal;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: #F5EDE5;
-      text-decoration: none;
-    }
-
-    header a:hover {
-      color: #F5EDE5;
-    }
-
-    header h1 {
-      font-size: 1rem;
-      font-weight: normal;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: #F5EDE5;
-      margin-top: 0.5rem;
-    }
-
-    main {
-      width: 100%;
-      max-width: 640px;
-    }
-
-    .archive-list {
-      list-style: none;
-    }
-
-    .archive-list li {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      padding: 0.55rem 0;
-      border-bottom: 1px solid rgba(245, 237, 229, 0.4);
-    }
-
-    .archive-list li:last-child {
-      border-bottom: none;
-    }
-
-    .archive-list a {
-      font-family: 'Fraunces', serif;
-      font-size: 1.2rem;
-      color: #F5EDE5;
-      text-decoration: none;
-    }
-
-    .archive-list a:hover {
-      color: #3D7A52;
-    }
-
-    .archive-date {
-      font-size: 0.8rem;
-      color: #F5EDE5;
-      font-family: system-ui, sans-serif;
-      flex-shrink: 0;
-      margin-left: 1rem;
-    }
-
-    .no-data {
-      color: #F5EDE5;
-      font-style: italic;
-    }
-
-    @media (max-width: 480px) {
-      body { padding: 1.5rem 1rem; }
-      header { margin-bottom: 2rem; }
-      .archive-list a { font-size: 1.1rem; }
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;1,400&family=Fraunces:ital,opsz,wght@0,9..144,300..800;1,9..144,300..800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <a href="index.html">&#8592; Päevasõna</a>
-    <h1>Arhiiv</h1>
+    <a href="index.html">Päeva sõna</a>
+    <h1 class="page-title">Arhiiv</h1>
   </header>
 
   <main>
-    <ul class="archive-list" id="archive-list">
-      <li><span class="no-data">Laadimine...</span></li>
-    </ul>
+    <div class="word-card" id="archive-content">
+      <div class="no-data">Laadimine...</div>
+    </div>
   </main>
+
+  <div class="footer-links">
+    <a href="archive.html">Arhiiv</a>
+    <a href="info.html">Info</a>
+  </div>
 
   <script>
     function parseDate(str) {
@@ -118,29 +32,45 @@
       return new Date(y, m - 1, d);
     }
 
-    function formatDate(str) {
-      const d = parseDate(str);
-      return d.toLocaleDateString('et-EE', { day: 'numeric', month: 'long', year: 'numeric' });
-    }
-
     async function load() {
-      const list = document.getElementById('archive-list');
+      const container = document.getElementById('archive-content');
       try {
         const res = await fetch('./cache/index.json');
         if (!res.ok) throw new Error();
         const index = await res.json();
         if (!index.length) {
-          list.innerHTML = '<li><span class="no-data">Arhiiv on tühi.</span></li>';
+          container.innerHTML = '<div class="no-data">Arhiiv on tühi.</div>';
           return;
         }
-        list.innerHTML = index.map(entry => `
-          <li>
-            <a href="index.html?date=${entry.date}">${entry.word}</a>
-            <span class="archive-date">${formatDate(entry.date)}</span>
-          </li>
-        `).join('');
+
+        const groups = {};
+        for (const entry of index) {
+          const key = entry.date.slice(0, 7);
+          if (!groups[key]) groups[key] = [];
+          groups[key].push(entry);
+        }
+
+        const sortedKeys = Object.keys(groups).sort().reverse();
+
+        container.innerHTML = sortedKeys.map((key, i) => {
+          const [year, month] = key.split('-').map(Number);
+          const rawMonth = new Date(year, month - 1, 1)
+            .toLocaleDateString('et-EE', { month: 'long', year: 'numeric' });
+          const monthName = rawMonth.charAt(0).toUpperCase() + rawMonth.slice(1);
+          const items = groups[key].map(entry => {
+            const day = parseInt(entry.date.slice(8, 10));
+            return `<li>
+              <span class="archive-date">${day}.</span>
+              <a href="index.html?date=${entry.date}">${entry.word}</a>
+            </li>`;
+          }).join('');
+          return `<div class="archive-month${i === 0 ? ' archive-month--first' : ''}">
+            <div class="archive-month-header">${monthName}</div>
+            <ul class="archive-list">${items}</ul>
+          </div>`;
+        }).join('');
       } catch {
-        list.innerHTML = '<li><span class="no-data">Arhiivi ei õnnestunud laadida.</span></li>';
+        container.innerHTML = '<div class="no-data">Arhiivi ei õnnestunud laadida.</div>';
       }
     }
 

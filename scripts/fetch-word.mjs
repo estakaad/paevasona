@@ -87,7 +87,10 @@ const lexemes = (details.lexemes || []).map(lex => ({
     .map(d => d.valuePrese || d.value),
   usages: ((lex.usages) || [])
     .filter(u => u.lang === 'est')
-    .map(u => u.valuePrese || u.value)
+    .map(u => ({
+      text: u.valuePrese || u.value,
+      sources: (u.sourceLinks || []).map(s => [s.sourceName, s.name].filter(Boolean).join(', ')).filter(Boolean),
+    }))
     .slice(0, 3),
 }));
 
