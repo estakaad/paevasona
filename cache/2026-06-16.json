@@ -1,0 +1,43 @@
+{
+  "date": "2026-06-16",
+  "word": "umbluu",
+  "wordId": 251222,
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "nimisõna, substantiiv"
+      ],
+      "definitions": [
+        "segane, mitte tõsiselt võetav jutt, jama, totrus",
+        "(millegi või kellegi ebateaduslikuks või muidu kahtlaseks peetava kohta, hrl seoses mitmesuguste pseudoteadustega, para- ja alternatiivõpetustega)",
+        "segane, vale jutt"
+      ],
+      "usages": [
+        {
+          "text": "Ära aja umbluud!",
+          "sources": []
+        },
+        {
+          "text": "Väide, et õnn soosib tugevaid, ei ole umbluu.",
+          "sources": []
+        },
+        {
+          "text": "Mina seda umbluud ei usu.",
+          "sources": []
+        }
+      ]
+    },
+    {
+      "dataset": "eki",
+      "pos": [
+        "nimisõna, substantiiv"
+      ],
+      "definitions": [
+        "pärimuse järgi ülekohtuselt või õnnetult surma saanud inimese sääreluu, mis ulub surmasaanu hukkumiskohal ja ajab välja verist vahtu",
+        "selle sääreluu hüüe"
+      ],
+      "usages": []
+    }
+  ]
+}

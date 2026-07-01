@@ -1,0 +1,49 @@
+{
+  "date": "2026-06-17",
+  "word": "tutske",
+  "wordId": 1365701,
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "omadussõna, adjektiiv"
+      ],
+      "definitions": [
+        "lahe, mõnus, tubli"
+      ],
+      "usages": [
+        {
+          "text": "Uku on tutske tüüp, täielik suure lava täht.",
+          "sources": []
+        },
+        {
+          "text": "Väga tutske laul, mõnus video.",
+          "sources": []
+        }
+      ]
+    },
+    {
+      "dataset": "eki",
+      "pos": [
+        "omadussõna, adjektiiv"
+      ],
+      "definitions": [
+        "rikkalik, suur, võimas"
+      ],
+      "usages": [
+        {
+          "text": "Tuleviku virtuaalpiletite soetajate vahel läheb loosi tutske piknikukorv.",
+          "sources": []
+        },
+        {
+          "text": "Kui ise ei suuda ennast talitseda, siis tutske tou vastu maksa talitseb kindlasti.",
+          "sources": []
+        },
+        {
+          "text": "Selline tutske lõhn lõi ninna.",
+          "sources": []
+        }
+      ]
+    }
+  ]
+}

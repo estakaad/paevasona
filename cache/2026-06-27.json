@@ -15,7 +15,10 @@
         {
           "text": "Oma lapsepõlisele armastusele, tondipiiblile, olnud diplomaat nimelt kogu teenistusajagi truu.",
           "sources": [
-            "Eduard Vilde 2016 [1916], lk 8"
+            {
+              "label": "Eduard Vilde 2016 [1916], lk 8",
+              "detail": "Eduard Vilde. Mäeküla piimamees. Tallinn: Critera VMG, 2016. (Esmatrükk: Mõte, 1916.)"
+            }
           ]
         }
       ]

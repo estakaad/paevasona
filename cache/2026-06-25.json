@@ -1,0 +1,27 @@
+{
+  "date": "2026-06-25",
+  "word": "ruja",
+  "wordId": 2213064,
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "nimisõna, substantiiv"
+      ],
+      "definitions": [
+        "teaduslik fantastika, (teadus)ulme"
+      ],
+      "usages": [
+        {
+          "text": "Ilmar Sikemäe pakub teaduslik-fantastilise kirjanduse nimetamiseks välja sõna „ruja” .. Ruja on siiski jäänud pelgalt keeleajalooliseks kurioosumiks, mis on tuntud vaid populaarse rokkansambli nimena, mida tänapäeval ulmega ilmselt küll ei seostata.",
+          "sources": [
+            {
+              "label": "Andrus Org 2017",
+              "detail": "Andrus Org. Eesti ulmekirjanduse žanrid ja nende poeetika. Dissertationes litterarum et contemplationis comparativae Universitatis Tartuensis 16. Tartu: Tartu Ülikooli Kirjastus 2017."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

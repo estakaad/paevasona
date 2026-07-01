@@ -1,0 +1,20 @@
+{
+  "date": "2026-06-03",
+  "word": "patsiga poiss",
+  "wordId": 214419,
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [],
+      "definitions": [
+        "IT-spetsialist, arvutispetsialist"
+      ],
+      "usages": [
+        {
+          "text": "Ei pea olema patsiga poiss, et oma tarkvaraga ja rakenduste installeerimisega hakkama saada.",
+          "sources": []
+        }
+      ]
+    }
+  ]
+}

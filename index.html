@@ -105,7 +105,7 @@
       document.getElementById('share-icon-btn').style.visibility = 'hidden';
 
       try {
-        const res = await fetch(`./cache/${date}.json?v=2`);
+        const res = await fetch(`./cache/${date}.json?v=3`);
         if (!res.ok) throw new Error('not found');
         const data = await res.json();
         renderWord(data, content);
@@ -148,10 +148,17 @@
             html += '<div class="word-examples">';
             for (const u of lex.usages) {
               const text = typeof u === 'string' ? u : u.text;
-              const sources = typeof u === 'object' && u.sources && u.sources.length
-                ? `<span class="usage-source">${u.sources.map(s => escapeHtml(s)).join('; ')}</span>`
-                : '';
-              html += `<div class="usage">${text}${sources}</div>`;
+              let sourcesHtml = '';
+              if (typeof u === 'object' && u.sources && u.sources.length) {
+                const parts = u.sources.map(s => {
+                  if (typeof s === 'string') return escapeHtml(s);
+                  const label = escapeHtml(s.label || '');
+                  const detail = s.detail ? ` data-detail="${escapeHtml(s.detail)}"` : '';
+                  return `<span class="usage-source-item"${detail}>${label}</span>`;
+                });
+                sourcesHtml = `<span class="usage-source">${parts.join('; ')}</span>`;
+              }
+              html += `<div class="usage">${text}${sourcesHtml}</div>`;
             }
             html += '</div>';
           }
@@ -201,6 +208,38 @@
         document.getElementById('share-overlay').classList.remove('open');
       }
     }
+
+    const sourceTooltip = document.createElement('div');
+    sourceTooltip.className = 'source-tooltip';
+    document.body.appendChild(sourceTooltip);
+
+    document.addEventListener('click', function(e) {
+      const item = e.target.closest('[data-detail]');
+      if (item) {
+        e.stopPropagation();
+        const detail = item.dataset.detail;
+        if (sourceTooltip.dataset.for === detail && sourceTooltip.classList.contains('visible')) {
+          sourceTooltip.classList.remove('visible');
+          return;
+        }
+        sourceTooltip.textContent = detail;
+        sourceTooltip.dataset.for = detail;
+        sourceTooltip.style.left = '-9999px';
+        sourceTooltip.style.top = '-9999px';
+        sourceTooltip.classList.add('visible');
+        const rect = item.getBoundingClientRect();
+        const tw = sourceTooltip.offsetWidth;
+        const th = sourceTooltip.offsetHeight;
+        let left = rect.left + window.scrollX;
+        let top = rect.bottom + window.scrollY + 6;
+        if (rect.left + tw > window.innerWidth - 8) left = window.scrollX + window.innerWidth - tw - 8;
+        if (rect.bottom + th + 6 > window.innerHeight) top = rect.top + window.scrollY - th - 6;
+        sourceTooltip.style.left = left + 'px';
+        sourceTooltip.style.top = top + 'px';
+      } else {
+        sourceTooltip.classList.remove('visible');
+      }
+    });
 
     fetch('./cache/index.json')
       .then(r => r.json())

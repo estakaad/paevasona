@@ -1,0 +1,27 @@
+{
+  "date": "2026-06-23",
+  "word": "pakilt-palavalt",
+  "wordId": 1617373,
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "määrsõna, adverb"
+      ],
+      "definitions": [
+        "väga kiiresti",
+        "suure rutuga"
+      ],
+      "usages": [
+        {
+          "text": "Pakilt-palavalt tegutsema hakates võime kasu asemel hoopis asjad veelgi keerulisemaks ajada.",
+          "sources": []
+        },
+        {
+          "text": "Eks külmkapp sulab üles muidugi, kuid jahedal aastaajal pole muret, et miski kohe pakilt-palavalt hapneda-rikneda võiks.",
+          "sources": []
+        }
+      ]
+    }
+  ]
+}

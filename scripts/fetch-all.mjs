@@ -67,6 +67,30 @@ async function fetchWord(date, word) {
     if (!detailsRes.ok) throw new Error(`word/details: ${detailsRes.status}`);
     const details = await detailsRes.json();
 
+    // Collect unique sourceIds from all usages
+    const sourceIds = new Set();
+    for (const lex of (details.lexemes || [])) {
+      for (const u of (lex.usages || [])) {
+        for (const s of (u.sourceLinks || [])) {
+          if (s.sourceId) sourceIds.add(s.sourceId);
+        }
+      }
+    }
+
+    // Step 3: fetch source details for each unique sourceId
+    const sourceDetails = {};
+    for (const sourceId of sourceIds) {
+      try {
+        const srcRes = await fetch(`${API_URL}/api/source/details/${sourceId}`, { headers: { 'ekilex-api-key': API_KEY } });
+        if (srcRes.ok) {
+          const src = await srcRes.json();
+          sourceDetails[sourceId] = src.value || src.name || null;
+        }
+      } catch {
+        // ignore individual source fetch failures
+      }
+    }
+
     const lexemes = (details.lexemes || []).map(lex => ({
       dataset: lex.datasetCode,
       pos: (lex.pos || []).map(p => p.value).filter(Boolean),
@@ -77,7 +101,10 @@ async function fetchWord(date, word) {
         .filter(u => u.lang === 'est')
         .map(u => ({
           text: u.valuePrese || u.value,
-          sources: (u.sourceLinks || []).map(s => [s.sourceName, s.name].filter(Boolean).join(', ')).filter(Boolean),
+          sources: (u.sourceLinks || []).map(s => ({
+            label: [s.sourceName, s.name].filter(Boolean).join(', '),
+            detail: s.sourceId ? (sourceDetails[s.sourceId] || null) : null,
+          })).filter(s => s.label),
         }))
         .slice(0, 3),
     }));

@@ -1,0 +1,20 @@
+{
+  "date": "2026-06-02",
+  "word": "karvane sõber",
+  "wordId": 178516,
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [],
+      "definitions": [
+        "(lemmiklooma, hrl kassi või koera kohta)"
+      ],
+      "usages": [
+        {
+          "text": "Marit on oma uude karvasesse sõpra juba kõvasti kiindunud.",
+          "sources": []
+        }
+      ]
+    }
+  ]
+}

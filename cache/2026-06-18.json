@@ -1,0 +1,36 @@
+{
+  "date": "2026-06-18",
+  "word": "helepala",
+  "wordId": 1413272,
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "omadussõna, adjektiiv"
+      ],
+      "definitions": [
+        "liiga elav, kärsitu"
+      ],
+      "usages": [
+        {
+          "text": "„See on lihtsalt hirmus, kui helepala sa oled! hüüdis pr. Malmberg pahaselt. „Nüüd lõhkusid uue tassi ära.“",
+          "sources": [
+            {
+              "label": "A. H. Tammsaare",
+              "detail": "A. H. Tammsaare. Eesti kirjakeele arhiiv. Eesti Keele Instituut. 4,3 mln sedelit, kogutud 1960–2000."
+            }
+          ]
+        },
+        {
+          "text": "See inimene oli küll juba sündides helepala.",
+          "sources": [
+            {
+              "label": "Aet Varik 2022",
+              "detail": "Kerstin Ekman. Hundijooks. Rootsi keelest tõlkinud Aet Varik. Tallinn, Varrak, 2022."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

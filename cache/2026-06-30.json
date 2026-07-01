@@ -23,7 +23,10 @@
         {
           "text": "Viimaseks kaalusin veel pesamunast näälu telefoninumbri valimist, aga see tundus liiast, nii et lõpetasin.",
           "sources": [
-            "Anni Arukask 2025, lk 22"
+            {
+              "label": "Anni Arukask 2025, lk 22",
+              "detail": "Han Kang. Taimetoitlane. Korea keelest tõlkinud Anni Arukask. Loomingu Raamatukogu 7-9, 2025."
+            }
           ]
         }
       ]
