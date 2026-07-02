@@ -1,28 +1,24 @@
 {
   "date": "2026-07-01",
-  "word": "kukepea",
-  "wordId": 187228,
+  "word": "leema",
+  "wordId": 193592,
+  "forms": {
+    "IndPrSg3": "leeb",
+    "Sup": "leema",
+    "Inf": "leeda"
+  },
   "lexemes": [
     {
       "dataset": "eki",
       "pos": [
-        "määrsõna, adverb"
+        "tegusõna, verb"
       ],
       "definitions": [
-        "väljendab, et miski on kergesti, lihtsalt tehtav või tundub tühine, tähtsusetu (kasutatakse hrl üleolekuga, praalivalt)",
-        "väga lihtne asi"
+        "(tulevikus) olema"
       ],
       "usages": [
         {
-          "text": "Helsingis on kukepea vaadata päevas neli-viis filmi.",
-          "sources": []
-        },
-        {
-          "text": "Pesu pesemine? – Kukepea!",
-          "sources": []
-        },
-        {
-          "text": "Kardan oma tervise pärast, kõik muu on kukepea.",
+          "text": "Eesti keel oli, on ja leeb.",
           "sources": []
         }
       ]

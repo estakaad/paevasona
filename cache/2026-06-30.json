@@ -1,0 +1,64 @@
+{
+  "date": "2026-06-30",
+  "word": "naksitrall",
+  "wordId": 207301,
+  "forms": {
+    "SgN": "naksitrall",
+    "SgG": "naksitralli",
+    "SgP": "naksitralli"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "nimisõna, substantiiv"
+      ],
+      "definitions": [
+        "üks kolmest väikesest lustlikust mehikesest Eno Raua lasteraamatutes"
+      ],
+      "usages": [
+        {
+          "text": "Üks naksitrallidest suhtles endaga kirja teel.",
+          "sources": []
+        },
+        {
+          "text": "Abivalmis naksitrallid vabastavad linnakese kassidest, kuid see toob kaasa uue nuhtluse – rotid.",
+          "sources": []
+        }
+      ]
+    },
+    {
+      "dataset": "eki",
+      "pos": [
+        "nimisõna, substantiiv"
+      ],
+      "definitions": [
+        "(kellegi või millegi toreda, vahva, hakkaja, uhke kohta)"
+      ],
+      "usages": [
+        {
+          "text": "Meie pojake on igavene naksitrall.",
+          "sources": []
+        },
+        {
+          "text": "Ning peagi oli igal mehel naksitrall [tüdruk] põlvel.",
+          "sources": [
+            {
+              "label": "Lilli Promet 1964",
+              "detail": "Lilli Promet. Muinasjutud. – Leninlik Lipp 04.08.1964."
+            }
+          ]
+        },
+        {
+          "text": ".. hakkasid Pariisi preilid mind vahtima. Üks mustajuukseline naksitrall pidas kalessi kinni ..",
+          "sources": [
+            {
+              "label": "Aimée Beekman",
+              "detail": "Aimée Beekman. Eesti kirjakeele arhiiv. Eesti Keele Instituut. 4,3 mln sedelit, kogutud 1960–2000."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

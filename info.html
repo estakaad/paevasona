@@ -6,13 +6,13 @@
   <title>Info — Päeva sõna</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;1,400&family=Fraunces:ital,opsz,wght@0,9..144,300..800;1,9..144,300..800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Lora:ital,wght@0,400;1,400&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="palette-4">
   <header>
     <a href="index.html">Päeva sõna</a>
-    <h1 class="page-title">Info</h1>
+    <span class="page-title">info</span>
   </header>
 
   <main>
@@ -24,8 +24,21 @@
     </div>
   </main>
   <div class="footer-links">
+    <button onclick="goRandom()">Suvakas</button>
     <a href="archive.html">Arhiiv</a>
     <a href="info.html">Info</a>
   </div>
+
+  <script>
+    async function goRandom() {
+      const res = await fetch('./cache/index.json');
+      const index = await res.json();
+      const today = new Date().toISOString().slice(0, 10);
+      const dates = index.map(e => e.date).filter(d => d !== today);
+      if (!dates.length) return;
+      const date = dates[Math.floor(Math.random() * dates.length)];
+      window.location.href = './?date=' + date;
+    }
+  </script>
 </body>
 </html>

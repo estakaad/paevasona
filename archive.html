@@ -6,30 +6,98 @@
   <title>Arhiiv — Päevasõna</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;1,400&family=Fraunces:ital,opsz,wght@0,9..144,300..800;1,9..144,300..800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Lora:ital,wght@0,400;1,400&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="palette-4">
   <header>
     <a href="index.html">Päeva sõna</a>
-    <h1 class="page-title">Arhiiv</h1>
+    <span class="page-title">arhiiv</span>
   </header>
 
   <main>
-    <div class="word-card" id="archive-content">
-      <div class="no-data">Laadimine...</div>
+    <div class="word-card">
+      <div class="archive-header">
+        <span class="archive-stat" id="archive-stat"></span>
+        <div class="archive-sort" id="archive-sort">
+          <button data-sort="date-desc">Uuemad enne</button>
+          <button data-sort="date-asc">Vanemad enne</button>
+          <button data-sort="alpha">Tähestik A–Ü</button>
+        </div>
+      </div>
+      <div id="archive-content">
+        <div class="no-data">Laadimine...</div>
+      </div>
     </div>
   </main>
 
   <div class="footer-links">
+    <button onclick="goRandom()">Suvakas</button>
     <a href="archive.html">Arhiiv</a>
     <a href="info.html">Info</a>
   </div>
 
   <script>
-    function parseDate(str) {
-      const [y, m, d] = str.split('-').map(Number);
-      return new Date(y, m - 1, d);
+    const today = new Date().toISOString().slice(0, 10);
+    let archiveIndex = [];
+
+    function renderArchive(sort) {
+      const container = document.getElementById('archive-content');
+
+      if (sort === 'alpha') {
+        const sorted = [...archiveIndex].sort((a, b) =>
+          a.word.localeCompare(b.word, 'et', { sensitivity: 'base' })
+        );
+        const items = sorted.map(entry => {
+          const [y, m, d] = entry.date.split('-');
+          const dateStr = `${parseInt(d)}.${parseInt(m)}.${y}`;
+          const isToday = entry.date === today;
+          return `<li>
+            <a href="./?date=${entry.date}">${entry.word}</a>
+            ${isToday ? '<span class="archive-today-tag">täna</span>' : ''}
+            <span class="archive-date">${dateStr}</span>
+          </li>`;
+        }).join('');
+        container.innerHTML = `<ul class="archive-list archive-list--flat">${items}</ul>`;
+        return;
+      }
+
+      const groups = {};
+      for (const entry of archiveIndex) {
+        const key = entry.date.slice(0, 7);
+        if (!groups[key]) groups[key] = [];
+        groups[key].push(entry);
+      }
+
+      let sortedKeys = Object.keys(groups).sort();
+      if (sort === 'date-desc') sortedKeys = sortedKeys.reverse();
+
+      container.innerHTML = sortedKeys.map((key, i) => {
+        const [year, month] = key.split('-').map(Number);
+        const rawMonth = new Date(year, month - 1, 1)
+          .toLocaleDateString('et-EE', { month: 'long', year: 'numeric' });
+        const monthName = rawMonth.charAt(0).toUpperCase() + rawMonth.slice(1);
+
+        const entries = [...groups[key]].sort((a, b) => sort === 'date-asc'
+          ? a.date.localeCompare(b.date)
+          : b.date.localeCompare(a.date)
+        );
+
+        const items = entries.map(entry => {
+          const day = parseInt(entry.date.slice(8, 10));
+          const isToday = entry.date === today;
+          return `<li>
+            <span class="archive-date">${day}.</span>
+            <a href="./?date=${entry.date}">${entry.word}</a>
+            ${isToday ? '<span class="archive-today-tag">täna</span>' : ''}
+          </li>`;
+        }).join('');
+
+        return `<div class="archive-month${i === 0 ? ' archive-month--first' : ''}">
+          <div class="archive-month-header">${monthName}</div>
+          <ul class="archive-list">${items}</ul>
+        </div>`;
+      }).join('');
     }
 
     async function load() {
@@ -37,44 +105,42 @@
       try {
         const res = await fetch('./cache/index.json');
         if (!res.ok) throw new Error();
-        const index = await res.json();
-        if (!index.length) {
+        archiveIndex = await res.json();
+        if (!archiveIndex.length) {
           container.innerHTML = '<div class="no-data">Arhiiv on tühi.</div>';
           return;
         }
 
-        const groups = {};
-        for (const entry of index) {
-          const key = entry.date.slice(0, 7);
-          if (!groups[key]) groups[key] = [];
-          groups[key].push(entry);
-        }
+        document.getElementById('archive-stat').textContent = `${archiveIndex.length} sõna`;
 
-        const sortedKeys = Object.keys(groups).sort().reverse();
+        const currentSort = localStorage.getItem('archive-sort') || 'date-desc';
+        const sortButtons = document.querySelectorAll('.archive-sort button');
+        sortButtons.forEach(btn => {
+          btn.classList.toggle('active', btn.dataset.sort === currentSort);
+          btn.addEventListener('click', () => {
+            const sort = btn.dataset.sort;
+            localStorage.setItem('archive-sort', sort);
+            sortButtons.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            renderArchive(sort);
+          });
+        });
 
-        container.innerHTML = sortedKeys.map((key, i) => {
-          const [year, month] = key.split('-').map(Number);
-          const rawMonth = new Date(year, month - 1, 1)
-            .toLocaleDateString('et-EE', { month: 'long', year: 'numeric' });
-          const monthName = rawMonth.charAt(0).toUpperCase() + rawMonth.slice(1);
-          const items = groups[key].map(entry => {
-            const day = parseInt(entry.date.slice(8, 10));
-            return `<li>
-              <span class="archive-date">${day}.</span>
-              <a href="index.html?date=${entry.date}">${entry.word}</a>
-            </li>`;
-          }).join('');
-          return `<div class="archive-month${i === 0 ? ' archive-month--first' : ''}">
-            <div class="archive-month-header">${monthName}</div>
-            <ul class="archive-list">${items}</ul>
-          </div>`;
-        }).join('');
+        renderArchive(currentSort);
       } catch {
         container.innerHTML = '<div class="no-data">Arhiivi ei õnnestunud laadida.</div>';
       }
     }
 
     load();
+
+    async function goRandom() {
+      const dates = archiveIndex.length
+        ? archiveIndex.map(e => e.date).filter(d => d !== today)
+        : await fetch('./cache/index.json').then(r => r.json()).then(idx => idx.map(e => e.date).filter(d => d !== today));
+      if (!dates.length) return;
+      window.location.href = './?date=' + dates[Math.floor(Math.random() * dates.length)];
+    }
   </script>
 </body>
 </html>

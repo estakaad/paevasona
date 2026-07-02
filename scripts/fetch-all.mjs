@@ -67,6 +67,23 @@ async function fetchWord(date, word) {
     if (!detailsRes.ok) throw new Error(`word/details: ${detailsRes.status}`);
     const details = await detailsRes.json();
 
+    // Fetch paradigm forms
+    const FORM_CODES = new Set(['SgN', 'SgG', 'SgP', 'Sup', 'Inf', 'IndPrSg3']);
+    const forms = {};
+    try {
+      const paradigmRes = await fetch(`${API_URL}/api/paradigm/details/${wordId}`, { headers: { 'ekilex-api-key': API_KEY } });
+      if (paradigmRes.ok) {
+        for (const paradigm of await paradigmRes.json()) {
+          if (paradigm.secondary) continue;
+          for (const f of (paradigm.paradigmForms || [])) {
+            if (FORM_CODES.has(f.morphCode) && f.morphExists && f.value && !forms[f.morphCode]) {
+              forms[f.morphCode] = f.value;
+            }
+          }
+        }
+      }
+    } catch {}
+
     // Collect unique sourceIds from all usages
     const sourceIds = new Set();
     for (const lex of (details.lexemes || [])) {
@@ -109,7 +126,7 @@ async function fetchWord(date, word) {
         .slice(0, 3),
     }));
 
-    const result = { date, word, wordId, lexemes };
+    const result = { date, word, wordId, forms, lexemes };
     writeFileSync(cacheFile, JSON.stringify(result, null, 2), 'utf8');
 
     // Update index

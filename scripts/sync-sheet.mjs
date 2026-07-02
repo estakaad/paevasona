@@ -89,6 +89,26 @@ async function fetchAndCache(date, word) {
   if (!detailsRes.ok) throw new Error(`word/details: ${detailsRes.status}`);
   const details = await detailsRes.json();
 
+  // Fetch paradigm forms (nom/gen/par for nouns; ma/da/sg3 for verbs)
+  const FORM_CODES = new Set(['SgN', 'SgG', 'SgP', 'Sup', 'Inf', 'IndPrSg3']);
+  const forms = {};
+  try {
+    const paradigmRes = await fetch(
+      `${API_URL}/api/paradigm/details/${wordId}`,
+      { headers: { 'ekilex-api-key': API_KEY } }
+    );
+    if (paradigmRes.ok) {
+      for (const paradigm of await paradigmRes.json()) {
+        if (paradigm.secondary) continue;
+        for (const f of (paradigm.paradigmForms || [])) {
+          if (FORM_CODES.has(f.morphCode) && f.morphExists && f.value && !forms[f.morphCode]) {
+            forms[f.morphCode] = f.value;
+          }
+        }
+      }
+    }
+  } catch {}
+
   const sourceIds = new Set();
   for (const lex of (details.lexemes || [])) {
     for (const u of (lex.usages || [])) {
@@ -127,7 +147,7 @@ async function fetchAndCache(date, word) {
       .slice(0, 3),
   }));
 
-  writeFileSync(cacheFile, JSON.stringify({ date, word, wordId, lexemes }, null, 2), 'utf8');
+  writeFileSync(cacheFile, JSON.stringify({ date, word, wordId, forms, lexemes }, null, 2), 'utf8');
   return true;
 }
 

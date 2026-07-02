@@ -1,23 +1,25 @@
 {
   "date": "2026-07-02",
-  "word": "hea-parem",
-  "wordId": 168622,
+  "word": "pakilt-palavalt",
+  "wordId": 1617373,
+  "forms": {},
   "lexemes": [
     {
       "dataset": "eki",
       "pos": [
-        "nimisõna, substantiiv"
+        "määrsõna, adverb"
       ],
       "definitions": [
-        "maitsev suupiste, joogi- või söögipoolis"
+        "väga kiiresti",
+        "suure rutuga"
       ],
       "usages": [
         {
-          "text": "Pidulisi ootas lookas laud hea-paremaga.",
+          "text": "Pakilt-palavalt tegutsema hakates võime kasu asemel hoopis asjad veelgi keerulisemaks ajada.",
           "sources": []
         },
         {
-          "text": "Rohke koduõlle ja muu hea-paremaga jätkus pidu hommikuni.",
+          "text": "Eks külmkapp sulab üles muidugi, kuid jahedal aastaajal pole muret, et miski kohe pakilt-palavalt hapneda-rikneda võiks.",
           "sources": []
         }
       ]

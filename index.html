@@ -6,24 +6,19 @@
   <title>Päeva sõna</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;1,400&family=Fraunces:ital,opsz,wght@0,9..144,300..800;1,9..144,300..800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Lora:ital,wght@0,400;1,400&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="palette-4">
   <header>
     <a href="index.html">Päeva sõna</a>
+    <span class="page-title">iga päev uus sõna</span>
   </header>
 
   <main>
     <div class="word-card" id="word-card">
       <div class="word-card-top">
         <span class="word-card-date" id="date-display"></span>
-        <button class="word-card-share" id="share-icon-btn" onclick="openShare()" title="Jaga">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/>
-            <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
-          </svg>
-        </button>
       </div>
       <div id="word-content"><div class="no-data">Laadimine...</div></div>
     </div>
@@ -34,20 +29,8 @@
     </nav>
   </main>
 
-  <div class="share-overlay" id="share-overlay" onclick="closeShare(event)">
-    <div>
-      <div class="share-card" id="share-card">
-        <button class="share-close" onclick="closeShareBtn()">&#x2715;</button>
-        <div class="share-accent"></div>
-        <div class="share-word" id="share-word"></div>
-        <div class="share-date" id="share-date-text"></div>
-        <div class="share-site">paevasona</div>
-      </div>
-      <div class="share-hint">Tee screenshot või kasuta allpool jagamisnuppu</div>
-    </div>
-  </div>
-
-  <div class="footer-links">
+<div class="footer-links">
+    <button onclick="goRandom()">Suvakas</button>
     <a href="archive.html">Arhiiv</a>
     <a href="info.html">Info</a>
   </div>
@@ -77,6 +60,47 @@
       return `${y}-${m}-${day}`;
     }
 
+    function formatDateNav(str) {
+      const d = parseDate(str);
+      return d.toLocaleDateString('et-EE', { day: 'numeric', month: 'long' });
+    }
+
+    function getAdjacentDates(date) {
+      const sorted = [...availableDates].sort();
+      let prevDate = null, nextDate = null;
+      for (const d of sorted) {
+        if (d < date) prevDate = d;
+        if (d > date && nextDate === null) nextDate = d;
+      }
+      return { prevDate, nextDate };
+    }
+
+    function updateNavButtons(date) {
+      const btnPrev = document.getElementById('btn-prev');
+      const btnNext = document.getElementById('btn-next');
+      const { prevDate, nextDate } = getAdjacentDates(date);
+      if (prevDate) {
+        const label = formatDateNav(prevDate);
+        btnPrev.innerHTML = `&#8592; <span class="nav-date">${label}</span>`;
+        btnPrev.setAttribute('aria-label', 'Eelmine sõna: ' + label);
+        btnPrev.style.visibility = 'visible';
+      } else {
+        btnPrev.innerHTML = '&#8592;';
+        btnPrev.removeAttribute('aria-label');
+        btnPrev.style.visibility = 'hidden';
+      }
+      if (nextDate) {
+        const label = formatDateNav(nextDate);
+        btnNext.innerHTML = `<span class="nav-date">${label}</span> &#8594;`;
+        btnNext.setAttribute('aria-label', 'Järgmine sõna: ' + label);
+        btnNext.style.visibility = 'visible';
+      } else {
+        btnNext.innerHTML = '&#8594;';
+        btnNext.removeAttribute('aria-label');
+        btnNext.style.visibility = 'hidden';
+      }
+    }
+
     function todayStr() {
       const d = new Date();
       const y = d.getFullYear();
@@ -102,23 +126,19 @@
       btnNext.style.visibility = 'hidden';
 
       content.innerHTML = '<div class="no-data">Laadimine...</div>';
-      document.getElementById('share-icon-btn').style.visibility = 'hidden';
 
       try {
         const res = await fetch(`./cache/${date}.json?v=3`);
         if (!res.ok) throw new Error('not found');
         const data = await res.json();
         renderWord(data, content);
-        const prevDate = addDays(date, -1);
-        const nextDate = addDays(date, 1);
-        const hasPrev = availableDates.has(prevDate);
-        const hasNext = availableDates.has(nextDate);
-        btnPrev.style.visibility = hasPrev ? 'visible' : 'hidden';
-        btnNext.style.visibility = hasNext ? 'visible' : 'hidden';
-        btnPrev.title = hasPrev ? formatDate(prevDate) : '';
-        btnNext.title = hasNext ? formatDate(nextDate) : '';
+        updateNavButtons(date);
       } catch {
-        content.innerHTML = '<div class="no-data">Selle päeva sõna pole veel saadaval.</div>';
+        content.innerHTML = `<div class="empty-state">
+          <p class="empty-state-msg">Etskae, polegi sõna selleks päevaks!</p>
+          <button class="empty-state-btn" onclick="goRandom()">Vaata suvakat sõna</button>
+        </div>`;
+        updateNavButtons(date);
       }
     }
 
@@ -127,38 +147,62 @@
 
       let html = `<div class="word-title"><a href="${sonaveebiUrl}" target="_blank" rel="noopener">${escapeHtml(data.word)}</a></div>`;
 
+      const f = data.forms || {};
+      const nounForms = ['SgN', 'SgG', 'SgP'].map(c => f[c]).filter(Boolean);
+      const verbForms = ['Sup', 'Inf', 'IndPrSg3'].map(c => f[c]).filter(Boolean);
+      const displayForms = nounForms.length >= 2 ? nounForms : verbForms.length >= 2 ? verbForms : [];
+      if (displayForms.length) {
+        html += `<div class="word-forms">${displayForms.map(escapeHtml).join(', ')}</div>`;
+      }
+
       const lexemes = data.lexemes || [];
       if (!lexemes.length) {
         html += '<div class="no-data">Definitsioone ei leitud.</div>';
       } else {
+        // Group consecutive lexemes by part of speech
+        const posGroups = [];
         for (const lex of lexemes) {
-          html += '<div class="lexeme">';
-          if (lex.pos && lex.pos.length) {
-            html += `<div class="pos">${escapeHtml(lex.pos.join(', '))}</div>`;
+          const posKey = (lex.pos || []).join('\x00');
+          const last = posGroups[posGroups.length - 1];
+          if (last && last.posKey === posKey) {
+            last.lexemes.push(lex);
+          } else {
+            posGroups.push({ posKey, pos: lex.pos || [], lexemes: [lex] });
           }
-          if (lex.definitions && lex.definitions.length) {
-            html += '<ol class="definitions">';
-            for (const rawDef of lex.definitions) {
-              const def = rawDef.replace(/<eki-foreign>/g, '<em>').replace(/<\/eki-foreign>/g, '</em>');
-              html += `<li><span>${def}</span></li>`;
-            }
-            html += '</ol>';
+        }
+
+        for (const group of posGroups) {
+          html += '<div class="pos-group">';
+          if (group.pos.length) {
+            html += `<div class="pos">${escapeHtml(group.pos.join(', '))}</div>`;
           }
-          if (lex.usages && lex.usages.length) {
-            html += '<div class="word-examples">';
-            for (const u of lex.usages) {
-              const text = typeof u === 'string' ? u : u.text;
-              let sourcesHtml = '';
-              if (typeof u === 'object' && u.sources && u.sources.length) {
-                const parts = u.sources.map(s => {
-                  if (typeof s === 'string') return escapeHtml(s);
-                  const label = escapeHtml(s.label || '');
-                  const detail = s.detail ? ` data-detail="${escapeHtml(s.detail)}"` : '';
-                  return `<span class="usage-source-item"${detail}>${label}</span>`;
-                });
-                sourcesHtml = `<span class="usage-source">${parts.join('; ')}</span>`;
+          for (const lex of group.lexemes) {
+            html += '<div class="lexeme">';
+            if (lex.definitions && lex.definitions.length) {
+              html += '<ol class="definitions">';
+              for (const rawDef of lex.definitions) {
+                const def = rawDef.replace(/<eki-foreign>/g, '<em>').replace(/<\/eki-foreign>/g, '</em>');
+                html += `<li><span>${def}</span></li>`;
               }
-              html += `<div class="usage">${text}${sourcesHtml}</div>`;
+              html += '</ol>';
+            }
+            if (lex.usages && lex.usages.length) {
+              html += '<div class="word-examples">';
+              for (const u of lex.usages) {
+                const text = typeof u === 'string' ? u : u.text;
+                let sourcesHtml = '';
+                if (typeof u === 'object' && u.sources && u.sources.length) {
+                  const parts = u.sources.map(s => {
+                    if (typeof s === 'string') return escapeHtml(s);
+                    const label = escapeHtml(s.label || '');
+                    const detail = s.detail ? ` data-detail="${escapeHtml(s.detail)}"` : '';
+                    return `<span class="usage-source-item"${detail}>${label}</span>`;
+                  });
+                  sourcesHtml = `<span class="usage-source">${parts.join('; ')}</span>`;
+                }
+                html += `<div class="usage">${text}${sourcesHtml}</div>`;
+              }
+              html += '</div>';
             }
             html += '</div>';
           }
@@ -172,10 +216,6 @@
 
       content.innerHTML = html;
       document.title = `Päeva sõna – ${data.word}`;
-      document.getElementById('share-icon-btn').style.visibility = 'visible';
-      document.getElementById('share-icon-btn').style.display = 'block';
-      document.getElementById('share-word').textContent = data.word;
-      document.getElementById('share-date-text').textContent = formatDate(data.date);
     }
 
     function escapeHtml(str) {
@@ -183,33 +223,25 @@
     }
 
     function navigate(n) {
-      const next = addDays(currentDate, n);
-      if (!availableDates.has(next)) return;
-      currentDate = next;
+      const { prevDate, nextDate } = getAdjacentDates(currentDate);
+      const target = n < 0 ? prevDate : nextDate;
+      if (!target) return;
+      currentDate = target;
+      history.pushState(null, '', '?date=' + target);
       loadWord(currentDate);
     }
 
-    function openShare() {
-      const word = document.getElementById('share-word').textContent;
-      if (!word) return;
-      if (navigator.share) {
-        navigator.share({ title: 'Päeva sõna', text: word, url: window.location.href });
-      } else {
-        document.getElementById('share-overlay').classList.add('open');
-      }
+    function goRandom() {
+      const today = todayStr();
+      const dates = [...availableDates].filter(d => d !== today);
+      if (!dates.length) return;
+      const date = dates[Math.floor(Math.random() * dates.length)];
+      currentDate = date;
+      history.pushState(null, '', '?date=' + date);
+      loadWord(date);
     }
 
-    function closeShareBtn() {
-      document.getElementById('share-overlay').classList.remove('open');
-    }
-
-    function closeShare(e) {
-      if (e.target === document.getElementById('share-overlay')) {
-        document.getElementById('share-overlay').classList.remove('open');
-      }
-    }
-
-    const sourceTooltip = document.createElement('div');
+const sourceTooltip = document.createElement('div');
     sourceTooltip.className = 'source-tooltip';
     document.body.appendChild(sourceTooltip);
 
