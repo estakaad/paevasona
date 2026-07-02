@@ -45,8 +45,8 @@ function normalizeDate(raw) {
   raw = raw.trim();
   // YYYY-MM-DD — already correct
   if (/^\d{4}-\d{2}-\d{2}$/.test(raw)) return raw;
-  // DD/MM/YYYY or D/M/YYYY
-  const m = raw.match(/^(\d{1,2})\/(\d{1,2})\/(\d{4})$/);
+  // DD/MM/YYYY, DD.MM.YYYY or D/M/YYYY
+  const m = raw.match(/^(\d{1,2})[\/.](\d{1,2})[\/.](\d{4})$/);
   if (m) return `${m[3]}-${m[2].padStart(2, '0')}-${m[1].padStart(2, '0')}`;
   return '';
 }
