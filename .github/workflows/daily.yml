@@ -12,26 +12,20 @@ jobs:
       contents: write
 
     steps:
-      - name: Checkout public repo
+      - name: Checkout repo
         uses: actions/checkout@v4
-
-      - name: Checkout private data repo
-        uses: actions/checkout@v4
-        with:
-          repository: estakaad/paevasona-data
-          token: ${{ secrets.DATA_REPO_TOKEN }}
-          path: data
 
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: '20'
 
-      - name: Fetch today's word
+      - name: Sync sheet and fetch new words
         env:
           EKILEX_API_KEY: ${{ secrets.EKILEX_API_KEY }}
           EKILEX_API_URL: https://ekilex.ee
-        run: node scripts/fetch-word.mjs
+          GOOGLE_SHEET_CSV_URL: ${{ secrets.GOOGLE_SHEET_CSV_URL }}
+        run: node scripts/sync-sheet.mjs
 
       - name: Commit cache if changed
         run: |
