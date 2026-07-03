@@ -3,21 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Päeva sõna – leema</title>
-  <meta name="description" content="(tulevikus) olema">
-
-  <meta property="og:type" content="article">
-  <meta property="og:title" content="Päeva sõna – leema">
-  <meta property="og:description" content="(tulevikus) olema">
-
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Päeva sõna – leema">
-  <meta name="twitter:description" content="(tulevikus) olema">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"DefinedTerm","name":"leema","description":"(tulevikus) olema","sameAs":"https://sonaveeb.ee/search/unif/est/eki/leema/1/est","inDefinedTermSet":{"@type":"DefinedTermSet","name":"EKI ühendsõnastik","url":"https://sonaveeb.ee"}}</script>
-  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
-  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+  <title>Päeva sõna</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Lora:ital,wght@0,400;1,400&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
@@ -33,12 +23,12 @@
   <main>
     <div class="word-card" id="word-card">
       <div class="word-card-top">
-        <time class="word-card-date" id="date-display" datetime="2026-07-01">1. juuli 2026</time>
+        <time class="word-card-date" id="date-display"></time>
         <button class="share-btn" id="btn-share" hidden aria-label="Kopeeri pildina">
           <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
         </button>
       </div>
-      <div id="word-content" aria-live="polite" aria-atomic="true" tabindex="-1"><div class="word-title"><a href="https://sonaveeb.ee/search/unif/est/eki/leema/1/est" target="_blank" rel="noopener">leema</a></div><div class="word-forms">leema, leeda, leeb</div><div class="pos-group"><div class="pos">tegusõna</div><div class="lexeme"><ol class="definitions" role="list"><li><span>(tulevikus) olema</span></li></ol><div class="word-examples"><div class="usage">Eesti keel oli, on ja leeb.</div></div></div></div><div class="word-source">Allikas: leema. EKI ühendsõnastik 2026. Eesti Keele Instituut, Sõnaveeb 2026. <a href="https://sonaveeb.ee/search/unif/est/eki/leema/1/est" target="_blank" rel="noopener">https://sonaveeb.ee/search/unif/est/eki/leema/1/est</a> (<time datetime="2026-07-01">01.07.2026</time>)</div></div>
+      <div id="word-content" aria-live="polite" aria-atomic="true" tabindex="-1"><div class="no-data">Laadimine...</div></div>
     </div>
 
     <nav aria-label="Päevade navigeerimine">
@@ -56,16 +46,16 @@
   <script data-goatcounter="https://paevasona.goatcounter.com/count"
           async src="//gc.zgo.at/count.js"></script>
   <script type="module">
-// Client-side script for pre-rendered per-date pages (e.g. /2026-07-03/index.html).
-// Embedded verbatim inside <script type="module"> by generate-pages.mjs.
-// Import paths resolve relative to the HTML document URL, not this file.
-
 import { renderWordHtml, formatDate } from '../render-word.mjs';
 import { generateAndShareImage } from '../share-image.mjs';
 
-// Capture stable base URLs before any pushState changes the document URL.
 const cacheBase = new URL('../cache/', window.location.href).href;
 const datesBase = new URL('../', window.location.href).href;
+
+// Pin site-level links to absolute URLs now, before any pushState shifts the base.
+document.querySelector('header a').href = datesBase;
+document.querySelector('a[href="../archive.html"]').href = datesBase + 'archive.html';
+document.querySelector('a[href="../info.html"]').href = datesBase + 'info.html';
 
 function todayStr() {
   const d = new Date();
@@ -116,9 +106,17 @@ function updateNavButtons(date) {
 let availableDates = new Set();
 let currentData = null;
 
-// Determine which date this page is for from the URL path (e.g. /paevasona/2026-07-03/).
 const pathMatch = window.location.pathname.match(/\/(\d{4}-\d{2}-\d{2})\/?$/);
-let currentDate = pathMatch ? pathMatch[1] : todayStr();
+let currentDate = pathMatch ? pathMatch[1] : null;
+
+// Not a date URL — show generic not-found message
+if (!currentDate) {
+  document.getElementById('date-display').textContent = '';
+  document.getElementById('word-content').innerHTML = '<div class="empty-state"><p class="empty-state-msg">Lehekülge ei leitud.</p></div>';
+  document.getElementById('btn-prev').style.visibility = 'hidden';
+  document.getElementById('btn-next').style.visibility = 'hidden';
+  throw new Error('not a date URL');
+}
 
 async function loadWord(date) {
   const content = document.getElementById('word-content');
@@ -135,7 +133,7 @@ async function loadWord(date) {
     const data = await res.json();
     currentData = data;
     content.innerHTML = renderWordHtml(data);
-    document.title = `P\u00e4eva s\u00f5na \u2013 ${data.word}`;
+    document.title = `Päeva sõna \u2013 ${data.word}`;
     // document.getElementById('btn-share').hidden = false;
     updateNavButtons(date);
   } catch {
@@ -274,22 +272,9 @@ fetch(cacheBase + 'index.json')
   .then(r => r.json())
   .then(index => {
     availableDates = new Set(index.map(e => e.date));
-    if (document.getElementById('word-content').querySelector('.word-title')) {
-      // Hydration: content already pre-rendered; fetch data quietly for share button
-      updateNavButtons(currentDate);
-      fetch(cacheBase + currentDate + '.json?v=3')
-        .then(r => r.json())
-        .then(data => {
-          currentData = data;
-          // document.getElementById('btn-share').hidden = false;
-        })
-        .catch(() => {});
-    } else {
-      loadWord(currentDate);
-    }
+    loadWord(currentDate);
   })
   .catch(() => loadWord(currentDate));
-
   </script>
 </body>
 </html>

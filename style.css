@@ -760,6 +760,7 @@ p + p { margin-top: 0.85rem; }
   position: relative;
   transition: transform 0.08s, box-shadow 0.08s;
 }
+.share-btn[hidden] { display: none; }
 
 .share-btn::after {
   content: "Kopeeri pildina";

@@ -32,7 +32,7 @@ function buildDatePageHtml(data) {
 
   const firstDef = getFirstDefinition(data);
   const description = truncate(firstDef || `${word} \u2013 P\u00e4eva s\u00f5na ${date}`, 155);
-  const escapedTitle = escapeHtml(word) + ' \u2013 P\u00e4eva s\u00f5na';
+  const escapedTitle = 'P\u00e4eva s\u00f5na \u2013 ' + escapeHtml(word);
   const escapedDesc = escapeHtml(description);
 
   // Prevent </script> inside JSON-LD from breaking the tag.
@@ -69,6 +69,10 @@ ${canonicalUrl ? `  <meta property="og:url" content="${canonicalUrl}">` : ''}
   <meta name="twitter:title" content="${escapedTitle}">
   <meta name="twitter:description" content="${escapedDesc}">
   <script type="application/ld+json">${jsonLd}</script>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Lora:ital,wght@0,400;1,400&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">

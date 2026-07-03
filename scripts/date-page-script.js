@@ -77,12 +77,12 @@ async function loadWord(date) {
     const data = await res.json();
     currentData = data;
     content.innerHTML = renderWordHtml(data);
-    document.title = `Päeva sõna \u2013 ${data.word}`;
+    document.title = `P\u00e4eva s\u00f5na \u2013 ${data.word}`;
     // document.getElementById('btn-share').hidden = false;
     updateNavButtons(date);
   } catch {
     content.innerHTML = `<div class="empty-state">
-      <p class="empty-state-msg">Etskae, polegi s\u00f5na selleks p\u00e4evaks!</p>
+      <p class="empty-state-msg">Vai-vai, polegi s\u00f5na!</p>
       <button class="empty-state-btn" id="btn-random-err">Vaata suvakat s\u00f5na</button>
     </div>`;
     document.getElementById('btn-random-err').addEventListener('click', goRandom);

@@ -3,17 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>abiööbik – Päeva sõna</title>
+  <title>Päeva sõna – abiööbik</title>
   <meta name="description" content="segametsas ja kuusikus elutsev laululinnuna tuntud rästas">
-  <link rel="canonical" href="https://päevasõna.ee/2026-07-03/">
+
   <meta property="og:type" content="article">
-  <meta property="og:title" content="abiööbik – Päeva sõna">
+  <meta property="og:title" content="Päeva sõna – abiööbik">
   <meta property="og:description" content="segametsas ja kuusikus elutsev laululinnuna tuntud rästas">
-  <meta property="og:url" content="https://päevasõna.ee/2026-07-03/">
+
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="abiööbik – Päeva sõna">
+  <meta name="twitter:title" content="Päeva sõna – abiööbik">
   <meta name="twitter:description" content="segametsas ja kuusikus elutsev laululinnuna tuntud rästas">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"DefinedTerm","name":"abiööbik","description":"segametsas ja kuusikus elutsev laululinnuna tuntud rästas","url":"https://päevasõna.ee/2026-07-03/","sameAs":"https://sonaveeb.ee/search/unif/est/eki/abi%C3%B6%C3%B6bik/1/est","inDefinedTermSet":{"@type":"DefinedTermSet","name":"EKI ühendsõnastik","url":"https://sonaveeb.ee"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"DefinedTerm","name":"abiööbik","description":"segametsas ja kuusikus elutsev laululinnuna tuntud rästas","sameAs":"https://sonaveeb.ee/search/unif/est/eki/abi%C3%B6%C3%B6bik/1/est","inDefinedTermSet":{"@type":"DefinedTermSet","name":"EKI ühendsõnastik","url":"https://sonaveeb.ee"}}</script>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Lora:ital,wght@0,400;1,400&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
@@ -131,12 +135,12 @@ async function loadWord(date) {
     const data = await res.json();
     currentData = data;
     content.innerHTML = renderWordHtml(data);
-    document.title = `Päeva sõna \u2013 ${data.word}`;
+    document.title = `P\u00e4eva s\u00f5na \u2013 ${data.word}`;
     // document.getElementById('btn-share').hidden = false;
     updateNavButtons(date);
   } catch {
     content.innerHTML = `<div class="empty-state">
-      <p class="empty-state-msg">Etskae, polegi s\u00f5na selleks p\u00e4evaks!</p>
+      <p class="empty-state-msg">Vai-vai, polegi s\u00f5na!</p>
       <button class="empty-state-btn" id="btn-random-err">Vaata suvakat s\u00f5na</button>
     </div>`;
     document.getElementById('btn-random-err').addEventListener('click', goRandom);
