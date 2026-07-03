@@ -43,6 +43,8 @@
     <a href="info.html">Info</a>
   </div>
 
+  <script data-goatcounter="https://paevasona.goatcounter.com/count"
+          async src="//gc.zgo.at/count.js"></script>
   <script type="module">
     import { renderWordHtml, formatDate } from './render-word.mjs';
 
@@ -136,12 +138,17 @@
       }
     }
 
+    function trackPageview(path) {
+      if (window.goatcounter?.count) window.goatcounter.count({ path });
+    }
+
     function navigate(n) {
       const { prevDate, nextDate } = getAdjacentDates(currentDate);
       const target = n < 0 ? prevDate : nextDate;
       if (!target) return;
       currentDate = target;
       history.pushState(null, '', datesBase + target + '/');
+      trackPageview('/' + target + '/');
       loadWord(currentDate);
     }
 
@@ -152,6 +159,7 @@
       const date = dates[Math.floor(Math.random() * dates.length)];
       currentDate = date;
       history.pushState(null, '', datesBase + date + '/');
+      trackPageview('/' + date + '/');
       loadWord(date);
     }
 

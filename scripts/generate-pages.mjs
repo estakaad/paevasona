@@ -101,6 +101,8 @@ ${canonicalUrl ? `  <meta property="og:url" content="${canonicalUrl}">` : ''}
     <a href="../info.html">Info</a>
   </div>
 
+  <script data-goatcounter="https://paevasona.goatcounter.com/count"
+          async src="//gc.zgo.at/count.js"></script>
   <script type="module">
 ${datePageScript}
   </script>

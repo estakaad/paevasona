@@ -85,12 +85,17 @@ async function loadWord(date) {
   }
 }
 
+function trackPageview(path) {
+  if (window.goatcounter?.count) window.goatcounter.count({ path });
+}
+
 function navigate(n) {
   const { prevDate, nextDate } = getAdjacentDates(currentDate);
   const target = n < 0 ? prevDate : nextDate;
   if (!target) return;
   currentDate = target;
   history.pushState(null, '', datesBase + target + '/');
+  trackPageview('/' + target + '/');
   loadWord(currentDate);
 }
 
@@ -101,6 +106,7 @@ function goRandom() {
   const date = dates[Math.floor(Math.random() * dates.length)];
   currentDate = date;
   history.pushState(null, '', datesBase + date + '/');
+  trackPageview('/' + date + '/');
   loadWord(date);
 }
 
