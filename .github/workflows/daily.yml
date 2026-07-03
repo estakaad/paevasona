@@ -2,7 +2,7 @@ name: Fetch word of the day
 
 on:
   schedule:
-    - cron: '0 3 * * *'  # iga päev kell 03:00 UTC (06:00 Eesti aeg)
+    - cron: '5 0 * * *'  # iga päev kell 00:05 UTC (03:05 Eesti aeg)
   workflow_dispatch:      # käivitamine käsitsi
 
 jobs:
