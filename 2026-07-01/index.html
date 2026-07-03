@@ -30,9 +30,8 @@
     <div class="word-card" id="word-card">
       <div class="word-card-top">
         <time class="word-card-date" id="date-display" datetime="2026-07-01">1. juuli 2026</time>
-        <button class="share-btn" id="btn-share" hidden aria-label="Kopeeri sõna pildina">
-          <svg aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-          Kopeeri
+        <button class="share-btn" id="btn-share" hidden aria-label="Kopeeri pildina">
+          <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
         </button>
       </div>
       <div id="word-content" aria-live="polite" aria-atomic="true" tabindex="-1"><div class="word-title"><a href="https://sonaveeb.ee/search/unif/est/eki/leema/1/est" target="_blank" rel="noopener">leema</a></div><div class="word-forms">leema, leeda, leeb</div><div class="pos-group"><div class="pos">tegusõna</div><div class="lexeme"><ol class="definitions" role="list"><li><span>(tulevikus) olema</span></li></ol><div class="word-examples"><div class="usage">Eesti keel oli, on ja leeb.</div></div></div></div><div class="word-source">Allikas: leema. EKI ühendsõnastik 2026. Eesti Keele Instituut, Sõnaveeb 2026. <a href="https://sonaveeb.ee/search/unif/est/eki/leema/1/est" target="_blank" rel="noopener">https://sonaveeb.ee/search/unif/est/eki/leema/1/est</a> (<time datetime="2026-07-01">01.07.2026</time>)</div></div>
@@ -255,11 +254,11 @@ const shareBtnLabel = shareBtn.innerHTML;
 shareBtn.addEventListener('click', async () => {
   if (!currentData || shareBtn.disabled) return;
   shareBtn.disabled = true;
-  shareBtn.textContent = 'Genereerin\u2026';
   try {
     await generateAndShareImage(currentData);
-    shareBtn.textContent = 'Kopeeritud!';
-    setTimeout(() => { shareBtn.disabled = false; shareBtn.innerHTML = shareBtnLabel; }, 2000);
+    shareBtn.innerHTML = '<svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>';
+    shareBtn.setAttribute('aria-label', 'Kopeeritud!');
+    setTimeout(() => { shareBtn.disabled = false; shareBtn.innerHTML = shareBtnLabel; shareBtn.setAttribute('aria-label', 'Kopeeri pildina'); }, 2000);
   } catch (e) {
     console.error('Copy failed:', e);
     shareBtn.disabled = false;

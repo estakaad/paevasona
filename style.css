@@ -748,21 +748,44 @@ p + p { margin-top: 0.85rem; }
 /* ── SHARE BUTTON ───────────────────────────────── */
 
 .share-btn {
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 0.72rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.07em;
   color: var(--color-ink);
   background: var(--color-accent-2);
   border: 2px solid var(--color-ink);
   box-shadow: 2px 2px 0 var(--color-ink);
-  padding: 0.3rem 0.75rem;
+  padding: 0.35rem;
   cursor: pointer;
   display: flex;
   align-items: center;
-  gap: 5px;
+  justify-content: center;
+  position: relative;
   transition: transform 0.08s, box-shadow 0.08s;
+}
+
+.share-btn::after {
+  content: "Kopeeri pildina";
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  background: var(--color-ink);
+  color: var(--color-bg);
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1.55;
+  padding: 0.4rem 0.65rem;
+  white-space: nowrap;
+  box-shadow: 3px 3px 0 var(--color-accent);
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.1s;
+  z-index: 200;
+}
+
+.share-btn:not(:disabled):hover::after,
+.share-btn:not(:disabled):focus-visible::after {
+  opacity: 1;
+  visibility: visible;
 }
 
 .share-btn:hover {

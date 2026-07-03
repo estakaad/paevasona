@@ -200,11 +200,11 @@ const shareBtnLabel = shareBtn.innerHTML;
 shareBtn.addEventListener('click', async () => {
   if (!currentData || shareBtn.disabled) return;
   shareBtn.disabled = true;
-  shareBtn.textContent = 'Genereerin\u2026';
   try {
     await generateAndShareImage(currentData);
-    shareBtn.textContent = 'Kopeeritud!';
-    setTimeout(() => { shareBtn.disabled = false; shareBtn.innerHTML = shareBtnLabel; }, 2000);
+    shareBtn.innerHTML = '<svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>';
+    shareBtn.setAttribute('aria-label', 'Kopeeritud!');
+    setTimeout(() => { shareBtn.disabled = false; shareBtn.innerHTML = shareBtnLabel; shareBtn.setAttribute('aria-label', 'Kopeeri pildina'); }, 2000);
   } catch (e) {
     console.error('Copy failed:', e);
     shareBtn.disabled = false;
