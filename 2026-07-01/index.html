@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>leema – Päeva sõna</title>
+  <meta name="description" content="(tulevikus) olema">
+  <link rel="canonical" href="https://example.github.io/paevasona/2026-07-01/">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="leema – Päeva sõna">
+  <meta property="og:description" content="(tulevikus) olema">
+  <meta property="og:url" content="https://example.github.io/paevasona/2026-07-01/">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="leema – Päeva sõna">
+  <meta name="twitter:description" content="(tulevikus) olema">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"DefinedTerm","name":"leema","description":"(tulevikus) olema","url":"https://example.github.io/paevasona/2026-07-01/","sameAs":"https://sonaveeb.ee/search/unif/est/eki/leema/1/est","inDefinedTermSet":{"@type":"DefinedTermSet","name":"EKI ühendsõnastik","url":"https://sonaveeb.ee"}}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Lora:ital,wght@0,400;1,400&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body class="palette-4">
+  <header>
+    <a href="../">Päeva sõna</a>
+    <span class="page-title">iga päev uus sõna</span>
+  </header>
+
+  <main>
+    <div class="word-card" id="word-card">
+      <div class="word-card-top">
+        <span class="word-card-date" id="date-display">1. juuli 2026</span>
+      </div>
+      <div id="word-content"><div class="word-title"><a href="https://sonaveeb.ee/search/unif/est/eki/leema/1/est" target="_blank" rel="noopener">leema</a></div><div class="word-forms">leema, leeda, leeb</div><div class="pos-group"><div class="pos">tegusõna, verb</div><div class="lexeme"><ol class="definitions"><li><span>(tulevikus) olema</span></li></ol><div class="word-examples"><div class="usage">Eesti keel oli, on ja leeb.</div></div></div></div><div class="word-source">Allikas: leema. EKI ühendsõnastik 2026. Eesti Keele Instituut, Sõnaveeb 2026. <a href="https://sonaveeb.ee/search/unif/est/eki/leema/1/est" target="_blank" rel="noopener">https://sonaveeb.ee/search/unif/est/eki/leema/1/est</a> (01.07.2026)</div></div>
+    </div>
+
+    <nav>
+      <button id="btn-prev">&#8592;</button>
+      <button id="btn-next">&#8594;</button>
+    </nav>
+  </main>
+
+  <div class="footer-links">
+    <button id="btn-random">Suvakas</button>
+    <a href="../archive.html">Arhiiv</a>
+    <a href="../info.html">Info</a>
+  </div>
+
+  <script type="module">
+// Client-side script for pre-rendered per-date pages (e.g. /2026-07-03/index.html).
+// Embedded verbatim inside <script type="module"> by generate-pages.mjs.
+// Import paths resolve relative to the HTML document URL, not this file.
+
+import { renderWordHtml, formatDate } from '../render-word.mjs';
+
+// Capture stable base URLs before any pushState changes the document URL.
+const cacheBase = new URL('../cache/', window.location.href).href;
+const datesBase = new URL('../', window.location.href).href;
+
+function todayStr() {
+  const d = new Date();
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+}
+
+function formatDateNav(str) {
+  const [y, m, d] = str.split('-').map(Number);
+  return new Date(y, m - 1, d).toLocaleDateString('et-EE', { day: 'numeric', month: 'long' });
+}
+
+function getAdjacentDates(date) {
+  const sorted = [...availableDates].sort();
+  let prevDate = null, nextDate = null;
+  for (const d of sorted) {
+    if (d < date) prevDate = d;
+    if (d > date && nextDate === null) nextDate = d;
+  }
+  return { prevDate, nextDate };
+}
+
+function updateNavButtons(date) {
+  const btnPrev = document.getElementById('btn-prev');
+  const btnNext = document.getElementById('btn-next');
+  const { prevDate, nextDate } = getAdjacentDates(date);
+  if (prevDate) {
+    const label = formatDateNav(prevDate);
+    btnPrev.innerHTML = `&#8592; <span class="nav-date">${label}</span>`;
+    btnPrev.setAttribute('aria-label', 'Eelmine sõna: ' + label);
+    btnPrev.style.visibility = 'visible';
+  } else {
+    btnPrev.innerHTML = '&#8592;';
+    btnPrev.removeAttribute('aria-label');
+    btnPrev.style.visibility = 'hidden';
+  }
+  if (nextDate) {
+    const label = formatDateNav(nextDate);
+    btnNext.innerHTML = `<span class="nav-date">${label}</span> &#8594;`;
+    btnNext.setAttribute('aria-label', 'Järgmine sõna: ' + label);
+    btnNext.style.visibility = 'visible';
+  } else {
+    btnNext.innerHTML = '&#8594;';
+    btnNext.removeAttribute('aria-label');
+    btnNext.style.visibility = 'hidden';
+  }
+}
+
+let availableDates = new Set();
+
+// Determine which date this page is for from the URL path (e.g. /paevasona/2026-07-03/).
+const pathMatch = window.location.pathname.match(/\/(\d{4}-\d{2}-\d{2})\/?$/);
+let currentDate = pathMatch ? pathMatch[1] : todayStr();
+
+async function loadWord(date) {
+  const content = document.getElementById('word-content');
+  document.getElementById('date-display').textContent = formatDate(date);
+  document.getElementById('btn-prev').style.visibility = 'hidden';
+  document.getElementById('btn-next').style.visibility = 'hidden';
+  content.innerHTML = '<div class="no-data">Laadimine...</div>';
+  try {
+    const res = await fetch(cacheBase + date + '.json?v=3');
+    if (!res.ok) throw new Error('not found');
+    const data = await res.json();
+    content.innerHTML = renderWordHtml(data);
+    document.title = `Päeva sõna \u2013 ${data.word}`;
+    updateNavButtons(date);
+  } catch {
+    content.innerHTML = `<div class="empty-state">
+      <p class="empty-state-msg">Etskae, polegi s\u00f5na selleks p\u00e4evaks!</p>
+      <button class="empty-state-btn" id="btn-random-err">Vaata suvakat s\u00f5na</button>
+    </div>`;
+    document.getElementById('btn-random-err').addEventListener('click', goRandom);
+    updateNavButtons(date);
+  }
+}
+
+function navigate(n) {
+  const { prevDate, nextDate } = getAdjacentDates(currentDate);
+  const target = n < 0 ? prevDate : nextDate;
+  if (!target) return;
+  currentDate = target;
+  history.pushState(null, '', datesBase + target + '/');
+  loadWord(currentDate);
+}
+
+function goRandom() {
+  const today = todayStr();
+  const dates = [...availableDates].filter(d => d !== today);
+  if (!dates.length) return;
+  const date = dates[Math.floor(Math.random() * dates.length)];
+  currentDate = date;
+  history.pushState(null, '', datesBase + date + '/');
+  loadWord(date);
+}
+
+const sourceTooltip = document.createElement('div');
+sourceTooltip.className = 'source-tooltip';
+document.body.appendChild(sourceTooltip);
+
+document.addEventListener('click', function(e) {
+  const item = e.target.closest('[data-detail]');
+  if (item) {
+    e.stopPropagation();
+    const detail = item.dataset.detail;
+    if (sourceTooltip.dataset.for === detail && sourceTooltip.classList.contains('visible')) {
+      sourceTooltip.classList.remove('visible');
+      return;
+    }
+    sourceTooltip.textContent = detail;
+    sourceTooltip.dataset.for = detail;
+    sourceTooltip.style.left = '-9999px';
+    sourceTooltip.style.top = '-9999px';
+    sourceTooltip.classList.add('visible');
+    const rect = item.getBoundingClientRect();
+    const tw = sourceTooltip.offsetWidth;
+    const th = sourceTooltip.offsetHeight;
+    let left = rect.left + window.scrollX;
+    let top = rect.bottom + window.scrollY + 6;
+    if (rect.left + tw > window.innerWidth - 8) left = window.scrollX + window.innerWidth - tw - 8;
+    if (rect.bottom + th + 6 > window.innerHeight) top = rect.top + window.scrollY - th - 6;
+    sourceTooltip.style.left = left + 'px';
+    sourceTooltip.style.top = top + 'px';
+  } else {
+    sourceTooltip.classList.remove('visible');
+  }
+});
+
+document.getElementById('btn-prev').addEventListener('click', () => navigate(-1));
+document.getElementById('btn-next').addEventListener('click', () => navigate(1));
+document.getElementById('btn-random').addEventListener('click', goRandom);
+
+fetch(cacheBase + 'index.json')
+  .then(r => r.json())
+  .then(index => {
+    availableDates = new Set(index.map(e => e.date));
+    // Hydration: #word-content already has pre-rendered markup — skip the initial fetch,
+    // just wire up the nav buttons against the existing DOM.
+    if (document.getElementById('word-content').querySelector('.word-title')) {
+      updateNavButtons(currentDate);
+    } else {
+      loadWord(currentDate);
+    }
+  })
+  .catch(() => loadWord(currentDate));
+
+  </script>
+</body>
+</html>

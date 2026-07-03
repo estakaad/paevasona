@@ -4,6 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Päeva sõna</title>
+  <meta name="description" content="Iga päev uus eestikeelne sõna koos seletuse ja näitelausetega.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Päeva sõna">
+  <meta property="og:description" content="Iga päev uus eesti keele sõna koos seletuse ja näitelausetega.">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Päeva sõna">
+  <meta name="twitter:description" content="Iga päev uus eesti keele sõna koos seletuse ja näitelausetega.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Lora:ital,wght@0,400;1,400&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
@@ -11,7 +18,7 @@
 </head>
 <body class="palette-4">
   <header>
-    <a href="index.html">Päeva sõna</a>
+    <a href="./">Päeva sõna</a>
     <span class="page-title">iga päev uus sõna</span>
   </header>
 
@@ -24,45 +31,32 @@
     </div>
 
     <nav>
-      <button id="btn-prev" onclick="navigate(-1)">&#8592;</button>
-      <button id="btn-next" onclick="navigate(1)">&#8594;</button>
+      <button id="btn-prev">&#8592;</button>
+      <button id="btn-next">&#8594;</button>
     </nav>
   </main>
 
 <div class="footer-links">
-    <button onclick="goRandom()">Suvakas</button>
+    <button id="btn-random">Suvakas</button>
     <a href="archive.html">Arhiiv</a>
     <a href="info.html">Info</a>
   </div>
 
-  <script>
-    function parseDate(str) {
-      const [y, m, d] = str.split('-').map(Number);
-      return new Date(y, m - 1, d);
-    }
+  <script type="module">
+    import { renderWordHtml, formatDate } from './render-word.mjs';
 
-    function formatDate(str) {
-      const d = parseDate(str);
-      return d.toLocaleDateString('et-EE', { day: 'numeric', month: 'long', year: 'numeric' });
-    }
+    // Capture stable base URLs before any pushState changes the document URL.
+    const cacheBase = new URL('./cache/', window.location.href).href;
+    const datesBase = new URL('./', window.location.href).href;
 
-    function formatDateShort(str) {
-      const [y, m, d] = str.split('-');
-      return `${d}.${m}.${y}`;
-    }
-
-    function addDays(dateStr, n) {
-      const d = parseDate(dateStr);
-      d.setDate(d.getDate() + n);
-      const y = d.getFullYear();
-      const m = String(d.getMonth() + 1).padStart(2, '0');
-      const day = String(d.getDate()).padStart(2, '0');
-      return `${y}-${m}-${day}`;
+    function todayStr() {
+      const d = new Date();
+      return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
     }
 
     function formatDateNav(str) {
-      const d = parseDate(str);
-      return d.toLocaleDateString('et-EE', { day: 'numeric', month: 'long' });
+      const [y, m, d] = str.split('-').map(Number);
+      return new Date(y, m - 1, d).toLocaleDateString('et-EE', { day: 'numeric', month: 'long' });
     }
 
     function getAdjacentDates(date) {
@@ -101,125 +95,37 @@
       }
     }
 
-    function todayStr() {
-      const d = new Date();
-      const y = d.getFullYear();
-      const m = String(d.getMonth() + 1).padStart(2, '0');
-      const day = String(d.getDate()).padStart(2, '0');
-      return `${y}-${m}-${day}`;
-    }
-
     let availableDates = new Set();
 
-    const params = new URLSearchParams(window.location.search);
-    const rawDate = params.get('date') || '';
-    let currentDate = /^\d{4}-\d{2}-\d{2}$/.test(rawDate) ? rawDate : todayStr();
+    // Redirect any stale ?date= URLs to the canonical clean-path page.
+    const rawDate = new URLSearchParams(window.location.search).get('date') || '';
+    if (/^\d{4}-\d{2}-\d{2}$/.test(rawDate)) {
+      window.location.replace(datesBase + rawDate + '/');
+    }
+
+    let currentDate = todayStr();
 
     async function loadWord(date) {
       const content = document.getElementById('word-content');
-      const dateDisplay = document.getElementById('date-display');
-      dateDisplay.textContent = formatDate(date);
-
-      const btnPrev = document.getElementById('btn-prev');
-      const btnNext = document.getElementById('btn-next');
-      btnPrev.style.visibility = 'hidden';
-      btnNext.style.visibility = 'hidden';
-
+      document.getElementById('date-display').textContent = formatDate(date);
+      document.getElementById('btn-prev').style.visibility = 'hidden';
+      document.getElementById('btn-next').style.visibility = 'hidden';
       content.innerHTML = '<div class="no-data">Laadimine...</div>';
-
       try {
-        const res = await fetch(`./cache/${date}.json?v=3`);
+        const res = await fetch(cacheBase + date + '.json?v=3');
         if (!res.ok) throw new Error('not found');
         const data = await res.json();
-        renderWord(data, content);
+        content.innerHTML = renderWordHtml(data);
+        document.title = `Päeva sõna – ${data.word}`;
         updateNavButtons(date);
       } catch {
         content.innerHTML = `<div class="empty-state">
           <p class="empty-state-msg">Etskae, polegi sõna selleks päevaks!</p>
-          <button class="empty-state-btn" onclick="goRandom()">Vaata suvakat sõna</button>
+          <button class="empty-state-btn" id="btn-random-err">Vaata suvakat sõna</button>
         </div>`;
+        document.getElementById('btn-random-err').addEventListener('click', goRandom);
         updateNavButtons(date);
       }
-    }
-
-    function renderWord(data, content) {
-      const sonaveebiUrl = `https://sonaveeb.ee/search/unif/est/eki/${encodeURIComponent(data.word)}/1/est`;
-
-      let html = `<div class="word-title"><a href="${sonaveebiUrl}" target="_blank" rel="noopener">${escapeHtml(data.word)}</a></div>`;
-
-      const f = data.forms || {};
-      const nounForms = ['SgN', 'SgG', 'SgP'].map(c => f[c]).filter(Boolean);
-      const verbForms = ['Sup', 'Inf', 'IndPrSg3'].map(c => f[c]).filter(Boolean);
-      const displayForms = nounForms.length >= 2 ? nounForms : verbForms.length >= 2 ? verbForms : [];
-      if (displayForms.length) {
-        html += `<div class="word-forms">${displayForms.map(escapeHtml).join(', ')}</div>`;
-      }
-
-      const lexemes = data.lexemes || [];
-      if (!lexemes.length) {
-        html += '<div class="no-data">Definitsioone ei leitud.</div>';
-      } else {
-        // Group consecutive lexemes by part of speech
-        const posGroups = [];
-        for (const lex of lexemes) {
-          const posKey = (lex.pos || []).join('\x00');
-          const last = posGroups[posGroups.length - 1];
-          if (last && last.posKey === posKey) {
-            last.lexemes.push(lex);
-          } else {
-            posGroups.push({ posKey, pos: lex.pos || [], lexemes: [lex] });
-          }
-        }
-
-        for (const group of posGroups) {
-          html += '<div class="pos-group">';
-          if (group.pos.length) {
-            html += `<div class="pos">${escapeHtml(group.pos.join(', '))}</div>`;
-          }
-          for (const lex of group.lexemes) {
-            html += '<div class="lexeme">';
-            if (lex.definitions && lex.definitions.length) {
-              html += '<ol class="definitions">';
-              for (const rawDef of lex.definitions) {
-                const def = rawDef.replace(/<eki-foreign>/g, '<em>').replace(/<\/eki-foreign>/g, '</em>');
-                html += `<li><span>${def}</span></li>`;
-              }
-              html += '</ol>';
-            }
-            if (lex.usages && lex.usages.length) {
-              html += '<div class="word-examples">';
-              for (const u of lex.usages) {
-                const text = typeof u === 'string' ? u : u.text;
-                let sourcesHtml = '';
-                if (typeof u === 'object' && u.sources && u.sources.length) {
-                  const parts = u.sources.map(s => {
-                    if (typeof s === 'string') return escapeHtml(s);
-                    const label = escapeHtml(s.label || '');
-                    const detail = s.detail ? ` data-detail="${escapeHtml(s.detail)}"` : '';
-                    return `<span class="usage-source-item"${detail}>${label}</span>`;
-                  });
-                  sourcesHtml = `<span class="usage-source">${parts.join('; ')}</span>`;
-                }
-                html += `<div class="usage">${text}${sourcesHtml}</div>`;
-              }
-              html += '</div>';
-            }
-            html += '</div>';
-          }
-          html += '</div>';
-        }
-      }
-
-      const year = data.date.slice(0, 4);
-      const citationUrl = sonaveebiUrl;
-      html += `<div class="word-source">Allikas: ${escapeHtml(data.word)}. EKI ühendsõnastik ${year}. Eesti Keele Instituut, Sõnaveeb ${year}. <a href="${citationUrl}" target="_blank" rel="noopener">${citationUrl}</a> (${formatDateShort(data.date)})</div>`;
-
-      content.innerHTML = html;
-      document.title = `Päeva sõna – ${data.word}`;
-    }
-
-    function escapeHtml(str) {
-      return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
     }
 
     function navigate(n) {
@@ -227,7 +133,7 @@
       const target = n < 0 ? prevDate : nextDate;
       if (!target) return;
       currentDate = target;
-      history.pushState(null, '', '?date=' + target);
+      history.pushState(null, '', datesBase + target + '/');
       loadWord(currentDate);
     }
 
@@ -237,11 +143,11 @@
       if (!dates.length) return;
       const date = dates[Math.floor(Math.random() * dates.length)];
       currentDate = date;
-      history.pushState(null, '', '?date=' + date);
+      history.pushState(null, '', datesBase + date + '/');
       loadWord(date);
     }
 
-const sourceTooltip = document.createElement('div');
+    const sourceTooltip = document.createElement('div');
     sourceTooltip.className = 'source-tooltip';
     document.body.appendChild(sourceTooltip);
 
@@ -273,7 +179,11 @@ const sourceTooltip = document.createElement('div');
       }
     });
 
-    fetch('./cache/index.json')
+    document.getElementById('btn-prev').addEventListener('click', () => navigate(-1));
+    document.getElementById('btn-next').addEventListener('click', () => navigate(1));
+    document.getElementById('btn-random').addEventListener('click', goRandom);
+
+    fetch(cacheBase + 'index.json')
       .then(r => r.json())
       .then(index => { availableDates = new Set(index.map(e => e.date)); })
       .catch(() => {})
