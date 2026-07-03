@@ -350,9 +350,24 @@ export async function generateAndShareImage(data) {
   // Content
   layoutContent(ctx, data, CARD_Y + PAD_V, true, p);
 
-  // Copy PNG to clipboard
-  const blob = await new Promise((resolve, reject) => {
+  // Build blob promise before any await so ClipboardItem is created
+  // within the user-gesture context (required by some browsers).
+  const blobPromise = new Promise((resolve, reject) => {
     canvas.toBlob(b => b ? resolve(b) : reject(new Error('toBlob failed')), 'image/png');
   });
-  await navigator.clipboard.write([new ClipboardItem({ 'image/png': blob })]);
+
+  if (navigator.clipboard?.write && typeof ClipboardItem !== 'undefined') {
+    await navigator.clipboard.write([new ClipboardItem({ 'image/png': blobPromise })]);
+  } else {
+    // Fallback for browsers without clipboard image support (Firefox etc.): download
+    const blob = await blobPromise;
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `paevasona-${data.word}-${data.date}.png`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  }
 }
