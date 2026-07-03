@@ -1,0 +1,27 @@
+{
+  "date": "2026-07-03",
+  "word": "abiööbik",
+  "wordId": 1271081,
+  "forms": {
+    "SgN": "abiööbik",
+    "SgG": "abiööbiku",
+    "SgP": "abiööbikut"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "nimisõna, substantiiv"
+      ],
+      "definitions": [
+        "segametsas ja kuusikus elutsev laululinnuna tuntud rästas"
+      ],
+      "usages": [
+        {
+          "text": "Laulurästal on tõesti väga ilus laul, vanarahvas pole teda mitte asjatult abiööbikuks kutsunud.",
+          "sources": []
+        }
+      ]
+    }
+  ]
+}
