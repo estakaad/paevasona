@@ -27,6 +27,10 @@
     <div class="word-card" id="word-card">
       <div class="word-card-top">
         <time class="word-card-date" id="date-display"></time>
+        <button class="share-btn" id="btn-share" hidden aria-label="Kopeeri sõna pildina">
+          <svg aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+          Kopeeri
+        </button>
       </div>
       <div id="word-content" aria-live="polite" aria-atomic="true" tabindex="-1"><div class="no-data">Laadimine...</div></div>
     </div>
@@ -47,6 +51,7 @@
           async src="//gc.zgo.at/count.js"></script>
   <script type="module">
     import { renderWordHtml, formatDate } from './render-word.mjs';
+    import { generateAndShareImage } from './share-image.mjs';
 
     // Capture stable base URLs before any pushState changes the document URL.
     const cacheBase = new URL('./cache/', window.location.href).href;
@@ -104,6 +109,7 @@
     }
 
     let availableDates = new Set();
+    let currentData = null;
 
     // Redirect any stale ?date= URLs to the canonical clean-path page.
     const rawDate = new URLSearchParams(window.location.search).get('date') || '';
@@ -120,13 +126,16 @@
       dateEl.setAttribute('datetime', date);
       document.getElementById('btn-prev').style.visibility = 'hidden';
       document.getElementById('btn-next').style.visibility = 'hidden';
+      document.getElementById('btn-share').hidden = true;
       content.innerHTML = '<div class="no-data">Laadimine...</div>';
       try {
         const res = await fetch(cacheBase + date + '.json?v=3');
         if (!res.ok) throw new Error('not found');
         const data = await res.json();
+        currentData = data;
         content.innerHTML = renderWordHtml(data);
         document.title = `Päeva sõna – ${data.word}`;
+        document.getElementById('btn-share').hidden = false;
         updateNavButtons(date);
       } catch {
         content.innerHTML = `<div class="empty-state">
@@ -240,6 +249,23 @@
     document.getElementById('btn-prev').addEventListener('click', () => navigate(-1));
     document.getElementById('btn-next').addEventListener('click', () => navigate(1));
     document.getElementById('btn-random').addEventListener('click', goRandom);
+
+    const shareBtn = document.getElementById('btn-share');
+    const shareBtnLabel = shareBtn.innerHTML;
+    shareBtn.addEventListener('click', async () => {
+      if (!currentData || shareBtn.disabled) return;
+      shareBtn.disabled = true;
+      shareBtn.textContent = 'Genereerin…';
+      try {
+        await generateAndShareImage(currentData);
+        shareBtn.textContent = 'Kopeeritud!';
+        setTimeout(() => { shareBtn.disabled = false; shareBtn.innerHTML = shareBtnLabel; }, 2000);
+      } catch (e) {
+        console.error('Copy failed:', e);
+        shareBtn.disabled = false;
+        shareBtn.innerHTML = shareBtnLabel;
+      }
+    });
 
     fetch(cacheBase + 'index.json')
       .then(r => r.json())

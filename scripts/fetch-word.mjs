@@ -122,7 +122,7 @@ for (const sourceId of sourceIds) {
 // Extract definitions from lexemes
 const lexemes = (details.lexemes || []).map(lex => ({
   dataset: lex.datasetCode,
-  pos: (lex.pos || []).map(p => p.value).filter(Boolean),
+  pos: (lex.pos || []).map(p => p.code).filter(Boolean),
   definitions: ((lex.meaning && lex.meaning.definitions) || [])
     .filter(d => d.lang === 'est')
     .map(d => d.valuePrese || d.value),

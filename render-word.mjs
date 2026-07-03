@@ -2,6 +2,27 @@
 // No DOM APIs; pure string operations only.
 // Used by: scripts/generate-pages.mjs (build) and inline <script type="module"> (browser).
 
+export const POS_LABELS = {
+  s:     'nimisõna',
+  v:     'tegusõna',
+  adj:   'omadussõna',
+  adjg:  'omadussõna',
+  adv:   'määrsõna',
+  prop:  'pärisnimi',
+  pron:  'asesõna',
+  num:   'arvsõna',
+  interj:'hüüdsõna',
+  konj:  'sidesõna',
+  prep:  'eessõna',
+  postp: 'tagasõna',
+  adp:   'kaassõna',
+  abr:   'lühend',
+  prf:   'eesliide',
+  suf:   'järelliide',
+  inda:  'muutumatu',
+  vrm:   'vaba morfeem',
+};
+
 export function escapeHtml(str) {
   return String(str)
     .replace(/&/g, '&amp;')
@@ -65,7 +86,8 @@ export function renderWordHtml(data) {
     for (const group of posGroups) {
       html += '<div class="pos-group">';
       if (group.pos.length) {
-        html += `<div class="pos">${escapeHtml(group.pos.join(', '))}</div>`;
+        const posLabel = group.pos.map(p => POS_LABELS[p] || p).join(', ');
+        html += `<div class="pos">${escapeHtml(posLabel)}</div>`;
       }
       for (const lex of group.lexemes) {
         html += '<div class="lexeme">';

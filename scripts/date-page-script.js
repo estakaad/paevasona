@@ -3,6 +3,7 @@
 // Import paths resolve relative to the HTML document URL, not this file.
 
 import { renderWordHtml, formatDate } from '../render-word.mjs';
+import { generateAndShareImage } from '../share-image.mjs';
 
 // Capture stable base URLs before any pushState changes the document URL.
 const cacheBase = new URL('../cache/', window.location.href).href;
@@ -55,6 +56,7 @@ function updateNavButtons(date) {
 }
 
 let availableDates = new Set();
+let currentData = null;
 
 // Determine which date this page is for from the URL path (e.g. /paevasona/2026-07-03/).
 const pathMatch = window.location.pathname.match(/\/(\d{4}-\d{2}-\d{2})\/?$/);
@@ -67,13 +69,16 @@ async function loadWord(date) {
   dateEl.setAttribute('datetime', date);
   document.getElementById('btn-prev').style.visibility = 'hidden';
   document.getElementById('btn-next').style.visibility = 'hidden';
+  document.getElementById('btn-share').hidden = true;
   content.innerHTML = '<div class="no-data">Laadimine...</div>';
   try {
     const res = await fetch(cacheBase + date + '.json?v=3');
     if (!res.ok) throw new Error('not found');
     const data = await res.json();
+    currentData = data;
     content.innerHTML = renderWordHtml(data);
     document.title = `Päeva sõna \u2013 ${data.word}`;
+    document.getElementById('btn-share').hidden = false;
     updateNavButtons(date);
   } catch {
     content.innerHTML = `<div class="empty-state">
@@ -190,14 +195,37 @@ document.getElementById('btn-prev').addEventListener('click', () => navigate(-1)
 document.getElementById('btn-next').addEventListener('click', () => navigate(1));
 document.getElementById('btn-random').addEventListener('click', goRandom);
 
+const shareBtn = document.getElementById('btn-share');
+const shareBtnLabel = shareBtn.innerHTML;
+shareBtn.addEventListener('click', async () => {
+  if (!currentData || shareBtn.disabled) return;
+  shareBtn.disabled = true;
+  shareBtn.textContent = 'Genereerin\u2026';
+  try {
+    await generateAndShareImage(currentData);
+    shareBtn.textContent = 'Kopeeritud!';
+    setTimeout(() => { shareBtn.disabled = false; shareBtn.innerHTML = shareBtnLabel; }, 2000);
+  } catch (e) {
+    console.error('Copy failed:', e);
+    shareBtn.disabled = false;
+    shareBtn.innerHTML = shareBtnLabel;
+  }
+});
+
 fetch(cacheBase + 'index.json')
   .then(r => r.json())
   .then(index => {
     availableDates = new Set(index.map(e => e.date));
-    // Hydration: #word-content already has pre-rendered markup — skip the initial fetch,
-    // just wire up the nav buttons against the existing DOM.
     if (document.getElementById('word-content').querySelector('.word-title')) {
+      // Hydration: content already pre-rendered; fetch data quietly for share button
       updateNavButtons(currentDate);
+      fetch(cacheBase + currentDate + '.json?v=3')
+        .then(r => r.json())
+        .then(data => {
+          currentData = data;
+          document.getElementById('btn-share').hidden = false;
+        })
+        .catch(() => {});
     } else {
       loadWord(currentDate);
     }
