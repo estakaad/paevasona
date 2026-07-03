@@ -78,7 +78,7 @@ async function loadWord(date) {
     currentData = data;
     content.innerHTML = renderWordHtml(data);
     document.title = `Päeva sõna \u2013 ${data.word}`;
-    document.getElementById('btn-share').hidden = false;
+    // document.getElementById('btn-share').hidden = false;
     updateNavButtons(date);
   } catch {
     content.innerHTML = `<div class="empty-state">
@@ -223,7 +223,7 @@ fetch(cacheBase + 'index.json')
         .then(r => r.json())
         .then(data => {
           currentData = data;
-          document.getElementById('btn-share').hidden = false;
+          // document.getElementById('btn-share').hidden = false;
         })
         .catch(() => {});
     } else {
