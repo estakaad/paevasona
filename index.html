@@ -125,6 +125,7 @@
       dateEl.setAttribute('datetime', date);
       document.getElementById('btn-prev').style.visibility = 'hidden';
       document.getElementById('btn-next').style.visibility = 'hidden';
+      document.getElementById('btn-share').hidden = true;
       content.innerHTML = '<div class="no-data">Laadimine...</div>';
       try {
         const res = await fetch(cacheBase + date + '.json?v=3');

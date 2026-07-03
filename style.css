@@ -782,10 +782,16 @@ p + p { margin-top: 0.85rem; }
   z-index: 200;
 }
 
-.share-btn:not(:disabled):hover::after,
 .share-btn:not(:disabled):focus-visible::after {
   opacity: 1;
   visibility: visible;
+}
+
+@media (hover: hover) {
+  .share-btn:not(:disabled):hover::after {
+    opacity: 1;
+    visibility: visible;
+  }
 }
 
 .share-btn:hover {
