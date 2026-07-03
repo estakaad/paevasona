@@ -11,7 +11,7 @@
 </head>
 <body class="palette-4">
   <header>
-    <a href="index.html">Päeva sõna</a>
+    <a href="./">Päeva sõna</a>
     <span class="page-title">info</span>
   </header>
 
@@ -24,7 +24,7 @@
     </div>
   </main>
   <div class="footer-links">
-    <button onclick="goRandom()">Suvakas</button>
+    <button id="btn-random">Suvakas</button>
     <a href="archive.html">Arhiiv</a>
     <a href="info.html">Info</a>
   </div>
@@ -37,8 +37,9 @@
       const dates = index.map(e => e.date).filter(d => d !== today);
       if (!dates.length) return;
       const date = dates[Math.floor(Math.random() * dates.length)];
-      window.location.href = './?date=' + date;
+      window.location.href = './' + date + '/';
     }
+    document.getElementById('btn-random').addEventListener('click', goRandom);
   </script>
 </body>
 </html>

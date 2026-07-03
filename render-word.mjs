@@ -70,7 +70,7 @@ export function renderWordHtml(data) {
       for (const lex of group.lexemes) {
         html += '<div class="lexeme">';
         if (lex.definitions && lex.definitions.length) {
-          html += '<ol class="definitions">';
+          html += '<ol class="definitions" role="list">';
           for (const rawDef of lex.definitions) {
             const def = rawDef.replace(/<eki-foreign>/g, '<em>').replace(/<\/eki-foreign>/g, '</em>');
             html += `<li><span>${def}</span></li>`;
@@ -87,7 +87,8 @@ export function renderWordHtml(data) {
                 if (typeof s === 'string') return escapeHtml(s);
                 const label = escapeHtml(s.label || '');
                 const detail = s.detail ? ` data-detail="${escapeHtml(s.detail)}"` : '';
-                return `<span class="usage-source-item"${detail}>${label}</span>`;
+                const interactive = s.detail ? ` role="button" tabindex="0" aria-expanded="false"` : '';
+                return `<span class="usage-source-item"${detail}${interactive}>${label}</span>`;
               });
               sourcesHtml = `<span class="usage-source">${parts.join('; ')}</span>`;
             }
@@ -102,7 +103,7 @@ export function renderWordHtml(data) {
   }
 
   const year = data.date.slice(0, 4);
-  html += `<div class="word-source">Allikas: ${escapeHtml(data.word)}. EKI ühendsõnastik ${year}. Eesti Keele Instituut, Sõnaveeb ${year}. <a href="${sonaveebiUrl}" target="_blank" rel="noopener">${sonaveebiUrl}</a> (${formatDateShort(data.date)})</div>`;
+  html += `<div class="word-source">Allikas: ${escapeHtml(data.word)}. EKI ühendsõnastik ${year}. Eesti Keele Instituut, Sõnaveeb ${year}. <a href="${sonaveebiUrl}" target="_blank" rel="noopener">${sonaveebiUrl}</a> (<time datetime="${data.date}">${formatDateShort(data.date)}</time>)</div>`;
 
   return html;
 }

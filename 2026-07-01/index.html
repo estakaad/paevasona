@@ -5,21 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>leema – Päeva sõna</title>
   <meta name="description" content="(tulevikus) olema">
-  <link rel="canonical" href="https://example.github.io/paevasona/2026-07-01/">
+  <link rel="canonical" href="https://päevasõna.ee/2026-07-01/">
   <meta property="og:type" content="article">
   <meta property="og:title" content="leema – Päeva sõna">
   <meta property="og:description" content="(tulevikus) olema">
-  <meta property="og:url" content="https://example.github.io/paevasona/2026-07-01/">
+  <meta property="og:url" content="https://päevasõna.ee/2026-07-01/">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="leema – Päeva sõna">
   <meta name="twitter:description" content="(tulevikus) olema">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"DefinedTerm","name":"leema","description":"(tulevikus) olema","url":"https://example.github.io/paevasona/2026-07-01/","sameAs":"https://sonaveeb.ee/search/unif/est/eki/leema/1/est","inDefinedTermSet":{"@type":"DefinedTermSet","name":"EKI ühendsõnastik","url":"https://sonaveeb.ee"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"DefinedTerm","name":"leema","description":"(tulevikus) olema","url":"https://päevasõna.ee/2026-07-01/","sameAs":"https://sonaveeb.ee/search/unif/est/eki/leema/1/est","inDefinedTermSet":{"@type":"DefinedTermSet","name":"EKI ühendsõnastik","url":"https://sonaveeb.ee"}}</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Lora:ital,wght@0,400;1,400&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../style.css">
 </head>
 <body class="palette-4">
+  <a href="#word-content" class="skip-link">Mine sisu juurde</a>
   <header>
     <a href="../">Päeva sõna</a>
     <span class="page-title">iga päev uus sõna</span>
@@ -28,14 +29,14 @@
   <main>
     <div class="word-card" id="word-card">
       <div class="word-card-top">
-        <span class="word-card-date" id="date-display">1. juuli 2026</span>
+        <time class="word-card-date" id="date-display" datetime="2026-07-01">1. juuli 2026</time>
       </div>
-      <div id="word-content"><div class="word-title"><a href="https://sonaveeb.ee/search/unif/est/eki/leema/1/est" target="_blank" rel="noopener">leema</a></div><div class="word-forms">leema, leeda, leeb</div><div class="pos-group"><div class="pos">tegusõna, verb</div><div class="lexeme"><ol class="definitions"><li><span>(tulevikus) olema</span></li></ol><div class="word-examples"><div class="usage">Eesti keel oli, on ja leeb.</div></div></div></div><div class="word-source">Allikas: leema. EKI ühendsõnastik 2026. Eesti Keele Instituut, Sõnaveeb 2026. <a href="https://sonaveeb.ee/search/unif/est/eki/leema/1/est" target="_blank" rel="noopener">https://sonaveeb.ee/search/unif/est/eki/leema/1/est</a> (01.07.2026)</div></div>
+      <div id="word-content" aria-live="polite" aria-atomic="true" tabindex="-1"><div class="word-title"><a href="https://sonaveeb.ee/search/unif/est/eki/leema/1/est" target="_blank" rel="noopener">leema</a></div><div class="word-forms">leema, leeda, leeb</div><div class="pos-group"><div class="pos">tegusõna, verb</div><div class="lexeme"><ol class="definitions" role="list"><li><span>(tulevikus) olema</span></li></ol><div class="word-examples"><div class="usage">Eesti keel oli, on ja leeb.</div></div></div></div><div class="word-source">Allikas: leema. EKI ühendsõnastik 2026. Eesti Keele Instituut, Sõnaveeb 2026. <a href="https://sonaveeb.ee/search/unif/est/eki/leema/1/est" target="_blank" rel="noopener">https://sonaveeb.ee/search/unif/est/eki/leema/1/est</a> (<time datetime="2026-07-01">01.07.2026</time>)</div></div>
     </div>
 
-    <nav>
-      <button id="btn-prev">&#8592;</button>
-      <button id="btn-next">&#8594;</button>
+    <nav aria-label="Päevade navigeerimine">
+      <button id="btn-prev" aria-label="Eelmine sõna">&#8592;</button>
+      <button id="btn-next" aria-label="Järgmine sõna">&#8594;</button>
     </nav>
   </main>
 
@@ -110,7 +111,9 @@ let currentDate = pathMatch ? pathMatch[1] : todayStr();
 
 async function loadWord(date) {
   const content = document.getElementById('word-content');
-  document.getElementById('date-display').textContent = formatDate(date);
+  const dateEl = document.getElementById('date-display');
+  dateEl.textContent = formatDate(date);
+  dateEl.setAttribute('datetime', date);
   document.getElementById('btn-prev').style.visibility = 'hidden';
   document.getElementById('btn-next').style.visibility = 'hidden';
   content.innerHTML = '<div class="no-data">Laadimine...</div>';
@@ -150,35 +153,79 @@ function goRandom() {
   loadWord(date);
 }
 
+// ── Tooltip ──────────────────────────────────────
+
 const sourceTooltip = document.createElement('div');
+sourceTooltip.id = 'source-tooltip';
 sourceTooltip.className = 'source-tooltip';
+sourceTooltip.setAttribute('role', 'tooltip');
 document.body.appendChild(sourceTooltip);
+
+function positionTooltip(item) {
+  const rect = item.getBoundingClientRect();
+  const tw = sourceTooltip.offsetWidth;
+  const th = sourceTooltip.offsetHeight;
+  let left = rect.left + window.scrollX;
+  let top = rect.bottom + window.scrollY + 6;
+  if (rect.left + tw > window.innerWidth - 8) left = window.scrollX + window.innerWidth - tw - 8;
+  if (rect.bottom + th + 6 > window.innerHeight) top = rect.top + window.scrollY - th - 6;
+  sourceTooltip.style.left = left + 'px';
+  sourceTooltip.style.top = top + 'px';
+}
+
+function showTooltip(item) {
+  sourceTooltip.textContent = item.dataset.detail;
+  sourceTooltip.style.left = '-9999px';
+  sourceTooltip.style.top = '-9999px';
+  sourceTooltip.classList.add('visible');
+  item.setAttribute('aria-expanded', 'true');
+  item.setAttribute('aria-describedby', 'source-tooltip');
+  positionTooltip(item);
+}
+
+function hideTooltip(item) {
+  sourceTooltip.classList.remove('visible');
+  if (item) {
+    item.setAttribute('aria-expanded', 'false');
+    item.removeAttribute('aria-describedby');
+  }
+}
 
 document.addEventListener('click', function(e) {
   const item = e.target.closest('[data-detail]');
   if (item) {
     e.stopPropagation();
-    const detail = item.dataset.detail;
-    if (sourceTooltip.dataset.for === detail && sourceTooltip.classList.contains('visible')) {
-      sourceTooltip.classList.remove('visible');
-      return;
+    if (item.getAttribute('aria-expanded') === 'true') {
+      hideTooltip(item);
+    } else {
+      const prev = document.querySelector('[data-detail][aria-expanded="true"]');
+      if (prev) hideTooltip(prev);
+      showTooltip(item);
     }
-    sourceTooltip.textContent = detail;
-    sourceTooltip.dataset.for = detail;
-    sourceTooltip.style.left = '-9999px';
-    sourceTooltip.style.top = '-9999px';
-    sourceTooltip.classList.add('visible');
-    const rect = item.getBoundingClientRect();
-    const tw = sourceTooltip.offsetWidth;
-    const th = sourceTooltip.offsetHeight;
-    let left = rect.left + window.scrollX;
-    let top = rect.bottom + window.scrollY + 6;
-    if (rect.left + tw > window.innerWidth - 8) left = window.scrollX + window.innerWidth - tw - 8;
-    if (rect.bottom + th + 6 > window.innerHeight) top = rect.top + window.scrollY - th - 6;
-    sourceTooltip.style.left = left + 'px';
-    sourceTooltip.style.top = top + 'px';
   } else {
-    sourceTooltip.classList.remove('visible');
+    const active = document.querySelector('[data-detail][aria-expanded="true"]');
+    if (active) hideTooltip(active);
+  }
+});
+
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    const active = document.querySelector('[data-detail][aria-expanded="true"]');
+    if (active) { hideTooltip(active); active.focus(); }
+    return;
+  }
+  if (e.key === 'Enter' || e.key === ' ') {
+    const item = e.target.closest('[data-detail]');
+    if (item) {
+      e.preventDefault();
+      if (item.getAttribute('aria-expanded') === 'true') {
+        hideTooltip(item);
+      } else {
+        const prev = document.querySelector('[data-detail][aria-expanded="true"]');
+        if (prev) hideTooltip(prev);
+        showTooltip(item);
+      }
+    }
   }
 });
 

@@ -62,7 +62,9 @@ let currentDate = pathMatch ? pathMatch[1] : todayStr();
 
 async function loadWord(date) {
   const content = document.getElementById('word-content');
-  document.getElementById('date-display').textContent = formatDate(date);
+  const dateEl = document.getElementById('date-display');
+  dateEl.textContent = formatDate(date);
+  dateEl.setAttribute('datetime', date);
   document.getElementById('btn-prev').style.visibility = 'hidden';
   document.getElementById('btn-next').style.visibility = 'hidden';
   content.innerHTML = '<div class="no-data">Laadimine...</div>';
@@ -102,35 +104,79 @@ function goRandom() {
   loadWord(date);
 }
 
+// ── Tooltip ──────────────────────────────────────
+
 const sourceTooltip = document.createElement('div');
+sourceTooltip.id = 'source-tooltip';
 sourceTooltip.className = 'source-tooltip';
+sourceTooltip.setAttribute('role', 'tooltip');
 document.body.appendChild(sourceTooltip);
+
+function positionTooltip(item) {
+  const rect = item.getBoundingClientRect();
+  const tw = sourceTooltip.offsetWidth;
+  const th = sourceTooltip.offsetHeight;
+  let left = rect.left + window.scrollX;
+  let top = rect.bottom + window.scrollY + 6;
+  if (rect.left + tw > window.innerWidth - 8) left = window.scrollX + window.innerWidth - tw - 8;
+  if (rect.bottom + th + 6 > window.innerHeight) top = rect.top + window.scrollY - th - 6;
+  sourceTooltip.style.left = left + 'px';
+  sourceTooltip.style.top = top + 'px';
+}
+
+function showTooltip(item) {
+  sourceTooltip.textContent = item.dataset.detail;
+  sourceTooltip.style.left = '-9999px';
+  sourceTooltip.style.top = '-9999px';
+  sourceTooltip.classList.add('visible');
+  item.setAttribute('aria-expanded', 'true');
+  item.setAttribute('aria-describedby', 'source-tooltip');
+  positionTooltip(item);
+}
+
+function hideTooltip(item) {
+  sourceTooltip.classList.remove('visible');
+  if (item) {
+    item.setAttribute('aria-expanded', 'false');
+    item.removeAttribute('aria-describedby');
+  }
+}
 
 document.addEventListener('click', function(e) {
   const item = e.target.closest('[data-detail]');
   if (item) {
     e.stopPropagation();
-    const detail = item.dataset.detail;
-    if (sourceTooltip.dataset.for === detail && sourceTooltip.classList.contains('visible')) {
-      sourceTooltip.classList.remove('visible');
-      return;
+    if (item.getAttribute('aria-expanded') === 'true') {
+      hideTooltip(item);
+    } else {
+      const prev = document.querySelector('[data-detail][aria-expanded="true"]');
+      if (prev) hideTooltip(prev);
+      showTooltip(item);
     }
-    sourceTooltip.textContent = detail;
-    sourceTooltip.dataset.for = detail;
-    sourceTooltip.style.left = '-9999px';
-    sourceTooltip.style.top = '-9999px';
-    sourceTooltip.classList.add('visible');
-    const rect = item.getBoundingClientRect();
-    const tw = sourceTooltip.offsetWidth;
-    const th = sourceTooltip.offsetHeight;
-    let left = rect.left + window.scrollX;
-    let top = rect.bottom + window.scrollY + 6;
-    if (rect.left + tw > window.innerWidth - 8) left = window.scrollX + window.innerWidth - tw - 8;
-    if (rect.bottom + th + 6 > window.innerHeight) top = rect.top + window.scrollY - th - 6;
-    sourceTooltip.style.left = left + 'px';
-    sourceTooltip.style.top = top + 'px';
   } else {
-    sourceTooltip.classList.remove('visible');
+    const active = document.querySelector('[data-detail][aria-expanded="true"]');
+    if (active) hideTooltip(active);
+  }
+});
+
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    const active = document.querySelector('[data-detail][aria-expanded="true"]');
+    if (active) { hideTooltip(active); active.focus(); }
+    return;
+  }
+  if (e.key === 'Enter' || e.key === ' ') {
+    const item = e.target.closest('[data-detail]');
+    if (item) {
+      e.preventDefault();
+      if (item.getAttribute('aria-expanded') === 'true') {
+        hideTooltip(item);
+      } else {
+        const prev = document.querySelector('[data-detail][aria-expanded="true"]');
+        if (prev) hideTooltip(prev);
+        showTooltip(item);
+      }
+    }
   }
 });
 

@@ -386,7 +386,7 @@ main {
 .no-data {
   font-family: 'Space Grotesk', sans-serif;
   font-size: 0.85rem;
-  color: #888;
+  color: #767676;
   font-style: italic;
 }
 
@@ -742,5 +742,86 @@ p + p { margin-top: 0.85rem; }
 
   .archive-list a {
     font-size: 1.15rem;
+  }
+}
+
+/* ── SKIP LINK ──────────────────────────────────── */
+
+.skip-link {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.skip-link:focus {
+  clip: auto;
+  clip-path: none;
+  height: auto;
+  overflow: visible;
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  width: auto;
+  z-index: 1000;
+  background: var(--color-accent-2);
+  color: var(--color-ink);
+  border: 3px solid var(--color-ink);
+  padding: 0.5rem 1rem;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+}
+
+/* ── FOCUS RINGS ────────────────────────────────── */
+
+nav button:focus-visible,
+.footer-links a:focus-visible,
+.footer-links button:focus-visible,
+.archive-sort button:focus-visible,
+.empty-state-btn:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.usage-source-item[data-detail]:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.archive-list a:focus-visible {
+  background-size: 100% 100%;
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.word-source a:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* ── REDUCED MOTION ─────────────────────────────── */
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+  nav button:hover,
+  nav button:active,
+  .footer-links a:hover,
+  .footer-links a:active,
+  .footer-links button:hover,
+  .footer-links button:active,
+  .archive-sort button:hover,
+  .archive-sort button:active,
+  .empty-state-btn:hover,
+  .empty-state-btn:active {
+    transform: none;
   }
 }

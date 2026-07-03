@@ -75,6 +75,7 @@ ${canonicalUrl ? `  <meta property="og:url" content="${canonicalUrl}">` : ''}
   <link rel="stylesheet" href="../style.css">
 </head>
 <body class="palette-4">
+  <a href="#word-content" class="skip-link">Mine sisu juurde</a>
   <header>
     <a href="../">P\u00e4eva s\u00f5na</a>
     <span class="page-title">iga p\u00e4ev uus s\u00f5na</span>
@@ -83,14 +84,14 @@ ${canonicalUrl ? `  <meta property="og:url" content="${canonicalUrl}">` : ''}
   <main>
     <div class="word-card" id="word-card">
       <div class="word-card-top">
-        <span class="word-card-date" id="date-display">${escapeHtml(formattedDate)}</span>
+        <time class="word-card-date" id="date-display" datetime="${date}">${escapeHtml(formattedDate)}</time>
       </div>
-      <div id="word-content">${preRenderedHtml}</div>
+      <div id="word-content" aria-live="polite" aria-atomic="true" tabindex="-1">${preRenderedHtml}</div>
     </div>
 
-    <nav>
-      <button id="btn-prev">&#8592;</button>
-      <button id="btn-next">&#8594;</button>
+    <nav aria-label="P\u00e4evade navigeerimine">
+      <button id="btn-prev" aria-label="Eelmine s\u00f5na">&#8592;</button>
+      <button id="btn-next" aria-label="J\u00e4rgmine s\u00f5na">&#8594;</button>
     </nav>
   </main>
 

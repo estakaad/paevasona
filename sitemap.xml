@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://example.github.io/paevasona/</loc>
+    <loc>https://päevasõna.ee/</loc>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://example.github.io/paevasona/2026-07-03/</loc>
+    <loc>https://päevasõna.ee/2026-07-03/</loc>
     <lastmod>2026-07-03</lastmod>
     <changefreq>never</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://example.github.io/paevasona/2026-07-02/</loc>
+    <loc>https://päevasõna.ee/2026-07-02/</loc>
     <lastmod>2026-07-02</lastmod>
     <changefreq>never</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://example.github.io/paevasona/2026-07-01/</loc>
+    <loc>https://päevasõna.ee/2026-07-01/</loc>
     <lastmod>2026-07-01</lastmod>
     <changefreq>never</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://example.github.io/paevasona/2026-06-30/</loc>
+    <loc>https://päevasõna.ee/2026-06-30/</loc>
     <lastmod>2026-06-30</lastmod>
     <changefreq>never</changefreq>
     <priority>0.8</priority>

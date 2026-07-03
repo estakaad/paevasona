@@ -10,8 +10,9 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body class="palette-4">
+  <a href="#archive-content" class="skip-link">Mine sisu juurde</a>
   <header>
-    <a href="index.html">Päeva sõna</a>
+    <a href="./">Päeva sõna</a>
     <span class="page-title">arhiiv</span>
   </header>
 
@@ -32,7 +33,7 @@
   </main>
 
   <div class="footer-links">
-    <button onclick="goRandom()">Suvakas</button>
+    <button id="btn-random">Suvakas</button>
     <a href="archive.html">Arhiiv</a>
     <a href="info.html">Info</a>
   </div>
@@ -53,12 +54,12 @@
           const dateStr = `${parseInt(d)}.${parseInt(m)}.${y}`;
           const isToday = entry.date === today;
           return `<li>
-            <a href="./?date=${entry.date}">${entry.word}</a>
+            <a href="./${entry.date}/">${entry.word}</a>
             ${isToday ? '<span class="archive-today-tag">täna</span>' : ''}
             <span class="archive-date">${dateStr}</span>
           </li>`;
         }).join('');
-        container.innerHTML = `<ul class="archive-list archive-list--flat">${items}</ul>`;
+        container.innerHTML = `<ul class="archive-list archive-list--flat" role="list">${items}</ul>`;
         return;
       }
 
@@ -88,14 +89,14 @@
           const isToday = entry.date === today;
           return `<li>
             <span class="archive-date">${day}.</span>
-            <a href="./?date=${entry.date}">${entry.word}</a>
+            <a href="./${entry.date}/">${entry.word}</a>
             ${isToday ? '<span class="archive-today-tag">täna</span>' : ''}
           </li>`;
         }).join('');
 
         return `<div class="archive-month${i === 0 ? ' archive-month--first' : ''}">
           <div class="archive-month-header">${monthName}</div>
-          <ul class="archive-list">${items}</ul>
+          <ul class="archive-list" role="list">${items}</ul>
         </div>`;
       }).join('');
     }
@@ -139,8 +140,10 @@
         ? archiveIndex.map(e => e.date).filter(d => d !== today)
         : await fetch('./cache/index.json').then(r => r.json()).then(idx => idx.map(e => e.date).filter(d => d !== today));
       if (!dates.length) return;
-      window.location.href = './?date=' + dates[Math.floor(Math.random() * dates.length)];
+      window.location.href = './' + dates[Math.floor(Math.random() * dates.length)] + '/';
     }
+
+    document.getElementById('btn-random').addEventListener('click', goRandom);
   </script>
 </body>
 </html>
