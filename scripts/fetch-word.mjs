@@ -124,7 +124,7 @@ const lexemes = (details.lexemes || []).map(lex => ({
   dataset: lex.datasetCode,
   pos: (lex.pos || []).map(p => p.code).filter(Boolean),
   definitions: ((lex.meaning && lex.meaning.definitions) || [])
-    .filter(d => d.lang === 'est')
+    .filter(d => d.lang === 'est' && d.wwUnif === true)
     .map(d => d.valuePrese || d.value),
   usages: ((lex.usages) || [])
     .filter(u => u.lang === 'est')
