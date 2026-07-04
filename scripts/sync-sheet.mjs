@@ -131,9 +131,9 @@ async function fetchAndCache(date, word) {
 
   const lexemes = (details.lexemes || []).map(lex => ({
     dataset: lex.datasetCode,
-    pos: (lex.pos || []).map(p => p.value).filter(Boolean),
+    pos: (lex.pos || []).map(p => p.code).filter(Boolean),
     definitions: ((lex.meaning && lex.meaning.definitions) || [])
-      .filter(d => d.lang === 'est')
+      .filter(d => d.lang === 'est' && d.wwUnif === true)
       .map(d => d.valuePrese || d.value),
     usages: (lex.usages || [])
       .filter(u => u.lang === 'est')
@@ -151,16 +151,51 @@ async function fetchAndCache(date, word) {
   return true;
 }
 
-// Fetch all words whose date is today or earlier
-const today = new Date().toISOString().slice(0, 10);
-const toFetch = schedule.filter(e => e.date <= today);
-console.log(`Kontrollin ${toFetch.length} kirjet (kuni ${today})...`);
+// Use local date (not UTC) to avoid off-by-one before midnight
+const _now = new Date();
+const today = `${_now.getFullYear()}-${String(_now.getMonth()+1).padStart(2,'0')}-${String(_now.getDate()).padStart(2,'0')}`;
+
+// Build set of already-published words from existing cache
+const cacheDir2 = join(ROOT, 'cache');
+if (!existsSync(cacheDir2)) mkdirSync(cacheDir2);
+const usedWords = new Set(
+  readdirSync(cacheDir2)
+    .filter(f => /^\d{4}-\d{2}-\d{2}\.json$/.test(f))
+    .flatMap(f => {
+      try { const w = JSON.parse(readFileSync(join(cacheDir2, f), 'utf8')).word; return w ? [w.toLowerCase()] : []; }
+      catch { return []; }
+    })
+);
+
+// Dates that need fetching: scheduled up to today, not yet cached
+const toProcess = schedule.filter(e =>
+  e.date <= today && !existsSync(join(cacheDir2, `${e.date}.json`))
+);
+console.log(`${toProcess.length} uut kuupäeva töötlemisel (kuni ${today})...`);
+
+// For a given schedule index, find the word to use:
+// use scheduled word if non-empty and unused, otherwise scan forward for next available.
+function resolveWord(scheduleIdx) {
+  const scheduled = schedule[scheduleIdx]?.word;
+  if (scheduled && !usedWords.has(scheduled.toLowerCase())) return { word: scheduled, fallback: false };
+  const reason = !scheduled ? 'tühi' : `"${scheduled}" juba avaldatud`;
+  for (let i = scheduleIdx + 1; i < schedule.length; i++) {
+    const w = schedule[i].word;
+    if (w && !usedWords.has(w.toLowerCase())) return { word: w, fallback: true, reason };
+  }
+  return { word: null, fallback: true, reason };
+}
 
 let fetched = 0;
-for (const { date, word } of toFetch) {
+for (const { date } of toProcess) {
+  const idx = schedule.findIndex(e => e.date === date);
+  const { word, fallback, reason } = resolveWord(idx);
+  if (!word) { console.warn(`  SKIP: ${date} — ${reason}, asendust ei leitud`); continue; }
+  if (fallback) console.log(`  INFO: ${date} planeeritud sõna ${reason}, kasutan: "${word}"`);
   try {
     const isNew = await fetchAndCache(date, word);
     if (isNew) {
+      usedWords.add(word.toLowerCase());
       console.log(`  OK: ${date} — ${word}`);
       fetched++;
     }
