@@ -58,7 +58,8 @@ export function getFirstDefinition(data) {
 export function renderWordHtml(data) {
   const sonaveebiUrl = `https://sonaveeb.ee/search/unif/est/eki/${encodeURIComponent(data.word)}/1/est`;
 
-  let html = `<div class="word-title"><a href="${sonaveebiUrl}" target="_blank" rel="noopener">${escapeHtml(data.word)}</a></div>`;
+  const wlen = Math.max(...data.word.split('-').map(s => s.length));
+  let html = `<div class="word-title" style="--wlen:${wlen}"><a href="${sonaveebiUrl}" target="_blank" rel="noopener">${escapeHtml(data.word)}</a></div>`;
 
   const f = data.forms || {};
   const nounForms = ['SgN', 'SgG', 'SgP'].map(c => f[c]).filter(Boolean);

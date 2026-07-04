@@ -141,7 +141,7 @@ body {
 
 header {
   width: 100%;
-  max-width: 640px;
+  max-width: 720px;
   margin-bottom: 2.5rem;
   display: flex;
   align-items: center;
@@ -180,7 +180,7 @@ header a:hover { color: var(--color-accent); }
 
 main {
   width: 100%;
-  max-width: 640px;
+  max-width: 720px;
 }
 
 /* ── WORD CARD ──────────────────────────────────── */
@@ -191,6 +191,7 @@ main {
   box-shadow: 5px 5px 0 var(--color-ink);
   padding: 1.75rem 2.5rem 3rem;
   margin-bottom: 1.75rem;
+  container-type: inline-size;
 }
 
 .word-card-top {
@@ -213,11 +214,12 @@ main {
 .word-title {
   font-family: 'Fraunces', serif;
   font-size: 5.5rem;
+  font-size: clamp(1.75rem, calc(160cqw / var(--wlen, 8)), 5.5rem);
   font-weight: 800;
   font-variation-settings: 'opsz' 72, 'WONK' 1;
   line-height: 1.2;
   margin-bottom: 1rem;
-  overflow: hidden;
+  overflow-wrap: break-word;
 }
 
 .word-title a {
@@ -301,13 +303,10 @@ main {
   counter-increment: def-counter;
   display: flex;
   align-items: flex-start;
-  gap: 1.25rem;
-  padding: 1rem 0;
-  border-bottom: 2px solid var(--color-ink);
+  gap: 0.75rem;
+  padding: 0.5rem 0;
   line-height: 1.65;
 }
-
-.definitions li:last-child { border-bottom: none; }
 
 .definitions li::before {
   content: counter(def-counter);
@@ -718,18 +717,30 @@ p + p { margin-top: 0.85rem; }
   }
 
   .word-card {
-    padding: 1.25rem 1.25rem 2.5rem;
+    padding: 1rem 1rem 2rem;
     box-shadow: 3px 3px 0 var(--color-ink);
   }
 
   .word-title {
-    font-size: 3.5rem;
     margin-bottom: 0.5rem;
   }
 
+  .definitions li {
+    display: block;
+    padding: 0.4rem 0;
+  }
+
   .definitions li::before {
-    font-size: 1.75rem;
-    min-width: 1.5rem;
+    display: inline;
+    font-size: 1rem;
+    min-width: auto;
+    margin-right: 0.35rem;
+    vertical-align: baseline;
+  }
+
+  .definitions li span {
+    display: inline;
+    padding-top: 0;
   }
 
   nav button {
