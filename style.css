@@ -850,9 +850,7 @@ p + p { margin-top: 0.85rem; }
 /* ── FIXED NAV ARROWS ───────────────────────────── */
 
 .fixed-nav {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  position: fixed; /* top/left/right set dynamically by JS via getBoundingClientRect */
   z-index: 50;
   background: transparent;
   border: none;
@@ -867,10 +865,6 @@ p + p { margin-top: 0.85rem; }
   cursor: pointer;
   transition: opacity 0.15s, color 0.15s, transform 0.12s;
 }
-
-/* ~43px gap from card edge at any viewport width */
-.fixed-nav--prev { left: -100px; }
-.fixed-nav--next { right: -100px; }
 
 .fixed-nav-arrow {
   font-size: 2.5rem;
@@ -891,11 +885,11 @@ p + p { margin-top: 0.85rem; }
 .fixed-nav:hover {
   opacity: 1;
   color: var(--color-accent);
-  transform: translateY(-50%) scale(1.1);
+  transform: scale(1.1);
 }
 
 .fixed-nav:active {
-  transform: translateY(-50%) scale(0.92);
+  transform: scale(0.92);
 }
 
 .fixed-nav:focus-visible {
@@ -1111,7 +1105,7 @@ p + p { margin-top: 0.85rem; }
   .suggest-submit:active,
   .fixed-nav:hover,
   .fixed-nav:active {
-    transform: translateY(-50%);
+    transform: none;
   }
   .mobile-nav-btn:active { background: transparent; }
 }

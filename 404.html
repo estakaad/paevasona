@@ -277,6 +277,19 @@ document.addEventListener('keydown', function(e) {
   }
 });
 
+function positionSideArrows() {
+  const card = document.getElementById('word-card');
+  if (!card) return;
+  const rect = card.getBoundingClientRect();
+  const top = (rect.top + window.scrollY) + 'px';
+  const prev = document.getElementById('btn-prev-fixed');
+  const next = document.getElementById('btn-next-fixed');
+  if (prev) { prev.style.top = top; prev.style.left = (rect.left - 100) + 'px'; }
+  if (next) { next.style.top = top; next.style.right = (window.innerWidth - rect.right - 100) + 'px'; }
+}
+positionSideArrows();
+window.addEventListener('resize', positionSideArrows);
+
 document.getElementById('btn-prev-fixed').addEventListener('click', () => navigate(-1));
 document.getElementById('btn-next-fixed').addEventListener('click', () => navigate(1));
 document.getElementById('btn-prev-mobile').addEventListener('click', () => navigate(-1));
