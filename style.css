@@ -218,8 +218,10 @@ main {
   font-weight: 800;
   font-variation-settings: 'opsz' 72, 'WONK' 1;
   line-height: 1.2;
-  margin-bottom: 1rem;
+  margin-bottom: 0.25rem;
   overflow-wrap: break-word;
+  overflow: hidden;
+  padding-bottom: 0.45em;
 }
 
 .word-title a {
@@ -230,7 +232,6 @@ main {
   background-position: 0 100%;
   background-repeat: no-repeat;
   transition: background-size 0.18s ease;
-  padding-bottom: 0.45em;
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
 }

@@ -65,9 +65,6 @@ export function renderWordHtml(data) {
   const nounForms = ['SgN', 'SgG', 'SgP'].map(c => f[c]).filter(Boolean);
   const verbForms = ['Sup', 'Inf', 'IndPrSg3'].map(c => f[c]).filter(Boolean);
   const displayForms = nounForms.length >= 2 ? nounForms : verbForms.length >= 2 ? verbForms : [];
-  if (displayForms.length) {
-    html += `<div class="word-forms">${displayForms.map(escapeHtml).join(', ')}</div>`;
-  }
 
   const lexemes = data.lexemes || [];
   if (!lexemes.length) {
@@ -84,11 +81,15 @@ export function renderWordHtml(data) {
       }
     }
 
-    for (const group of posGroups) {
+    for (let gi = 0; gi < posGroups.length; gi++) {
+      const group = posGroups[gi];
       html += '<div class="pos-group">';
       if (group.pos.length) {
         const posLabel = group.pos.map(p => POS_LABELS[p] || p).join(', ');
         html += `<div class="pos">${escapeHtml(posLabel)}</div>`;
+      }
+      if (gi === 0 && displayForms.length) {
+        html += `<div class="word-forms">${displayForms.map(escapeHtml).join(', ')}</div>`;
       }
       for (const lex of group.lexemes) {
         html += '<div class="lexeme">';
