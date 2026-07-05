@@ -705,6 +705,130 @@ p + p { margin-top: 0.85rem; }
 
 .word-card a:hover { color: var(--color-ink); }
 
+/* ── SUGGEST FORM ───────────────────────────────── */
+
+.suggest-heading {
+  font-family: 'Fraunces', serif;
+  font-size: 1.75rem;
+  font-weight: 800;
+  font-variation-settings: 'opsz' 36, 'WONK' 1;
+  text-transform: none;
+  letter-spacing: 0;
+  margin-bottom: 0.5rem;
+  color: var(--color-ink);
+}
+
+.suggest-intro {
+  margin-bottom: 1.5rem;
+}
+
+.suggest-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.suggest-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--color-ink);
+}
+
+.suggest-required {
+  color: var(--color-accent);
+}
+
+.suggest-form input[type="text"],
+.suggest-form textarea {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 1rem;
+  color: var(--color-ink);
+  background: var(--color-bg);
+  border: 2px solid var(--color-ink);
+  padding: 0.55rem 0.75rem;
+  width: 100%;
+  transition: box-shadow 0.1s;
+  resize: vertical;
+}
+
+.suggest-form input[type="text"]:focus,
+.suggest-form textarea:focus {
+  outline: none;
+  box-shadow: 3px 3px 0 var(--color-accent);
+}
+
+.suggest-hp {
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+  tab-size: 0;
+}
+
+.suggest-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.suggest-submit {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-surface);
+  background: var(--color-accent);
+  border: 3px solid var(--color-ink);
+  box-shadow: 3px 3px 0 var(--color-ink);
+  padding: 0.55rem 1.5rem;
+  cursor: pointer;
+  transition: transform 0.08s, box-shadow 0.08s;
+}
+
+.suggest-submit:hover:not(:disabled) {
+  box-shadow: 1px 1px 0 var(--color-ink);
+  transform: translate(2px, 2px);
+}
+
+.suggest-submit:active:not(:disabled) {
+  box-shadow: 0 0 0 var(--color-ink);
+  transform: translate(3px, 3px);
+}
+
+.suggest-submit:disabled {
+  opacity: 0.55;
+  cursor: default;
+  transform: none;
+  box-shadow: 3px 3px 0 var(--color-ink);
+}
+
+.suggest-submit:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+.suggest-status {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.suggest-status--ok  { color: #1F7A47; }
+.suggest-status--err { color: var(--color-accent); }
+
 /* ── RESPONSIVE ─────────────────────────────────── */
 
 @media (max-width: 480px) {
@@ -904,7 +1028,9 @@ nav button:focus-visible,
   .archive-sort button:hover,
   .archive-sort button:active,
   .empty-state-btn:hover,
-  .empty-state-btn:active {
+  .empty-state-btn:active,
+  .suggest-submit:hover,
+  .suggest-submit:active {
     transform: none;
   }
 }

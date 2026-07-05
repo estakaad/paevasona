@@ -22,8 +22,30 @@
   <main>
     <div class="word-card">
       <section>
-        <p>Iga päev kuvatakse siin EKI ühendsõnastikust üht sõna koos seletuste ja kasutusnäidetega. Täpsemat infot saab lugeda Sõnaveebist, kui klikkida päeva sõnale või allikaviites leiduvale lingile. Sõnad olen valinud selle järgi, mis mulle on tundunud toredad või huvitavad.</p>
+        <h2 class="suggest-heading">Mis see on?</h2>
+        <p>Iga päev kuvatakse siin EKI ühendsõnastikust üht sõna koos seletuste ja kasutusnäidetega. Täpsemat infot saab lugeda Sõnaveebist, kui klikkida päeva sõnale või allikaviites leiduvale lingile. </p>
         <p>Tagasiside ja küsimustega kirjuta: <a href="mailto:esta.prangel@gmail.com">esta.prangel@gmail.com</a></p>
+      </section>
+    </div>
+
+    <div class="word-card">
+      <section>
+        <h2 class="suggest-heading">Soovita sõna</h2>
+        <p class="suggest-intro">Kui tead mõnda toredat sõna, mis võiks siin lehel ilmuda, saada see mulle.</p>
+        <form class="suggest-form" id="suggest-form" novalidate>
+          <label for="suggest-word">
+            <input type="text" id="suggest-word" name="word" maxlength="50" autocomplete="off" spellcheck="false">
+          </label>
+          <!-- Honeypot: off-screen, invisible to humans, bots tend to fill it -->
+          <div class="suggest-hp" aria-hidden="true">
+            <label for="suggest-website">Jäta tühjaks</label>
+            <input type="text" id="suggest-website" name="website" tabindex="-1" autocomplete="off">
+          </div>
+          <div class="suggest-actions">
+            <button type="submit" class="suggest-submit" id="suggest-submit">Saada</button>
+            <p class="suggest-status" id="suggest-status" role="status" aria-live="polite"></p>
+          </div>
+        </form>
       </section>
     </div>
   </main>
@@ -46,6 +68,81 @@
       window.location.href = './' + date + '/';
     }
     document.getElementById('btn-random').addEventListener('click', goRandom);
+  </script>
+  <script>
+    // ── Sõna ettepaneku vorm ─────────────────────────────────────────────
+    // TODO: paste your deployed Apps Script Web App URL below.
+    const SUGGEST_URL = 'https://script.google.com/macros/s/AKfycbxz75BXYkZy66487eXqv6h8yLTM9mrLEUPwUAnEGbaDA_AeLwhlXTfcVQKPs80uZxSewQ/exec';
+
+    // Session token for server-side rate limiting (regenerated after success).
+    function newToken() {
+      return Array.from(crypto.getRandomValues(new Uint8Array(16)))
+        .map(b => b.toString(16).padStart(2, '0')).join('');
+    }
+    let suggestToken = sessionStorage.getItem('ps_suggest_token') || newToken();
+    sessionStorage.setItem('ps_suggest_token', suggestToken);
+
+    const form       = document.getElementById('suggest-form');
+    const wordInput  = document.getElementById('suggest-word');
+    const hpInput    = document.getElementById('suggest-website');
+    const submitBtn  = document.getElementById('suggest-submit');
+    const statusEl   = document.getElementById('suggest-status');
+    const origLabel  = submitBtn.textContent;
+
+    const ERROR_MSGS = {
+      empty:        'Palun sisesta sõna.',
+      too_long:     'Sõna on liiga pikk (max 50 tähemärki).',
+      rate_limited: 'Palun oota hetk enne uut saatmist.',
+      server_error: 'Midagi läks valesti. Proovi uuesti.',
+    };
+
+    function setStatus(text, type) {
+      statusEl.textContent = text;
+      statusEl.className = 'suggest-status' + (type ? ' suggest-status--' + type : '');
+    }
+
+    form.addEventListener('submit', async (ev) => {
+      ev.preventDefault();
+      if (submitBtn.disabled) return;
+
+      const word = wordInput.value.trim();
+      if (!word) { setStatus('Palun sisesta sõna.', 'err'); wordInput.focus(); return; }
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Saadan\u2026';
+      setStatus('', '');
+
+      try {
+        // Send as plain string body — avoids CORS preflight with Apps Script.
+        const res = await fetch(SUGGEST_URL, {
+          method: 'POST',
+          body: JSON.stringify({
+            word,
+            token: suggestToken,
+            website: hpInput.value,   // honeypot value
+          }),
+          redirect: 'follow',
+        });
+        const data = await res.json();
+
+        if (data.ok) {
+          setStatus('Aitäh! Vaatan s\u00f5na \u00fcle.', 'ok');
+          form.reset();
+          submitBtn.textContent = origLabel;
+          submitBtn.disabled = false;
+          suggestToken = newToken();
+          sessionStorage.setItem('ps_suggest_token', suggestToken);
+        } else {
+          setStatus(ERROR_MSGS[data.error] || 'Midagi l\u00e4ks valesti.', 'err');
+          submitBtn.disabled = false;
+          submitBtn.textContent = origLabel;
+        }
+      } catch {
+        setStatus('Saatmine eba\u00f5nnestus. Kontrolli interneti\u00fchendust.', 'err');
+        submitBtn.disabled = false;
+        submitBtn.textContent = origLabel;
+      }
+    });
   </script>
 </body>
 </html>
