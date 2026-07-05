@@ -31,11 +31,29 @@
       <div id="word-content" aria-live="polite" aria-atomic="true" tabindex="-1"><div class="no-data">Laadimine...</div></div>
     </div>
 
-    <nav aria-label="Päevade navigeerimine">
-      <button id="btn-prev" aria-label="Eelmine sõna">&#8592;</button>
-      <button id="btn-next" aria-label="Järgmine sõna">&#8594;</button>
-    </nav>
+  <button class="fixed-nav fixed-nav--prev" id="btn-prev-fixed" aria-label="Eelmine sõna" style="visibility:hidden">
+    <span class="fixed-nav-arrow">&#8592;</span>
+    <span class="fixed-nav-label" id="label-prev-fixed"></span>
+  </button>
+  <button class="fixed-nav fixed-nav--next" id="btn-next-fixed" aria-label="Järgmine sõna" style="visibility:hidden">
+    <span class="fixed-nav-arrow">&#8594;</span>
+    <span class="fixed-nav-label" id="label-next-fixed"></span>
+  </button>
   </main>
+
+  <div class="mobile-nav" role="navigation" aria-label="Navigeerimine">
+    <button class="mobile-nav-btn" id="btn-prev-mobile" aria-label="Eelmine sõna" disabled>
+      <span class="mobile-nav-arrow">&#8592;</span>
+      <span class="mobile-nav-label" id="label-prev-mobile">Eelmine</span>
+    </button>
+    <button class="mobile-nav-btn" id="btn-next-mobile" aria-label="Järgmine sõna" disabled>
+      <span class="mobile-nav-arrow">&#8594;</span>
+      <span class="mobile-nav-label" id="label-next-mobile">Järgmine</span>
+    </button>
+    <button class="mobile-nav-btn" id="btn-random-mobile">Suvakas</button>
+    <a class="mobile-nav-btn" href="../archive.html">Arhiiv</a>
+    <a class="mobile-nav-btn" href="../info.html">Info</a>
+  </div>
 
   <div class="footer-links">
     <button id="btn-random">Suvakas</button>
@@ -78,28 +96,38 @@ function getAdjacentDates(date) {
 }
 
 function updateNavButtons(date) {
-  const btnPrev = document.getElementById('btn-prev');
-  const btnNext = document.getElementById('btn-next');
   const { prevDate, nextDate } = getAdjacentDates(date);
+  const btnPrevFixed = document.getElementById('btn-prev-fixed');
+  const btnNextFixed = document.getElementById('btn-next-fixed');
+  const btnPrevMobile = document.getElementById('btn-prev-mobile');
+  const btnNextMobile = document.getElementById('btn-next-mobile');
   if (prevDate) {
     const label = formatDateNav(prevDate);
-    btnPrev.innerHTML = `&#8592; <span class="nav-date">${label}</span>`;
-    btnPrev.setAttribute('aria-label', 'Eelmine sõna: ' + label);
-    btnPrev.style.visibility = 'visible';
+    btnPrevFixed.setAttribute('aria-label', 'Eelmine sõna: ' + label);
+    document.getElementById('label-prev-fixed').textContent = label;
+    btnPrevFixed.style.visibility = 'visible';
+    btnPrevMobile.disabled = false;
+    btnPrevMobile.setAttribute('aria-label', 'Eelmine sõna: ' + label);
+    document.getElementById('label-prev-mobile').textContent = label;
   } else {
-    btnPrev.innerHTML = '&#8592;';
-    btnPrev.removeAttribute('aria-label');
-    btnPrev.style.visibility = 'hidden';
+    btnPrevFixed.style.visibility = 'hidden';
+    document.getElementById('label-prev-fixed').textContent = '';
+    btnPrevMobile.disabled = true;
+    document.getElementById('label-prev-mobile').textContent = 'Eelmine';
   }
   if (nextDate) {
     const label = formatDateNav(nextDate);
-    btnNext.innerHTML = `<span class="nav-date">${label}</span> &#8594;`;
-    btnNext.setAttribute('aria-label', 'Järgmine sõna: ' + label);
-    btnNext.style.visibility = 'visible';
+    btnNextFixed.setAttribute('aria-label', 'Järgmine sõna: ' + label);
+    document.getElementById('label-next-fixed').textContent = label;
+    btnNextFixed.style.visibility = 'visible';
+    btnNextMobile.disabled = false;
+    btnNextMobile.setAttribute('aria-label', 'Järgmine sõna: ' + label);
+    document.getElementById('label-next-mobile').textContent = label;
   } else {
-    btnNext.innerHTML = '&#8594;';
-    btnNext.removeAttribute('aria-label');
-    btnNext.style.visibility = 'hidden';
+    btnNextFixed.style.visibility = 'hidden';
+    document.getElementById('label-next-fixed').textContent = '';
+    btnNextMobile.disabled = true;
+    document.getElementById('label-next-mobile').textContent = 'Järgmine';
   }
 }
 
@@ -113,8 +141,8 @@ let currentDate = pathMatch ? pathMatch[1] : null;
 if (!currentDate) {
   document.getElementById('date-display').textContent = '';
   document.getElementById('word-content').innerHTML = '<div class="empty-state"><p class="empty-state-msg">Lehekülge ei leitud.</p></div>';
-  document.getElementById('btn-prev').style.visibility = 'hidden';
-  document.getElementById('btn-next').style.visibility = 'hidden';
+  document.getElementById('btn-prev-fixed').style.visibility = 'hidden';
+  document.getElementById('btn-next-fixed').style.visibility = 'hidden';
   throw new Error('not a date URL');
 }
 
@@ -123,8 +151,10 @@ async function loadWord(date) {
   const dateEl = document.getElementById('date-display');
   dateEl.textContent = formatDate(date);
   dateEl.setAttribute('datetime', date);
-  document.getElementById('btn-prev').style.visibility = 'hidden';
-  document.getElementById('btn-next').style.visibility = 'hidden';
+  document.getElementById('btn-prev-fixed').style.visibility = 'hidden';
+  document.getElementById('btn-next-fixed').style.visibility = 'hidden';
+  document.getElementById('btn-prev-mobile').disabled = true;
+  document.getElementById('btn-next-mobile').disabled = true;
   document.getElementById('btn-share').hidden = true;
   content.innerHTML = '<div class="no-data">Laadimine...</div>';
   try {
@@ -247,8 +277,11 @@ document.addEventListener('keydown', function(e) {
   }
 });
 
-document.getElementById('btn-prev').addEventListener('click', () => navigate(-1));
-document.getElementById('btn-next').addEventListener('click', () => navigate(1));
+document.getElementById('btn-prev-fixed').addEventListener('click', () => navigate(-1));
+document.getElementById('btn-next-fixed').addEventListener('click', () => navigate(1));
+document.getElementById('btn-prev-mobile').addEventListener('click', () => navigate(-1));
+document.getElementById('btn-next-mobile').addEventListener('click', () => navigate(1));
+document.getElementById('btn-random-mobile').addEventListener('click', goRandom);
 document.getElementById('btn-random').addEventListener('click', goRandom);
 
 const shareBtn = document.getElementById('btn-share');

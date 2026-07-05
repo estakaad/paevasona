@@ -50,6 +50,12 @@
       </section>
     </div>
   </main>
+  <div class="mobile-nav" role="navigation" aria-label="Navigeerimine">
+    <button class="mobile-nav-btn" id="btn-random-mobile">Suvakas</button>
+    <a class="mobile-nav-btn" href="archive.html">Arhiiv</a>
+    <a class="mobile-nav-btn" href="info.html">Info</a>
+  </div>
+
   <div class="footer-links">
     <button id="btn-random">Suvakas</button>
     <a href="archive.html">Arhiiv</a>
@@ -69,6 +75,7 @@
       window.location.href = './' + date + '/';
     }
     document.getElementById('btn-random').addEventListener('click', goRandom);
+    document.getElementById('btn-random-mobile').addEventListener('click', goRandom);
   </script>
   <script>
     // ── Sõna ettepaneku vorm ─────────────────────────────────────────────

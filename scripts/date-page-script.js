@@ -30,46 +30,48 @@ function getAdjacentDates(date) {
 }
 
 function updateNavButtons(date) {
-  const btnPrev = document.getElementById('btn-prev');
-  const btnNext = document.getElementById('btn-next');
   const { prevDate, nextDate } = getAdjacentDates(date);
+  // Desktop side arrows
+  const btnPrevFixed = document.getElementById('btn-prev-fixed');
+  const btnNextFixed = document.getElementById('btn-next-fixed');
   if (prevDate) {
     const label = formatDateNav(prevDate);
-    btnPrev.innerHTML = `&#8592; <span class="nav-date">${label}</span>`;
-    btnPrev.setAttribute('aria-label', 'Eelmine sõna: ' + label);
-    btnPrev.style.visibility = 'visible';
+    btnPrevFixed.setAttribute('aria-label', 'Eelmine sõna: ' + label);
+    document.getElementById('label-prev-fixed').textContent = label;
+    btnPrevFixed.style.visibility = 'visible';
   } else {
-    btnPrev.innerHTML = '&#8592;';
-    btnPrev.removeAttribute('aria-label');
-    btnPrev.style.visibility = 'hidden';
+    btnPrevFixed.style.visibility = 'hidden';
+    document.getElementById('label-prev-fixed').textContent = '';
   }
   if (nextDate) {
     const label = formatDateNav(nextDate);
-    btnNext.innerHTML = `<span class="nav-date">${label}</span> &#8594;`;
-    btnNext.setAttribute('aria-label', 'Järgmine sõna: ' + label);
-    btnNext.style.visibility = 'visible';
+    btnNextFixed.setAttribute('aria-label', 'Järgmine sõna: ' + label);
+    document.getElementById('label-next-fixed').textContent = label;
+    btnNextFixed.style.visibility = 'visible';
   } else {
-    btnNext.innerHTML = '&#8594;';
-    btnNext.removeAttribute('aria-label');
-    btnNext.style.visibility = 'hidden';
+    btnNextFixed.style.visibility = 'hidden';
+    document.getElementById('label-next-fixed').textContent = '';
   }
-  const btnPrevFixed = document.getElementById('btn-prev-fixed');
-  const btnNextFixed = document.getElementById('btn-next-fixed');
-  if (btnPrevFixed) {
-    if (prevDate) {
-      btnPrevFixed.setAttribute('aria-label', 'Eelmine sõna: ' + formatDateNav(prevDate));
-      btnPrevFixed.style.visibility = 'visible';
-    } else {
-      btnPrevFixed.style.visibility = 'hidden';
-    }
+  // Mobile bottom bar
+  const btnPrevMobile = document.getElementById('btn-prev-mobile');
+  const btnNextMobile = document.getElementById('btn-next-mobile');
+  if (prevDate) {
+    const label = formatDateNav(prevDate);
+    btnPrevMobile.disabled = false;
+    btnPrevMobile.setAttribute('aria-label', 'Eelmine sõna: ' + label);
+    document.getElementById('label-prev-mobile').textContent = label;
+  } else {
+    btnPrevMobile.disabled = true;
+    document.getElementById('label-prev-mobile').textContent = 'Eelmine';
   }
-  if (btnNextFixed) {
-    if (nextDate) {
-      btnNextFixed.setAttribute('aria-label', 'Järgmine sõna: ' + formatDateNav(nextDate));
-      btnNextFixed.style.visibility = 'visible';
-    } else {
-      btnNextFixed.style.visibility = 'hidden';
-    }
+  if (nextDate) {
+    const label = formatDateNav(nextDate);
+    btnNextMobile.disabled = false;
+    btnNextMobile.setAttribute('aria-label', 'Järgmine sõna: ' + label);
+    document.getElementById('label-next-mobile').textContent = label;
+  } else {
+    btnNextMobile.disabled = true;
+    document.getElementById('label-next-mobile').textContent = 'Järgmine';
   }
 }
 
@@ -85,10 +87,10 @@ async function loadWord(date) {
   const dateEl = document.getElementById('date-display');
   dateEl.textContent = formatDate(date);
   dateEl.setAttribute('datetime', date);
-  document.getElementById('btn-prev').style.visibility = 'hidden';
-  document.getElementById('btn-next').style.visibility = 'hidden';
   document.getElementById('btn-prev-fixed').style.visibility = 'hidden';
   document.getElementById('btn-next-fixed').style.visibility = 'hidden';
+  document.getElementById('btn-prev-mobile').disabled = true;
+  document.getElementById('btn-next-mobile').disabled = true;
   document.getElementById('btn-share').hidden = true;
   content.innerHTML = '<div class="no-data">Laadimine...</div>';
   try {
@@ -211,10 +213,11 @@ document.addEventListener('keydown', function(e) {
   }
 });
 
-document.getElementById('btn-prev').addEventListener('click', () => navigate(-1));
-document.getElementById('btn-next').addEventListener('click', () => navigate(1));
 document.getElementById('btn-prev-fixed').addEventListener('click', () => navigate(-1));
 document.getElementById('btn-next-fixed').addEventListener('click', () => navigate(1));
+document.getElementById('btn-prev-mobile').addEventListener('click', () => navigate(-1));
+document.getElementById('btn-next-mobile').addEventListener('click', () => navigate(1));
+document.getElementById('btn-random-mobile').addEventListener('click', goRandom);
 document.getElementById('btn-random').addEventListener('click', goRandom);
 
 const shareBtn = document.getElementById('btn-share');

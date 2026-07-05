@@ -97,20 +97,35 @@ ${canonicalUrl ? `  <meta property="og:url" content="${canonicalUrl}">` : ''}
       <div id="word-content" aria-live="polite" aria-atomic="true" tabindex="-1">${preRenderedHtml}</div>
     </div>
 
-    <nav aria-label="P\u00e4evade navigeerimine">
-      <button id="btn-prev" aria-label="Eelmine s\u00f5na">&#8592;</button>
-      <button id="btn-next" aria-label="J\u00e4rgmine s\u00f5na">&#8594;</button>
-    </nav>
+  <button class="fixed-nav fixed-nav--prev" id="btn-prev-fixed" aria-label="Eelmine s\u00f5na" style="visibility:hidden">
+    <span class="fixed-nav-arrow">&#8592;</span>
+    <span class="fixed-nav-label" id="label-prev-fixed"></span>
+  </button>
+  <button class="fixed-nav fixed-nav--next" id="btn-next-fixed" aria-label="J\u00e4rgmine s\u00f5na" style="visibility:hidden">
+    <span class="fixed-nav-arrow">&#8594;</span>
+    <span class="fixed-nav-label" id="label-next-fixed"></span>
+  </button>
   </main>
+
+  <div class="mobile-nav" role="navigation" aria-label="Navigeerimine">
+    <button class="mobile-nav-btn" id="btn-prev-mobile" aria-label="Eelmine s\u00f5na" disabled>
+      <span class="mobile-nav-arrow">&#8592;</span>
+      <span class="mobile-nav-label" id="label-prev-mobile">Eelmine</span>
+    </button>
+    <button class="mobile-nav-btn" id="btn-next-mobile" aria-label="J\u00e4rgmine s\u00f5na" disabled>
+      <span class="mobile-nav-arrow">&#8594;</span>
+      <span class="mobile-nav-label" id="label-next-mobile">J\u00e4rgmine</span>
+    </button>
+    <button class="mobile-nav-btn" id="btn-random-mobile">Suvakas</button>
+    <a class="mobile-nav-btn" href="../archive.html">Arhiiv</a>
+    <a class="mobile-nav-btn" href="../info.html">Info</a>
+  </div>
 
   <div class="footer-links">
     <button id="btn-random">Suvakas</button>
     <a href="../archive.html">Arhiiv</a>
     <a href="../info.html">Info</a>
   </div>
-
-  <button class="fixed-nav fixed-nav--prev" id="btn-prev-fixed" aria-label="Eelmine s\u00f5na" style="visibility:hidden">&#8592;</button>
-  <button class="fixed-nav fixed-nav--next" id="btn-next-fixed" aria-label="J\u00e4rgmine s\u00f5na" style="visibility:hidden">&#8594;</button>
 
   <script data-goatcounter="https://paevasona.goatcounter.com/count"
           async src="//gc.zgo.at/count.js"></script>
