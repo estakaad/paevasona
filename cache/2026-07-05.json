@@ -1,0 +1,35 @@
+{
+  "date": "2026-07-05",
+  "word": "aplaager",
+  "wordId": 330483,
+  "forms": {
+    "SgN": "aplaager",
+    "SgG": "aplaagri",
+    "SgP": "aplaagrit"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "tööst, aktiivsest tegevusest kõrval olek"
+      ],
+      "usages": [
+        {
+          "text": "Kui ma aplaagrisse jään, kes mu peret siis toidab?",
+          "sources": []
+        },
+        {
+          "text": "Ilmselt on nad praegu aplaagris ega saa vaesuse tõttu kinno minna.",
+          "sources": []
+        },
+        {
+          "text": "Tänavu kevadel on Nõmme turg aplaagris.",
+          "sources": []
+        }
+      ]
+    }
+  ]
+}
