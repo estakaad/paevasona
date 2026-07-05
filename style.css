@@ -973,7 +973,7 @@ p + p { margin-top: 0.85rem; }
 .share-btn[hidden] { display: none; }
 
 .share-btn::after {
-  content: "Kopeeri pildina";
+  content: "Jaga sõna";
   position: absolute;
   top: calc(100% + 6px);
   right: 0;
@@ -1026,6 +1026,129 @@ p + p { margin-top: 0.85rem; }
   outline: 3px solid var(--color-accent);
   outline-offset: 2px;
 }
+
+/* ── SHARE MODAL ────────────────────────────────── */
+
+.share-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(26, 26, 26, 0.55);
+  z-index: 600;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0.5rem;
+  overflow-y: auto;
+}
+
+.share-modal-overlay[hidden] { display: none; }
+
+.share-modal {
+  background: var(--color-surface);
+  border: 3px solid var(--color-ink);
+  box-shadow: 6px 6px 0 var(--color-ink);
+  max-width: min(680px, calc(100vw - 1rem));
+  width: 100%;
+  padding: 0.875rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+  margin: auto; /* vertical centering when content is short */
+}
+
+.share-modal-preview {
+  border: 2px solid var(--color-ink);
+  background: var(--color-bg);
+  overflow: hidden;
+  position: relative;
+}
+
+.share-modal-close {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  z-index: 10;
+  background: var(--color-surface);
+  border: 2px solid var(--color-ink);
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1;
+  padding: 0.3rem 0.55rem;
+  cursor: pointer;
+  color: var(--color-ink);
+  transition: background 0.1s;
+}
+
+.share-modal-close:hover { background: var(--color-accent-2); }
+
+.share-modal-close:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.share-modal-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.share-modal-img[hidden] { display: none; }
+
+.share-modal-status {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.875rem;
+  padding: 2rem;
+  text-align: center;
+  margin: 0;
+}
+
+.share-modal-status[hidden] { display: none; }
+
+.share-modal-actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.share-modal-action {
+  flex: 1;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  padding: 0.6rem 1rem;
+  border: 2px solid var(--color-ink);
+  box-shadow: 3px 3px 0 var(--color-ink);
+  background: var(--color-accent-2);
+  color: var(--color-ink);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: transform 0.08s, box-shadow 0.08s;
+}
+
+.share-modal-action:hover {
+  transform: translate(1px, 1px);
+  box-shadow: 2px 2px 0 var(--color-ink);
+}
+
+.share-modal-action:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0 var(--color-ink);
+}
+
+.share-modal-action:disabled {
+  opacity: 0.45;
+  cursor: default;
+  transform: none;
+  box-shadow: 3px 3px 0 var(--color-ink);
+}
+
+.share-modal-action:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.share-modal-action[hidden] { display: none; }
 
 /* ── SKIP LINK ──────────────────────────────────── */
 

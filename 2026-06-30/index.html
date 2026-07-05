@@ -35,8 +35,8 @@
     <div class="word-card" id="word-card">
       <div class="word-card-top">
         <time class="word-card-date" id="date-display" datetime="2026-06-30">30. juuni 2026</time>
-        <button class="share-btn" id="btn-share" hidden aria-label="Kopeeri pildina">
-          <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+        <button class="share-btn" id="btn-share" hidden aria-label="Jaga s\u00f5na">
+          <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
         </button>
       </div>
       <div id="word-content" aria-live="polite" aria-atomic="true" tabindex="-1"><div class="word-title" style="--wlen:10"><a href="https://sonaveeb.ee/search/unif/est/eki/naksitrall/1/est" target="_blank" rel="noopener">naksitrall</a></div><div class="pos-group"><div class="pos">nimisõna</div><div class="word-forms">naksitrall, naksitralli, naksitralli</div><div class="lexeme"><ol class="definitions" role="list"><li><span>üks kolmest väikesest lustlikust mehikesest Eno Raua lasteraamatutes</span></li></ol><div class="word-examples"><div class="usage">Üks naksitrallidest suhtles endaga kirja teel.</div><div class="usage">Abivalmis naksitrallid vabastavad linnakese kassidest, kuid see toob kaasa uue nuhtluse – rotid.</div></div></div><div class="lexeme"><ol class="definitions" role="list"><li><span>(kellegi või millegi toreda, vahva, hakkaja, uhke kohta)</span></li></ol><div class="word-examples"><div class="usage">Meie pojake on igavene naksitrall.</div><div class="usage">Ning peagi oli igal mehel naksitrall [tüdruk] põlvel.<span class="usage-source"><span class="usage-source-item" data-detail="Lilli Promet. Muinasjutud. – Leninlik Lipp 04.08.1964." role="button" tabindex="0" aria-expanded="false">Lilli Promet 1964</span></span></div><div class="usage">.. hakkasid Pariisi preilid mind vahtima. Üks mustajuukseline naksitrall pidas kalessi kinni ..<span class="usage-source"><span class="usage-source-item" data-detail="Aimée Beekman. Eesti kirjakeele arhiiv. Eesti Keele Instituut. 4,3 mln sedelit, kogutud 1960–2000." role="button" tabindex="0" aria-expanded="false">Aimée Beekman</span></span></div></div></div></div><div class="word-source">Allikas: naksitrall. EKI ühendsõnastik 2026. Eesti Keele Instituut, Sõnaveeb 2026. <a href="https://sonaveeb.ee/search/unif/est/eki/naksitrall/1/est" target="_blank" rel="noopener">https://sonaveeb.ee/search/unif/est/eki/naksitrall/1/est</a> (<time datetime="2026-06-30">30.06.2026</time>)</div></div>
@@ -80,7 +80,7 @@
 // Import paths resolve relative to the HTML document URL, not this file.
 
 import { renderWordHtml, formatDate } from '../render-word.mjs';
-import { generateAndShareImage } from '../share-image.mjs';
+import { openShareModal } from '../share-image.mjs';
 
 // Capture stable base URLs before any pushState changes the document URL.
 const cacheBase = new URL('../cache/', window.location.href).href;
@@ -177,7 +177,7 @@ async function loadWord(date) {
     currentData = data;
     content.innerHTML = renderWordHtml(data);
     document.title = `P\u00e4eva s\u00f5na \u2013 ${data.word}`;
-    // document.getElementById('btn-share').hidden = false;
+    document.getElementById('btn-share').hidden = false;
     updateNavButtons(date);
   } catch {
     content.innerHTML = `<div class="empty-state">
@@ -323,21 +323,8 @@ document.getElementById('btn-next-mobile').addEventListener('click', () => navig
 document.getElementById('btn-random-mobile').addEventListener('click', goRandom);
 document.getElementById('btn-random').addEventListener('click', goRandom);
 
-const shareBtn = document.getElementById('btn-share');
-const shareBtnLabel = shareBtn.innerHTML;
-shareBtn.addEventListener('click', async () => {
-  if (!currentData || shareBtn.disabled) return;
-  shareBtn.disabled = true;
-  try {
-    await generateAndShareImage(currentData);
-    shareBtn.innerHTML = '<svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>';
-    shareBtn.setAttribute('aria-label', 'Kopeeritud!');
-    setTimeout(() => { shareBtn.disabled = false; shareBtn.innerHTML = shareBtnLabel; shareBtn.setAttribute('aria-label', 'Kopeeri pildina'); }, 2000);
-  } catch (e) {
-    console.error('Copy failed:', e);
-    shareBtn.disabled = false;
-    shareBtn.innerHTML = shareBtnLabel;
-  }
+document.getElementById('btn-share').addEventListener('click', () => {
+  if (currentData) openShareModal(currentData);
 });
 
 fetch(cacheBase + 'index.json')
@@ -351,7 +338,7 @@ fetch(cacheBase + 'index.json')
         .then(r => r.json())
         .then(data => {
           currentData = data;
-          // document.getElementById('btn-share').hidden = false;
+          document.getElementById('btn-share').hidden = false;
         })
         .catch(() => {});
     } else {

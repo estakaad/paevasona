@@ -3,7 +3,7 @@
 // Import paths resolve relative to the HTML document URL, not this file.
 
 import { renderWordHtml, formatDate } from '../render-word.mjs';
-import { generateAndShareImage } from '../share-image.mjs';
+import { openShareModal } from '../share-image.mjs';
 
 // Capture stable base URLs before any pushState changes the document URL.
 const cacheBase = new URL('../cache/', window.location.href).href;
@@ -100,7 +100,7 @@ async function loadWord(date) {
     currentData = data;
     content.innerHTML = renderWordHtml(data);
     document.title = `P\u00e4eva s\u00f5na \u2013 ${data.word}`;
-    // document.getElementById('btn-share').hidden = false;
+    document.getElementById('btn-share').hidden = false;
     updateNavButtons(date);
   } catch {
     content.innerHTML = `<div class="empty-state">
@@ -246,21 +246,8 @@ document.getElementById('btn-next-mobile').addEventListener('click', () => navig
 document.getElementById('btn-random-mobile').addEventListener('click', goRandom);
 document.getElementById('btn-random').addEventListener('click', goRandom);
 
-const shareBtn = document.getElementById('btn-share');
-const shareBtnLabel = shareBtn.innerHTML;
-shareBtn.addEventListener('click', async () => {
-  if (!currentData || shareBtn.disabled) return;
-  shareBtn.disabled = true;
-  try {
-    await generateAndShareImage(currentData);
-    shareBtn.innerHTML = '<svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>';
-    shareBtn.setAttribute('aria-label', 'Kopeeritud!');
-    setTimeout(() => { shareBtn.disabled = false; shareBtn.innerHTML = shareBtnLabel; shareBtn.setAttribute('aria-label', 'Kopeeri pildina'); }, 2000);
-  } catch (e) {
-    console.error('Copy failed:', e);
-    shareBtn.disabled = false;
-    shareBtn.innerHTML = shareBtnLabel;
-  }
+document.getElementById('btn-share').addEventListener('click', () => {
+  if (currentData) openShareModal(currentData);
 });
 
 fetch(cacheBase + 'index.json')
@@ -274,7 +261,7 @@ fetch(cacheBase + 'index.json')
         .then(r => r.json())
         .then(data => {
           currentData = data;
-          // document.getElementById('btn-share').hidden = false;
+          document.getElementById('btn-share').hidden = false;
         })
         .catch(() => {});
     } else {
