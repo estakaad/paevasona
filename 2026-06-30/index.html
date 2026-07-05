@@ -5,15 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Päeva sõna – naksitrall</title>
   <meta name="description" content="üks kolmest väikesest lustlikust mehikesest Eno Raua lasteraamatutes">
-  <link rel="canonical" href="https://päevasõna.ee/2026-06-30/">
+
   <meta property="og:type" content="article">
   <meta property="og:title" content="Päeva sõna – naksitrall">
   <meta property="og:description" content="üks kolmest väikesest lustlikust mehikesest Eno Raua lasteraamatutes">
-  <meta property="og:url" content="https://päevasõna.ee/2026-06-30/">
+
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Päeva sõna – naksitrall">
   <meta name="twitter:description" content="üks kolmest väikesest lustlikust mehikesest Eno Raua lasteraamatutes">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"DefinedTerm","name":"naksitrall","description":"üks kolmest väikesest lustlikust mehikesest Eno Raua lasteraamatutes","url":"https://päevasõna.ee/2026-06-30/","sameAs":"https://sonaveeb.ee/search/unif/est/eki/naksitrall/1/est","inDefinedTermSet":{"@type":"DefinedTermSet","name":"EKI ühendsõnastik","url":"https://sonaveeb.ee"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"DefinedTerm","name":"naksitrall","description":"üks kolmest väikesest lustlikust mehikesest Eno Raua lasteraamatutes","sameAs":"https://sonaveeb.ee/search/unif/est/eki/naksitrall/1/est","inDefinedTermSet":{"@type":"DefinedTermSet","name":"EKI ühendsõnastik","url":"https://sonaveeb.ee"}}</script>
   <link rel="alternate" type="application/rss+xml" title="Päeva sõna" href="../feed.xml">
   <link rel="icon" type="image/svg+xml" href="../favicon.svg">
   <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
@@ -53,6 +53,9 @@
     <a href="../archive.html">Arhiiv</a>
     <a href="../info.html">Info</a>
   </div>
+
+  <button class="fixed-nav fixed-nav--prev" id="btn-prev-fixed" aria-label="Eelmine sõna" style="visibility:hidden">&#8592;</button>
+  <button class="fixed-nav fixed-nav--next" id="btn-next-fixed" aria-label="Järgmine sõna" style="visibility:hidden">&#8594;</button>
 
   <script data-goatcounter="https://paevasona.goatcounter.com/count"
           async src="//gc.zgo.at/count.js"></script>
@@ -112,6 +115,24 @@ function updateNavButtons(date) {
     btnNext.removeAttribute('aria-label');
     btnNext.style.visibility = 'hidden';
   }
+  const btnPrevFixed = document.getElementById('btn-prev-fixed');
+  const btnNextFixed = document.getElementById('btn-next-fixed');
+  if (btnPrevFixed) {
+    if (prevDate) {
+      btnPrevFixed.setAttribute('aria-label', 'Eelmine sõna: ' + formatDateNav(prevDate));
+      btnPrevFixed.style.visibility = 'visible';
+    } else {
+      btnPrevFixed.style.visibility = 'hidden';
+    }
+  }
+  if (btnNextFixed) {
+    if (nextDate) {
+      btnNextFixed.setAttribute('aria-label', 'Järgmine sõna: ' + formatDateNav(nextDate));
+      btnNextFixed.style.visibility = 'visible';
+    } else {
+      btnNextFixed.style.visibility = 'hidden';
+    }
+  }
 }
 
 let availableDates = new Set();
@@ -128,6 +149,8 @@ async function loadWord(date) {
   dateEl.setAttribute('datetime', date);
   document.getElementById('btn-prev').style.visibility = 'hidden';
   document.getElementById('btn-next').style.visibility = 'hidden';
+  document.getElementById('btn-prev-fixed').style.visibility = 'hidden';
+  document.getElementById('btn-next-fixed').style.visibility = 'hidden';
   document.getElementById('btn-share').hidden = true;
   content.innerHTML = '<div class="no-data">Laadimine...</div>';
   try {
@@ -252,6 +275,8 @@ document.addEventListener('keydown', function(e) {
 
 document.getElementById('btn-prev').addEventListener('click', () => navigate(-1));
 document.getElementById('btn-next').addEventListener('click', () => navigate(1));
+document.getElementById('btn-prev-fixed').addEventListener('click', () => navigate(-1));
+document.getElementById('btn-next-fixed').addEventListener('click', () => navigate(1));
 document.getElementById('btn-random').addEventListener('click', goRandom);
 
 const shareBtn = document.getElementById('btn-share');

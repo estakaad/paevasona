@@ -53,6 +53,24 @@ function updateNavButtons(date) {
     btnNext.removeAttribute('aria-label');
     btnNext.style.visibility = 'hidden';
   }
+  const btnPrevFixed = document.getElementById('btn-prev-fixed');
+  const btnNextFixed = document.getElementById('btn-next-fixed');
+  if (btnPrevFixed) {
+    if (prevDate) {
+      btnPrevFixed.setAttribute('aria-label', 'Eelmine sõna: ' + formatDateNav(prevDate));
+      btnPrevFixed.style.visibility = 'visible';
+    } else {
+      btnPrevFixed.style.visibility = 'hidden';
+    }
+  }
+  if (btnNextFixed) {
+    if (nextDate) {
+      btnNextFixed.setAttribute('aria-label', 'Järgmine sõna: ' + formatDateNav(nextDate));
+      btnNextFixed.style.visibility = 'visible';
+    } else {
+      btnNextFixed.style.visibility = 'hidden';
+    }
+  }
 }
 
 let availableDates = new Set();
@@ -69,6 +87,8 @@ async function loadWord(date) {
   dateEl.setAttribute('datetime', date);
   document.getElementById('btn-prev').style.visibility = 'hidden';
   document.getElementById('btn-next').style.visibility = 'hidden';
+  document.getElementById('btn-prev-fixed').style.visibility = 'hidden';
+  document.getElementById('btn-next-fixed').style.visibility = 'hidden';
   document.getElementById('btn-share').hidden = true;
   content.innerHTML = '<div class="no-data">Laadimine...</div>';
   try {
@@ -193,6 +213,8 @@ document.addEventListener('keydown', function(e) {
 
 document.getElementById('btn-prev').addEventListener('click', () => navigate(-1));
 document.getElementById('btn-next').addEventListener('click', () => navigate(1));
+document.getElementById('btn-prev-fixed').addEventListener('click', () => navigate(-1));
+document.getElementById('btn-next-fixed').addEventListener('click', () => navigate(1));
 document.getElementById('btn-random').addEventListener('click', goRandom);
 
 const shareBtn = document.getElementById('btn-share');

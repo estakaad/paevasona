@@ -109,6 +109,9 @@ ${canonicalUrl ? `  <meta property="og:url" content="${canonicalUrl}">` : ''}
     <a href="../info.html">Info</a>
   </div>
 
+  <button class="fixed-nav fixed-nav--prev" id="btn-prev-fixed" aria-label="Eelmine s\u00f5na" style="visibility:hidden">&#8592;</button>
+  <button class="fixed-nav fixed-nav--next" id="btn-next-fixed" aria-label="J\u00e4rgmine s\u00f5na" style="visibility:hidden">&#8594;</button>
+
   <script data-goatcounter="https://paevasona.goatcounter.com/count"
           async src="//gc.zgo.at/count.js"></script>
   <script type="module">
