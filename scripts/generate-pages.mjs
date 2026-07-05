@@ -69,6 +69,7 @@ ${canonicalUrl ? `  <meta property="og:url" content="${canonicalUrl}">` : ''}
   <meta name="twitter:title" content="${escapedTitle}">
   <meta name="twitter:description" content="${escapedDesc}">
   <script type="application/ld+json">${jsonLd}</script>
+  <link rel="alternate" type="application/rss+xml" title="P\u00e4eva s\u00f5na" href="../feed.xml">
   <link rel="icon" type="image/svg+xml" href="../favicon.svg">
   <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
@@ -160,3 +161,60 @@ const robotsPath = join(ROOT, 'robots.txt');
 const sitemapLine = SITE_URL ? `\nSitemap: ${SITE_URL}/sitemap.xml` : '';
 writeFileSync(robotsPath, `User-agent: *\nAllow: /${sitemapLine}\n`, 'utf8');
 console.log('Generated robots.txt.');
+
+// --- feed.xml (requires SITE_URL) ---
+const RSS_LIMIT = 50;
+const RFC822_DAYS   = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+const RFC822_MONTHS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+
+function toRfc822(dateStr) {
+  const [y, m, d] = dateStr.split('-').map(Number);
+  // Estonia: EEST UTC+3 (Apr–Oct), EET UTC+2 (Nov–Mar)
+  const tz = (m >= 4 && m <= 10) ? '+0300' : '+0200';
+  const dow = RFC822_DAYS[new Date(y, m - 1, d).getDay()];
+  return `${dow}, ${String(d).padStart(2, '0')} ${RFC822_MONTHS[m - 1]} ${y} 00:00:00 ${tz}`;
+}
+
+function xmlEsc(str) {
+  return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
+
+if (SITE_URL) {
+  const feedEntries = index.slice(0, RSS_LIMIT);
+  const lastBuildDate = feedEntries.length ? toRfc822(feedEntries[0].date) : '';
+
+  const items = feedEntries.map(({ date, word }) => {
+    const cacheFile = join(ROOT, 'cache', `${date}.json`);
+    let def = '';
+    if (existsSync(cacheFile)) {
+      def = truncate(getFirstDefinition(JSON.parse(readFileSync(cacheFile, 'utf8'))), 300);
+    }
+    const url = `${SITE_URL}/${date}/`;
+    return `    <item>
+      <title>${xmlEsc(word)}</title>
+      <link>${xmlEsc(url)}</link>
+      <guid isPermaLink="true">${xmlEsc(url)}</guid>
+      <pubDate>${toRfc822(date)}</pubDate>
+      <description>${xmlEsc(def)}</description>
+    </item>`;
+  }).join('\n');
+
+  const feedUrl = `${SITE_URL}/feed.xml`;
+  const rss = `<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>P\u00e4eva s\u00f5na</title>
+    <link>${xmlEsc(SITE_URL)}/</link>
+    <description>Eesti keele huvitavad ja harvad s\u00f5nad iga p\u00e4ev</description>
+    <language>et</language>
+    <lastBuildDate>${lastBuildDate}</lastBuildDate>
+    <atom:link href="${xmlEsc(feedUrl)}" rel="self" type="application/rss+xml"/>
+${items}
+  </channel>
+</rss>
+`;
+  writeFileSync(join(ROOT, 'feed.xml'), rss, 'utf8');
+  console.log(`Generated feed.xml with ${feedEntries.length} items.`);
+} else {
+  console.log('SITE_URL not set \u2014 skipping feed.xml.');
+}
