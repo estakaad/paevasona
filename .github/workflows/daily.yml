@@ -35,7 +35,7 @@ jobs:
 
       - name: Generate per-date pages, sitemap and robots.txt
         env:
-          SITE_URL: https://päevasõna.ee
+          SITE_URL: https://xn--pevasna-5wa1n.ee
         run: node scripts/generate-pages.mjs
 
       - name: Commit if changed
