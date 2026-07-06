@@ -20,12 +20,18 @@ jobs:
         with:
           node-version: '20'
 
+      - name: Install dependencies
+        run: npm ci
+
       - name: Sync sheet and fetch new words
         env:
           EKILEX_API_KEY: ${{ secrets.EKILEX_API_KEY }}
           EKILEX_API_URL: https://ekilex.ee
           GOOGLE_SHEET_CSV_URL: ${{ secrets.GOOGLE_SHEET_CSV_URL }}
         run: node scripts/sync-sheet.mjs
+
+      - name: Generate og:image PNGs
+        run: node scripts/generate-og-images.mjs
 
       - name: Generate per-date pages, sitemap and robots.txt
         env:

@@ -4,5 +4,8 @@
   "scripts": {
     "fetch": "node scripts/fetch-word.mjs",
     "sync": "node scripts/sync-sheet.mjs"
+  },
+  "dependencies": {
+    "@napi-rs/canvas": "^1.0.2"
   }
 }

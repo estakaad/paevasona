@@ -28,6 +28,7 @@ function truncate(str, max) {
 function buildDatePageHtml(data) {
   const { word, date } = data;
   const canonicalUrl = SITE_URL ? `${SITE_URL}/${date}/` : '';
+  const ogImageUrl   = SITE_URL ? `${SITE_URL}/images/og/${date}.png` : '';
   const sonaveebiUrl = `https://sonaveeb.ee/search/unif/est/eki/${encodeURIComponent(word)}/1/est`;
 
   const firstDef = getFirstDefinition(data);
@@ -64,10 +65,11 @@ ${canonicalUrl ? `  <link rel="canonical" href="${canonicalUrl}">` : ''}
   <meta property="og:type" content="article">
   <meta property="og:title" content="${escapedTitle}">
   <meta property="og:description" content="${escapedDesc}">
-${canonicalUrl ? `  <meta property="og:url" content="${canonicalUrl}">` : ''}
-  <meta name="twitter:card" content="summary">
+${canonicalUrl ? `  <meta property="og:url" content="${canonicalUrl}">` : ''}${ogImageUrl ? `\n  <meta property="og:image" content="${ogImageUrl}">\n  <meta property="og:image:width" content="1200">\n  <meta property="og:image:height" content="630">` : ''}
+  <meta name="twitter:card" content="${ogImageUrl ? 'summary_large_image' : 'summary'}">
   <meta name="twitter:title" content="${escapedTitle}">
   <meta name="twitter:description" content="${escapedDesc}">
+${ogImageUrl ? `  <meta name="twitter:image" content="${ogImageUrl}">` : ''}
   <script type="application/ld+json">${jsonLd}</script>
   <link rel="alternate" type="application/rss+xml" title="P\u00e4eva s\u00f5na" href="../feed.xml">
   <link rel="icon" type="image/svg+xml" href="../favicon.svg">
