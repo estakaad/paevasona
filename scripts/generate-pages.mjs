@@ -155,6 +155,47 @@ for (const { date } of index) {
   generated++;
 }
 
+// --- Update root index.html with today's word meta tags ---
+// index[0] is the most recent entry (newest-first).
+// Replaces the block between <!-- og-meta:start --> and <!-- og-meta:end -->
+// so the root URL gets an accurate daily preview image and description.
+if (SITE_URL && index.length > 0) {
+  const todayEntry = index[0];
+  const todayCacheFile = join(ROOT, 'cache', `${todayEntry.date}.json`);
+  if (existsSync(todayCacheFile)) {
+    const todayData = JSON.parse(readFileSync(todayCacheFile, 'utf8'));
+    const todayDef   = getFirstDefinition(todayData);
+    const todayDesc  = truncate(todayDef || todayData.word, 155);
+    const todayTitle = 'P\u00e4eva s\u00f5na \u2013 ' + escapeHtml(todayData.word);
+    const todayDescE = escapeHtml(todayDesc);
+    const ogImage    = `${SITE_URL}/images/og/${todayEntry.date}.png`;
+
+    const metaBlock =
+`<!-- og-meta:start -->
+  <meta name="description" content="${todayDescE}">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="${todayTitle}">
+  <meta property="og:description" content="${todayDescE}">
+  <meta property="og:image" content="${ogImage}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="${todayTitle}">
+  <meta name="twitter:description" content="${todayDescE}">
+  <meta name="twitter:image" content="${ogImage}">
+<!-- og-meta:end -->`;
+
+    const rootPath = join(ROOT, 'index.html');
+    const rootHtml = readFileSync(rootPath, 'utf8');
+    const updated  = rootHtml.replace(
+      /<!-- og-meta:start -->[\s\S]*?<!-- og-meta:end -->/,
+      metaBlock,
+    );
+    writeFileSync(rootPath, updated, 'utf8');
+    console.log(`Updated root index.html meta tags for ${todayEntry.date} (${todayData.word}).`);
+  }
+}
+
 console.log(`Generated ${generated} date pages.`);
 
 // --- sitemap.xml (requires SITE_URL) ---
