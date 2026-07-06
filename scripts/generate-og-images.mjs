@@ -108,13 +108,12 @@ async function generateOgImage(data) {
   const citeLines = wrapLines(ctx, citeText, CONT_W);
   const citeH = citeLines.length * 24;
 
-  // Main block total height (word + underline + def + POS)
+  // Main block total height (word + underline + POS + def)
   const mainH = (
     wordLines.length * LH_WORD +
     6 + 8 + 18 +                                                // underline (gap + strip + gap-below)
-    (defLines.length > 0 ? defLines.length * 42 : 0) +          // definition lines
-    (defLines.length > 0 && posLabel ? 16 : 0) +                // gap def → POS
-    (posLabel ? POS_H : 0)
+    (posLabel ? POS_H + 16 : 0) +                               // POS badge + gap below
+    (defLines.length > 0 ? defLines.length * 42 : 0)            // definition lines
   );
 
   // ── Vertical zone layout ──────────────────────────────────────────
@@ -181,17 +180,6 @@ async function generateOgImage(data) {
   ctx.fillRect(CONT_X, y + 6, CONT_W, 8);
   y += 6 + 8 + 18;
 
-  // First definition
-  if (defLines.length > 0) {
-    ctx.font = '400 30px Lora';
-    ctx.fillStyle = INK;
-    ctx.textBaseline = 'top';
-    let defY = y;
-    for (const line of defLines) { ctx.fillText(line, CONT_X, defY); defY += 42; }
-    y += defLines.length * 42;
-    if (posLabel) y += 16;
-  }
-
   // POS badge (ACCENT2 fill, INK border + text)
   if (posLabel) {
     ctx.font = '500 15px "Space Grotesk"';
@@ -204,6 +192,16 @@ async function generateOgImage(data) {
     ctx.fillStyle = INK;
     ctx.textBaseline = 'middle';
     ctx.fillText(posUpper, CONT_X + 12, y + POS_H / 2);
+    y += POS_H + 16;
+  }
+
+  // First definition
+  if (defLines.length > 0) {
+    ctx.font = '400 30px Lora';
+    ctx.fillStyle = INK;
+    ctx.textBaseline = 'top';
+    let defY = y;
+    for (const line of defLines) { ctx.fillText(line, CONT_X, defY); defY += 42; }
   }
 
   // ── Footer: full citation anchored to bottom ──────────────────────
