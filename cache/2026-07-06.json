@@ -1,0 +1,27 @@
+{
+  "date": "2026-07-06",
+  "word": "supivalgus",
+  "wordId": 237510,
+  "forms": {
+    "SgN": "supivalgus",
+    "SgG": "supivalguse",
+    "SgP": "supivalgust"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "(endisajal supile lisatud piima kohta, ka piima kohta üldse)"
+      ],
+      "usages": [
+        {
+          "text": "Piimapukkide juurde toodi hommikuti kokku nii supivalgus, kohalik kõmu kui ka jagamist vajavad mured-rõõmud.",
+          "sources": []
+        }
+      ]
+    }
+  ]
+}
