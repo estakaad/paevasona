@@ -1,0 +1,32 @@
+{
+  "date": "2026-07-07",
+  "word": "aiduraidutama",
+  "wordId": 1378063,
+  "forms": {
+    "Sup": "aiduraidutama",
+    "Inf": "aiduraidutada",
+    "IndPrSg3": "aiduraidutab"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "v"
+      ],
+      "definitions": [
+        "(sõnadeta, üksluist) laulujoru ajama"
+      ],
+      "usages": [
+        {
+          "text": ".. meie laulame – nemad aiduraidutavad; meie vaidleme – nemad sõimavad ..",
+          "sources": [
+            {
+              "label": "Ernst Peterson-Särgava",
+              "detail": "Ernst Peterson-Särgava. Eesti kirjakeele arhiiv. Eesti Keele Instituut. 4,3 mln sedelit, kogutud 1960–2000."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
