@@ -1,0 +1,28 @@
+{
+  "date": "2026-07-08",
+  "word": "näpuviluks",
+  "wordId": 210151,
+  "forms": {},
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "adv"
+      ],
+      "definitions": [
+        "(näpu)tööks, et tööd oleks"
+      ],
+      "usages": [
+        {
+          "text": "Oleks minu teha: mulle näpuviluks jääksid, maalutada, lustiks, silmailuks.",
+          "sources": [
+            {
+              "label": "Marie Under",
+              "detail": "Marie Under. Eesti kirjakeele arhiiv. Eesti Keele Instituut. 4,3 mln sedelit, kogutud 1960–2000."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

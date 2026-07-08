@@ -5,8 +5,15 @@
     <link>https://xn--pevasna-5wa1n.ee/</link>
     <description>Eesti keele huvitavad ja harvad sõnad iga päev</description>
     <language>et</language>
-    <lastBuildDate>Tue, 07 Jul 2026 00:00:00 +0300</lastBuildDate>
+    <lastBuildDate>Wed, 08 Jul 2026 00:00:00 +0300</lastBuildDate>
     <atom:link href="https://xn--pevasna-5wa1n.ee/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>näpuviluks</title>
+      <link>https://xn--pevasna-5wa1n.ee/2026-07-08/</link>
+      <guid isPermaLink="true">https://xn--pevasna-5wa1n.ee/2026-07-08/</guid>
+      <pubDate>Wed, 08 Jul 2026 00:00:00 +0300</pubDate>
+      <description>(näpu)tööks, et tööd oleks</description>
+    </item>
     <item>
       <title>aiduraidutama</title>
       <link>https://xn--pevasna-5wa1n.ee/2026-07-07/</link>
