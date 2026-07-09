@@ -1,0 +1,32 @@
+{
+  "date": "2026-07-09",
+  "word": "kipukas",
+  "wordId": 1413263,
+  "forms": {
+    "SgN": "kipukas",
+    "SgG": "kipuka",
+    "SgP": "kipukat"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "adj"
+      ],
+      "definitions": [
+        "kärsitu, läbematu"
+      ],
+      "usages": [
+        {
+          "text": "Isepäinis arutelles otsustas ta metsisekukke esimesena mitte lasta, kartes, et lask ja linnu kukkumine pelutab niigi kipuka soobli otsima mõnd kaugemat ja õdusamat puud.",
+          "sources": [
+            {
+              "label": "Nikolai Baturin",
+              "detail": "Nikolai Baturin. Eesti kirjakeele arhiiv. Eesti Keele Instituut. 4,3 mln sedelit, kogutud 1960–2000."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
