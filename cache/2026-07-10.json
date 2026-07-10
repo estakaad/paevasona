@@ -1,0 +1,27 @@
+{
+  "date": "2026-07-10",
+  "word": "alfons",
+  "wordId": 156317,
+  "forms": {
+    "SgN": "alfons",
+    "SgG": "alfonsi",
+    "SgP": "alfonsit"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "naise kulul elav armuke"
+      ],
+      "usages": [
+        {
+          "text": "Ma olen kena noor naine, aga tänapäeval ümbritsevad mind ainult alfonsid.",
+          "sources": []
+        }
+      ]
+    }
+  ]
+}
