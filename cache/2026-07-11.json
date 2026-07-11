@@ -1,0 +1,35 @@
+{
+  "date": "2026-07-11",
+  "word": "krell",
+  "wordId": 186361,
+  "forms": {
+    "SgN": "krell",
+    "SgG": "krelli",
+    "SgP": "krelli"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "adj"
+      ],
+      "definitions": [
+        "(värvi, pealispinna kohta:) eredalt, tugevasti läikiv"
+      ],
+      "usages": [
+        {
+          "text": "Kui tahate miskit arhailist teha, siis katsuge hoiduda väga krellidest värvidest.",
+          "sources": []
+        },
+        {
+          "text": "Väga ilusad on puhtad sinised, rohelised ja lillad toonid, krelli roosat tasuks vältida.",
+          "sources": []
+        },
+        {
+          "text": "Oranž ei tähenda alati krelli tooni.",
+          "sources": []
+        }
+      ]
+    }
+  ]
+}
