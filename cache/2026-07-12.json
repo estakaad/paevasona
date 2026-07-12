@@ -1,0 +1,54 @@
+{
+  "date": "2026-07-12",
+  "word": "tolk",
+  "wordId": 483702,
+  "forms": {
+    "SgN": "tolk",
+    "SgG": "tolgu",
+    "SgP": "tolku"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "aru, mõistus, taip(amine)"
+      ],
+      "usages": [
+        {
+          "text": "Otsuse tegemiseks peab endal ka pisut tolku peas olema.",
+          "sources": []
+        },
+        {
+          "text": "Ega Mikk tolguta ole.",
+          "sources": []
+        }
+      ]
+    },
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "kasu, abi, tulu"
+      ],
+      "usages": [
+        {
+          "text": "Ma ei tea, kas sest koolitusest tolku on.",
+          "sources": []
+        },
+        {
+          "text": "Tuleks siis mingit tolku ka sest kalorite lugemisest!",
+          "sources": []
+        },
+        {
+          "text": "Ta tahtis lastele kingituse teha, mitte ise sest tehingust tolku saada.",
+          "sources": []
+        }
+      ]
+    }
+  ]
+}
