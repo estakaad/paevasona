@@ -1,0 +1,45 @@
+{
+  "date": "2026-07-14",
+  "word": "kabajantsik",
+  "wordId": 176068,
+  "forms": {
+    "SgN": "kabajantsik",
+    "SgG": "kabajantsiku",
+    "SgP": "kabajantsikut"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "hulgus, suli vm kahtlane isik"
+      ],
+      "usages": [
+        {
+          "text": "Küll omal ajal luusis siin alles kabajantsikuid ringi!",
+          "sources": []
+        },
+        {
+          "text": "No näib siis, misukesed kabajantsikud end siia õhtul kokku ajavad. Ukse peab igatahes kõvasti lukku keerama ..",
+          "sources": [
+            {
+              "label": "Richard Janno",
+              "detail": "Richard Janno. Eesti kirjakeele arhiiv. Eesti Keele Instituut. 4,3 mln sedelit, kogutud 1960–2000."
+            }
+          ]
+        },
+        {
+          "text": "Kasige välja, ütlen ma! Kabajantsikud!",
+          "sources": [
+            {
+              "label": "Betti Alver",
+              "detail": "Betti Alver. Eesti kirjakeele arhiiv. Eesti Keele Instituut. 4,3 mln sedelit, kogutud 1960–2000."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

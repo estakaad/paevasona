@@ -1,0 +1,42 @@
+{
+  "date": "2026-07-13",
+  "word": "pigilind",
+  "wordId": 216188,
+  "forms": {
+    "SgN": "pigilind",
+    "SgG": "pigilinnu",
+    "SgP": "pigilindu"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "inimene, kellel kunagi ei vea, alaline ebaõnnestuja"
+      ],
+      "usages": [
+        {
+          "text": "Chaplini lõi filmikuju lihtsameelsest, kõigis oma ettevõtmistes alailma läbikukkuvast pigilinnust.",
+          "sources": []
+        }
+      ]
+    },
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "(hrl omaaegse kingsepa kohta)"
+      ],
+      "usages": [
+        {
+          "text": "Kingseppa nimetati ka pigilinnuks, sest ta pöial oli naasklijälgedega täkitud ja pöidla küüne all oli tubli kord lakki.",
+          "sources": []
+        }
+      ]
+    }
+  ]
+}
