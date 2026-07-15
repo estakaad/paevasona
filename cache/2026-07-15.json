@@ -1,0 +1,31 @@
+{
+  "date": "2026-07-15",
+  "word": "virvarr",
+  "wordId": 257316,
+  "forms": {
+    "SgN": "virvarr",
+    "SgG": "virvarri",
+    "SgP": "virvarri"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "läbisegi liikumisest, paljude eri asjade, nähtuste vm kooslusest tulenev kirevus, (silme ees kirjuks võttev) segadus"
+      ],
+      "usages": [
+        {
+          "text": "Ses info virvarris on raske orienteeruda.",
+          "sources": []
+        },
+        {
+          "text": "Neid võlus suurlinna virvarr.",
+          "sources": []
+        }
+      ]
+    }
+  ]
+}
