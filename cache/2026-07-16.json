@@ -1,0 +1,23 @@
+{
+  "date": "2026-07-16",
+  "word": "läbi-lõhki",
+  "wordId": 197995,
+  "forms": {},
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "adv"
+      ],
+      "definitions": [
+        "täiel määral, täiesti, läbinisti"
+      ],
+      "usages": [
+        {
+          "text": "Tüdruk oli koolis läbi-lõhki viieline.",
+          "sources": []
+        }
+      ]
+    }
+  ]
+}
