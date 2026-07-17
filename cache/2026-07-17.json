@@ -1,0 +1,32 @@
+{
+  "date": "2026-07-17",
+  "word": "kuradinahkne",
+  "wordId": 187993,
+  "forms": {
+    "SgN": "kuradinahkne",
+    "SgG": "kuradinahkse",
+    "SgP": "kuradinahkset"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "adj"
+      ],
+      "definitions": [
+        "tondinahast (sametitaolisest puuvillasest riidest) valmistatud"
+      ],
+      "usages": [
+        {
+          "text": "Aga riided – must talvepalitu, kuradinahksed püksid ja nöörideta poolsaabastesse topitud jalarätid – tõendasid, et päris uus ta siin ometi ei olnud.",
+          "sources": [
+            {
+              "label": "Jaan Kross",
+              "detail": "Jaan Kross. Eesti kirjakeele arhiiv. Eesti Keele Instituut. 4,3 mln sedelit, kogutud 1960–2000."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
