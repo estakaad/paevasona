@@ -1,0 +1,36 @@
+{
+  "date": "2026-07-18",
+  "word": "parlanks",
+  "wordId": 214059,
+  "forms": {
+    "SgN": "parlanks",
+    "SgG": "parlanksi",
+    "SgP": "parlanksi"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "tasakaal",
+        "kord"
+      ],
+      "usages": [
+        {
+          "text": "Pean oma tulud ja kulud ikkagi parlanksi saama.",
+          "sources": []
+        },
+        {
+          "text": "Tervis on enam-vähem parlanksis olnud.",
+          "sources": []
+        },
+        {
+          "text": "Asjad on vähe parlanksist väljas.",
+          "sources": []
+        }
+      ]
+    }
+  ]
+}
