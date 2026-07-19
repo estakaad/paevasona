@@ -1,0 +1,32 @@
+{
+  "date": "2026-07-19",
+  "word": "möhmus",
+  "wordId": 420433,
+  "forms": {
+    "SgN": "möhmus",
+    "SgG": "möhmuse",
+    "SgP": "möhmust"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "tahumatu, matslik, ebaviisakas inimene"
+      ],
+      "usages": [
+        {
+          "text": "„Sa oled möhmus,” hüüdis naine pahaselt. „Surud nina raamatusse ja ei tea mitte midagi, mis ilmas sünnib.”",
+          "sources": [
+            {
+              "label": "A. H. Tammsaare",
+              "detail": "A. H. Tammsaare. Eesti kirjakeele arhiiv. Eesti Keele Instituut. 4,3 mln sedelit, kogutud 1960–2000."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
