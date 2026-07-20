@@ -1,0 +1,31 @@
+{
+  "date": "2026-07-20",
+  "word": "hea-parem",
+  "wordId": 168622,
+  "forms": {
+    "SgN": "hea-parem",
+    "SgG": "hea-parema",
+    "SgP": "head-paremat"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "maitsev suupiste, joogi- või söögipoolis"
+      ],
+      "usages": [
+        {
+          "text": "Pidulisi ootas lookas laud hea-paremaga.",
+          "sources": []
+        },
+        {
+          "text": "Rohke koduõlle ja muu hea-paremaga jätkus pidu hommikuni.",
+          "sources": []
+        }
+      ]
+    }
+  ]
+}
