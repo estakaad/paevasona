@@ -1,0 +1,32 @@
+{
+  "date": "2026-07-21",
+  "word": "sübariit",
+  "wordId": 239605,
+  "forms": {
+    "SgN": "sübariit",
+    "SgG": "sübariidi",
+    "SgP": "sübariiti"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "luksuslikku eluviisi ja meelelisi mõnusid harrastav elunautija"
+      ],
+      "usages": [
+        {
+          "text": "Mu hinges koos on munk ja sübariit.",
+          "sources": [
+            {
+              "label": "Artur Alliksaar 2022",
+              "detail": "Artur Alliksaar. Päikesepillaja. Tartu: Ilmamaa, 2022."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
