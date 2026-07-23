@@ -1,0 +1,32 @@
+{
+  "date": "2026-07-23",
+  "word": "tondipiibel",
+  "wordId": 437417,
+  "forms": {
+    "SgN": "tondipiibel",
+    "SgG": "tondipiibli",
+    "SgP": "tondipiiblit"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "(kaardimängu, mängukaartide kohta)"
+      ],
+      "usages": [
+        {
+          "text": "Oma lapsepõlisele armastusele, tondipiiblile, olnud diplomaat nimelt kogu teenistusajagi truu.",
+          "sources": [
+            {
+              "label": "Eduard Vilde 2016 [1916], lk 8",
+              "detail": "Eduard Vilde. Mäeküla piimamees. Tallinn: Critera VMG, 2016. (Esmatrükk: Mõte, 1916.)"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
