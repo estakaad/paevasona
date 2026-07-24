@@ -1,0 +1,61 @@
+{
+  "date": "2026-07-24",
+  "word": "jupastama",
+  "wordId": 361261,
+  "forms": {
+    "IndPrSg3": "jupastab",
+    "Sup": "jupastama",
+    "Inf": "jupastada"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "v"
+      ],
+      "definitions": [
+        "hästi minema, juhuslikult vedama, õnnestuma"
+      ],
+      "usages": [
+        {
+          "text": "Mikaelil jupastas kõik, mille ees Truls põnnama lõi.",
+          "sources": [
+            {
+              "label": "Sigrid Tooming 2014",
+              "detail": "Jo Nesbø. Soomussüda. Norra keelest tõlkinud Sigrid Tooming. Tallinn: Varrak, 2014."
+            }
+          ]
+        },
+        {
+          "text": "Või poti kuningas jäi veel ülesse? No vaatame, ehk jupastab ja ehk saame kätte ...",
+          "sources": [
+            {
+              "label": "August Jakobson",
+              "detail": "August Jakobson. Eesti kirjakeele arhiiv. Eesti Keele Instituut. 4,3 mln sedelit, kogutud 1960–2000."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "dataset": "eki",
+      "pos": [
+        "v"
+      ],
+      "definitions": [
+        "kergelt purjus olema"
+      ],
+      "usages": [
+        {
+          "text": "Tal oli isegi see teada, mis Hundipalu Tiit kord jupastanud olekus öelnud ..",
+          "sources": [
+            {
+              "label": "A. H. Tammsaare 1931, Lk 229",
+              "detail": "A. H. Tammsaare. Tõde ja õigus III. Tartu: Noor-Eesti Kirjastus, 1931."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
