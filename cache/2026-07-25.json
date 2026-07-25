@@ -1,0 +1,31 @@
+{
+  "date": "2026-07-25",
+  "word": "koogelmoogel",
+  "wordId": 185031,
+  "forms": {
+    "SgN": "koogelmoogel",
+    "SgG": "koogelmoogli",
+    "SgP": "koogelmooglit"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "maiusroog, mis on valmistatud suhkruga vahustatud (ja vanilje või muuga maitsestatud) munakollasest"
+      ],
+      "usages": [
+        {
+          "text": "Ema klopib vist köögis koogelmooglit.",
+          "sources": []
+        },
+        {
+          "text": "Kui on suur magusaisu, siis teeme koogelmoogelit.",
+          "sources": []
+        }
+      ]
+    }
+  ]
+}
