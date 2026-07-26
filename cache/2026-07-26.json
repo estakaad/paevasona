@@ -1,0 +1,31 @@
+{
+  "date": "2026-07-26",
+  "word": "lillutama",
+  "wordId": 195314,
+  "forms": {
+    "IndPrSg3": "lillutab",
+    "Sup": "lillutama",
+    "Inf": "lillutada"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "v"
+      ],
+      "definitions": [
+        "mõnusalt ära olema, (pidutsedes) aega surnuks lööma"
+      ],
+      "usages": [
+        {
+          "text": "Jumal tänatud, et on koole, kust ei minda lillutades läbi.",
+          "sources": []
+        },
+        {
+          "text": "Sõbrannadele meeldis nädalavahetuseti linna peal niisama lillutada.",
+          "sources": []
+        }
+      ]
+    }
+  ]
+}
