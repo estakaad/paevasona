@@ -1,0 +1,45 @@
+{
+  "date": "2026-07-27",
+  "word": "puudama",
+  "wordId": 1376049,
+  "forms": {
+    "Sup": "puudama",
+    "Inf": "puuata",
+    "IndPrSg3": "puudab"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "v"
+      ],
+      "definitions": [
+        "puudust tundma"
+      ],
+      "usages": [
+        {
+          "text": "Keegi ei hakka sind puudama!",
+          "sources": []
+        },
+        {
+          "text": "Mida puudad, seda ihkad..",
+          "sources": [
+            {
+              "label": "August Sang",
+              "detail": "August Sang. Eesti kirjakeele arhiiv. Eesti Keele Instituut. 4,3 mln sedelit, kogutud 1960–2000."
+            }
+          ]
+        },
+        {
+          "text": "Ta tundis end üksikuna ja puudas naist, kelle tegevuse ja hoole jälgi ta igal sammul võis veel näha.",
+          "sources": [
+            {
+              "label": "Erni Krusten",
+              "detail": "Erni Krusten"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
