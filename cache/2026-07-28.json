@@ -1,0 +1,27 @@
+{
+  "date": "2026-07-28",
+  "word": "türp",
+  "wordId": 250622,
+  "forms": {
+    "SgN": "türp",
+    "SgG": "türbi",
+    "SgP": "türpi"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "ühes tükis töö-, spordi- või lasterõivas"
+      ],
+      "usages": [
+        {
+          "text": "Sinistes türpides ehitajad võtsid tellinguid maha.",
+          "sources": []
+        }
+      ]
+    }
+  ]
+}
