@@ -1,0 +1,50 @@
+{
+  "date": "2026-07-29",
+  "word": "virvatuli",
+  "wordId": 257318,
+  "forms": {
+    "SgN": "virvatuli",
+    "SgG": "virvatule",
+    "SgP": "virvatuld"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "nõrk valgus, mis tekib soogaasist ja võib sohu meelitada"
+      ],
+      "usages": [
+        {
+          "text": "Suveöises rabas eksitasid uitajaid kaugel vilkuvad virvatuled.",
+          "sources": []
+        },
+        {
+          "text": "Juba vanal ajal märkasid inimesed, et virvatuli ei püsi ühel kohal paigal, vaid võib siia-sinna liikuda.",
+          "sources": []
+        }
+      ]
+    },
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "(millegi meelitava ja üksiti petliku kohta)"
+      ],
+      "usages": [
+        {
+          "text": "Linn tõmbab noori oma virvatuledega enda poole.",
+          "sources": []
+        },
+        {
+          "text": "Võimu peibutavad virvatuled.",
+          "sources": []
+        }
+      ]
+    }
+  ]
+}
