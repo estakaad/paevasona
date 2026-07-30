@@ -1,0 +1,40 @@
+{
+  "date": "2026-07-30",
+  "word": "nadu",
+  "wordId": 206736,
+  "forms": {
+    "SgN": "nadu",
+    "SgG": "nao",
+    "SgP": "nadu"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "abikaasa õde (naise seisukohast)"
+      ],
+      "usages": [
+        {
+          "text": "Tema täditütre nadu elab Otepääl, otse Pühajärve kaldal.",
+          "sources": []
+        },
+        {
+          "text": "Petitsioon oli ajendatud Adleri tulevase nao Sofia juhtumist.",
+          "sources": []
+        },
+        {
+          "text": "Oma nao andmetel on ta isegi ajanud asju, et «Lendva» rootsi keelde ümber pandaks, võib-olla mõjutas teda H. Pauksoni toodud paralleel Selma Lagerlöfi loominguga.",
+          "sources": [
+            {
+              "label": "Toomas Haug 1987",
+              "detail": "Toomas Haug. Salakorterist linnavalitsusse. – Vikerkaar 1987, nr 11. https://www.vikerkaar.ee/salakorterist-linnavalitsusse/?fbclid=IwY2xjawSLlAJleHRuA2FlbQIxMQBzcnRjBmFwcF9pZBAyMjIwMzkxNzg4MjAwODkyAAEeEe9ZJS3Zu-2fajBlaMaVSIi69n4gkUAOwXuCnhKKgis32bxC-X5SLe7HX7s_aem_gx-b4UW9elunEm6riXg4-g"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
