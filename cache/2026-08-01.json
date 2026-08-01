@@ -1,0 +1,36 @@
+{
+  "date": "2026-08-01",
+  "word": "lähike",
+  "wordId": 1620670,
+  "forms": {
+    "SgN": "lähike",
+    "SgG": "lähikese",
+    "SgP": "lähikest"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "adj"
+      ],
+      "definitions": [
+        "lühikese vahemaa või ajavahemiku taga olev"
+      ],
+      "usages": [
+        {
+          "text": "Siit on lastel hea lähike koolis käia.",
+          "sources": []
+        },
+        {
+          "text": "Ja emand kuningannal oleks ehk rõõm juba lähikesel ajal kanda rõivaid, mis kootud Kastiilia siidist.",
+          "sources": [
+            {
+              "label": "Henn Saari ",
+              "detail": "Henn Saari. Eesti kirjakeele arhiiv. Eesti Keele Instituut. 4,3 mln sedelit, kogutud 1960–2000."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
