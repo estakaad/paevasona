@@ -1,0 +1,74 @@
+{
+  "date": "2026-08-02",
+  "word": "ponks",
+  "wordId": 218739,
+  "forms": {
+    "SgN": "ponks",
+    "SgG": "ponksi",
+    "SgP": "ponksi"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "suhkrust, siirupist ja mitmesugustest lisanditest väike maiustus"
+      ],
+      "usages": [
+        {
+          "text": "Palju nalja tekitas ponksipüüdmine, mis tähendab, et pruut viskas ponkse murule ja nende püüdjatele visati vett krae vahele.",
+          "sources": []
+        }
+      ]
+    },
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "(kena, meeldiva isiku, eseme vm kohta)"
+      ],
+      "usages": [
+        {
+          "text": "Poiss nagu ponks.",
+          "sources": []
+        },
+        {
+          "text": "Koer nagu ponks, ideaalses näitusevormis.",
+          "sources": []
+        },
+        {
+          "text": "Marjad kui ponksid, pihuga võtta, pole vaja eriti küürutada ega midagi.",
+          "sources": []
+        }
+      ]
+    },
+    {
+      "dataset": "eki",
+      "pos": [
+        "adj"
+      ],
+      "definitions": [
+        "väga hea või ilus, igati meeldiv",
+        "terve ja tugev"
+      ],
+      "usages": [
+        {
+          "text": "Ponks poiss missugune!",
+          "sources": []
+        },
+        {
+          "text": "Täitsa ponks beebi.",
+          "sources": []
+        },
+        {
+          "text": "Sekka näkkas ka mõni ponks ahven.",
+          "sources": []
+        }
+      ]
+    }
+  ]
+}
