@@ -1,0 +1,31 @@
+{
+  "date": "2026-08-03",
+  "word": "rebad",
+  "wordId": 226456,
+  "forms": {
+    "SgN": "reba",
+    "SgG": "reba",
+    "SgP": "reba"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "kehaosa allpool puusi, reite ülaosad"
+      ],
+      "usages": [
+        {
+          "text": "Jimi nahkpüksid läksid rebade vahelt katki, kui ta üle aia ronis.",
+          "sources": []
+        },
+        {
+          "text": "Taani kool keelab õpilastel rebadele vajunud pükste kandmise, teatas eile Rootsi ajaleht Dagens Nyheter.",
+          "sources": []
+        }
+      ]
+    }
+  ]
+}
