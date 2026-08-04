@@ -1,0 +1,32 @@
+{
+  "date": "2026-08-04",
+  "word": "teal",
+  "wordId": 242824,
+  "forms": {},
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "adv"
+      ],
+      "definitions": [
+        "kõneleja ligidal, lähedal olevas kohas"
+      ],
+      "usages": [
+        {
+          "text": "Alati on tähtis, kes seal või teal mingit komisjoni juhatab.",
+          "sources": []
+        },
+        {
+          "text": "Ei leia mina iial teal / see suure, laia ilma peal ..",
+          "sources": [
+            {
+              "label": "Johann Voldemar Jannsen",
+              "detail": "Johann Voldemar Jannsen"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
