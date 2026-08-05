@@ -1,0 +1,27 @@
+{
+  "date": "2026-08-05",
+  "word": "vooster",
+  "wordId": 257752,
+  "forms": {
+    "SgN": "vooster",
+    "SgG": "voostri",
+    "SgP": "voostrit"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "laiskvorst, looder"
+      ],
+      "usages": [
+        {
+          "text": "Voostrid aeti vitsaga tööle.",
+          "sources": []
+        }
+      ]
+    }
+  ]
+}
