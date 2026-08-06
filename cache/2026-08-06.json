@@ -1,0 +1,27 @@
+{
+  "date": "2026-08-06",
+  "word": "mitu-setu",
+  "wordId": 203357,
+  "forms": {
+    "SgN": "mitu-setu",
+    "SgG": "mitme-setme",
+    "SgP": "mitut-setut"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "pron"
+      ],
+      "definitions": [
+        "(ebamääraselt:) õige mitu"
+      ],
+      "usages": [
+        {
+          "text": "Üle mitme-setme aasta sain mahti folgifestivalile minna.",
+          "sources": []
+        }
+      ]
+    }
+  ]
+}
