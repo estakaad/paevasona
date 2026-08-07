@@ -1,0 +1,35 @@
+{
+  "date": "2026-08-07",
+  "word": "nurgavoodi",
+  "wordId": 1471107,
+  "forms": {
+    "SgN": "nurgavoodi",
+    "SgG": "nurgavoodi",
+    "SgP": "nurgavoodit"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "(väljendites sünnituse ja sünnitusjärgse aja kohta)"
+      ],
+      "usages": [
+        {
+          "text": "Vanasti kui naised nurgavoodisse läksid, panid nad kortslehti selja alla ─ usuti, et see kergendab sünnitust.",
+          "sources": []
+        },
+        {
+          "text": "Veel 19. sajandi Rootsis jäi naisterahva oodatav eluiga neljakümne aasta kanti, sest sageli lõppesid ta maised vaevad nurgavoodis.",
+          "sources": []
+        },
+        {
+          "text": "Oma lapsedki on ta ilmale toonud mitte kodus nurgavoodis, vaid Kuressaare haiglas.",
+          "sources": []
+        }
+      ]
+    }
+  ]
+}
