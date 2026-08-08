@@ -1,0 +1,32 @@
+{
+  "date": "2026-08-08",
+  "word": "ajekas",
+  "wordId": 1378085,
+  "forms": {
+    "SgN": "ajekas",
+    "SgG": "ajeka",
+    "SgP": "ajekat"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "adj"
+      ],
+      "definitions": [
+        "elav, toimekas, impulsiivne"
+      ],
+      "usages": [
+        {
+          "text": ".. sa tunned ju tema ajekat ja tujukat loomust. Naeru- ja nutupisarad on tal koos ühises näärmes ..",
+          "sources": [
+            {
+              "label": "Eduard Vilde",
+              "detail": "Eduard Vilde. Eesti kirjakeele arhiiv. Eesti Keele Instituut. 4,3 mln sedelit, kogutud 1960–2000."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
