@@ -1,0 +1,35 @@
+{
+  "date": "2026-08-09",
+  "word": "ülevise",
+  "wordId": 263627,
+  "forms": {
+    "SgN": "ülevise",
+    "SgG": "üleviske",
+    "SgP": "üleviset"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "õlgadel kantav riietusese (nt sõba, suurrätt, pleed)"
+      ],
+      "usages": [
+        {
+          "text": "Naiste ülevisked rahvarõivaste juurde.",
+          "sources": []
+        },
+        {
+          "text": "Lõuna-Eestis nimetati linikuks ka suvist üleviset, piklikku linasest kangast rõivaeset.",
+          "sources": []
+        },
+        {
+          "text": "Pole midagi mõnusamat jahedal ja vihmasel suvel kui üks läbivillane ülevise.",
+          "sources": []
+        }
+      ]
+    }
+  ]
+}
