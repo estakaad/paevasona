@@ -1,0 +1,31 @@
+{
+  "date": "2026-08-10",
+  "word": "kögöš-mögöš",
+  "wordId": 2092087,
+  "forms": {
+    "SgN": "kögöš-mögöš",
+    "SgG": "kögöš-mögöši",
+    "SgP": "kögöš-mögöšit"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "(ungari keele ja ungaripärase kohta)"
+      ],
+      "usages": [
+        {
+          "text": "Ungarikeelset vestlust kuulates hakkab aga paljudele eestlastele kõrva vaid kögöš-mögöš.",
+          "sources": []
+        },
+        {
+          "text": "Et ei peaks ise kögöš-mögöšit veerima, on audiofailis ka kuulda, kuidas need sõnad tegelikult kõlavad.",
+          "sources": []
+        }
+      ]
+    }
+  ]
+}
