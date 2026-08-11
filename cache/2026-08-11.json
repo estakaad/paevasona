@@ -1,0 +1,32 @@
+{
+  "date": "2026-08-11",
+  "word": "rannarihv",
+  "wordId": 225774,
+  "forms": {
+    "SgN": "rannarihv",
+    "SgG": "rannarihva",
+    "SgP": "rannarihva"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "rannaäärne peenike kivipuru, Eestis hrl lubjakivist lapikud kivikesed"
+      ],
+      "usages": [
+        {
+          "text": "Nad ratsutavad .. sadamasse ja otse rannarihvale välja.",
+          "sources": [
+            {
+              "label": "Jaan Kross",
+              "detail": "Jaan Kross. Eesti kirjakeele arhiiv. Eesti Keele Instituut. 4,3 mln sedelit, kogutud 1960–2000."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
