@@ -1,0 +1,38 @@
+{
+  "date": "2026-08-12",
+  "word": "ääri-veeri",
+  "wordId": 262169,
+  "forms": {},
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "adv"
+      ],
+      "definitions": [
+        "ettevaatlikult, kaude, mõista andes"
+      ],
+      "usages": [
+        {
+          "text": "Uurisin ääri-veeri ta sissetulekute kohta.",
+          "sources": []
+        }
+      ]
+    },
+    {
+      "dataset": "eki",
+      "pos": [
+        "adj"
+      ],
+      "definitions": [
+        "ettevaatlik, kaudne, mõista andev"
+      ],
+      "usages": [
+        {
+          "text": "See on selline ääri-veeri jutt, millest võib mitut moodi aru saada.",
+          "sources": []
+        }
+      ]
+    }
+  ]
+}
