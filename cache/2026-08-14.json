@@ -1,0 +1,50 @@
+{
+  "date": "2026-08-14",
+  "word": "käli",
+  "wordId": 190041,
+  "forms": {
+    "SgN": "käli",
+    "SgG": "käli",
+    "SgP": "käli"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "abikaasa õde (mehe seisukohast)"
+      ],
+      "usages": [
+        {
+          "text": "Lennukatastroofis said surma ka Kennedy naine ja käli.",
+          "sources": []
+        },
+        {
+          "text": "Emil tegi oma noorele kälile komplimente.",
+          "sources": []
+        },
+        {
+          "text": "Georgi käli elab Singapuris.",
+          "sources": []
+        }
+      ]
+    },
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "mehe vennanaine"
+      ],
+      "usages": [
+        {
+          "text": "Oleme Anniga kälid.",
+          "sources": []
+        }
+      ]
+    }
+  ]
+}

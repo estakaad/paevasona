@@ -1,0 +1,27 @@
+{
+  "date": "2026-08-13",
+  "word": "koduväi",
+  "wordId": 182986,
+  "forms": {
+    "SgN": "koduväi",
+    "SgG": "koduväi",
+    "SgP": "koduväid"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "naisevanemate kodus elav väimees"
+      ],
+      "usages": [
+        {
+          "text": "Talu oli koduväi käes laostunud.",
+          "sources": []
+        }
+      ]
+    }
+  ]
+}
