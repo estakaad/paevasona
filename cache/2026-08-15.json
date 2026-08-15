@@ -1,0 +1,32 @@
+{
+  "date": "2026-08-15",
+  "word": "mana",
+  "wordId": 200370,
+  "forms": {
+    "SgN": "mana",
+    "SgG": "mana",
+    "SgP": "mana"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "inimestes, loomades, loodus- vm esemeis peituv maagiline vägi või mõjuvõim"
+      ],
+      "usages": [
+        {
+          "text": "Tabu oli paarikmõiste terminiga mana .. Mana oli ohtlik ja temaga tuli ettevaatlikult ümber käia.",
+          "sources": [
+            {
+              "label": "Toomas Paul",
+              "detail": "Toomas Paul"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
