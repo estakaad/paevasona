@@ -1,0 +1,57 @@
+{
+  "date": "2026-08-16",
+  "word": "kaim",
+  "wordId": 176685,
+  "forms": {
+    "SgN": "kaim",
+    "SgG": "kaimu",
+    "SgP": "kaimu"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "(kauge) sugulane või hõimlane",
+        "kaaslane või sõber",
+        "(pöördumissõnana)"
+      ],
+      "usages": [
+        {
+          "text": "Petseris käies vaadatakse üle kallid kaimud ning süüdatakse surnuaial kalmuküünal.",
+          "sources": []
+        },
+        {
+          "text": "Soome kaimude kaasabil on Haapsallu jõudnud suurel hulgal liikurmasinaid.",
+          "sources": []
+        },
+        {
+          "text": "Kuulge, kallid kaimud, mis siin toimub?",
+          "sources": []
+        }
+      ]
+    },
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "sama nimega inimene (ka asutus, paik vm)"
+      ],
+      "usages": [
+        {
+          "text": "„Juss,” teatas Näll. „Mina olen ka Juss,” ütles mees. „Siis oleme kaimud,” kuulutas Näll ..",
+          "sources": [
+            {
+              "label": "Andres Vanapa",
+              "detail": "Andres Vanapa. Eesti kirjakeele arhiiv. Eesti Keele Instituut. 4,3 mln sedelit, kogutud 1960–2000."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
