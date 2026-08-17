@@ -1,0 +1,47 @@
+{
+  "date": "2026-08-17",
+  "word": "kreeps",
+  "wordId": 186349,
+  "forms": {
+    "SgN": "kreeps",
+    "SgG": "kreepsu",
+    "SgP": "kreepsu"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "(suure ehmatuse, vapustuse vms kohta)"
+      ],
+      "usages": [
+        {
+          "text": "Lapsevanemad olid kreepsu äärel.",
+          "sources": []
+        }
+      ]
+    },
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "haigus, mida iseloomustab kasvajarakkude kontrollimatu paljunemine ja vohamine organismis"
+      ],
+      "usages": [
+        {
+          "text": "Peremees viidud haigemajja, tal olevat kreeps.",
+          "sources": [
+            {
+              "label": "Karl Ristikivi",
+              "detail": "Karl Ristikivi. Eesti kirjakeele arhiiv. Eesti Keele Instituut. 4,3 mln sedelit, kogutud 1960–2000."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
