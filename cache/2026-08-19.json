@@ -1,0 +1,28 @@
+{
+  "date": "2026-08-19",
+  "word": "justament",
+  "wordId": 174494,
+  "forms": {},
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "interj",
+        "adv"
+      ],
+      "definitions": [
+        "(rõhutab, tõstab esile, kinnitab midagi:) just, nimelt, täpselt, just nii"
+      ],
+      "usages": [
+        {
+          "text": "Nojah, justament nii see oli!",
+          "sources": []
+        },
+        {
+          "text": "Õhk oli värske, justament nagu pesust tulnud.",
+          "sources": []
+        }
+      ]
+    }
+  ]
+}

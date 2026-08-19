@@ -5,8 +5,15 @@
     <link>https://xn--pevasna-5wa1n.ee/</link>
     <description>Eesti keele huvitavad ja harvad sõnad iga päev</description>
     <language>et</language>
-    <lastBuildDate>Tue, 18 Aug 2026 00:00:00 +0300</lastBuildDate>
+    <lastBuildDate>Wed, 19 Aug 2026 00:00:00 +0300</lastBuildDate>
     <atom:link href="https://xn--pevasna-5wa1n.ee/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>justament</title>
+      <link>https://xn--pevasna-5wa1n.ee/2026-08-19/</link>
+      <guid isPermaLink="true">https://xn--pevasna-5wa1n.ee/2026-08-19/</guid>
+      <pubDate>Wed, 19 Aug 2026 00:00:00 +0300</pubDate>
+      <description>(rõhutab, tõstab esile, kinnitab midagi:) just, nimelt, täpselt, just nii</description>
+    </item>
     <item>
       <title>tutske</title>
       <link>https://xn--pevasna-5wa1n.ee/2026-08-18/</link>
@@ -349,13 +356,6 @@
       <guid isPermaLink="true">https://xn--pevasna-5wa1n.ee/2026-07-01/</guid>
       <pubDate>Wed, 01 Jul 2026 00:00:00 +0300</pubDate>
       <description>(tulevikus) olema</description>
-    </item>
-    <item>
-      <title>naksitrall</title>
-      <link>https://xn--pevasna-5wa1n.ee/2026-06-30/</link>
-      <guid isPermaLink="true">https://xn--pevasna-5wa1n.ee/2026-06-30/</guid>
-      <pubDate>Tue, 30 Jun 2026 00:00:00 +0300</pubDate>
-      <description>üks kolmest väikesest lustlikust mehikesest Eno Raua lasteraamatutes</description>
     </item>
   </channel>
 </rss>
