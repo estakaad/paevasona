@@ -1,0 +1,27 @@
+{
+  "date": "2026-08-20",
+  "word": "bisarne",
+  "wordId": 160154,
+  "forms": {
+    "SgN": "bisarne",
+    "SgG": "bisarse",
+    "SgP": "bisarset"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "adj"
+      ],
+      "definitions": [
+        "veider, eriskummaline, pentsik"
+      ],
+      "usages": [
+        {
+          "text": "Kirjanik ärkas oma segastest unenägudest, bisarsed mõtted peas.",
+          "sources": []
+        }
+      ]
+    }
+  ]
+}
