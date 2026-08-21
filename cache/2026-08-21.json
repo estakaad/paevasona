@@ -1,0 +1,40 @@
+{
+  "date": "2026-08-21",
+  "word": "flanöör",
+  "wordId": 166094,
+  "forms": {
+    "SgN": "flanöör",
+    "SgG": "flanööri",
+    "SgP": "flanööri"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "linnas jõude uitaja, seal jalutaja"
+      ],
+      "usages": [
+        {
+          "text": "Baudelaire'i flanöör rõõmustas „mittekohtade“, st kaubatänavate voolus kohatavate põgusate rõõmude üle.",
+          "sources": []
+        },
+        {
+          "text": "Kui linnaelaniku argine pilk silmab teist inimest vaid põgusalt, siis poeetiline flanöör näeb kõike sügavuti ja intensiivselt.",
+          "sources": []
+        },
+        {
+          "text": "Kuigi Unt polnud suisa flanöör, meeldis talle kõndida.",
+          "sources": [
+            {
+              "label": "Mihkel Mutt 2023, lk 71",
+              "detail": "Mihkel Mutt. Liblikas, kes lendas liiga lähedale. Mati Unt ja tema aeg. Fabian, 2023."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
