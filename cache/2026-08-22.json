@@ -1,0 +1,27 @@
+{
+  "date": "2026-08-22",
+  "word": "kunskopp",
+  "wordId": 1380388,
+  "forms": {
+    "SgN": "kunskopp",
+    "SgG": "kunskopi",
+    "SgP": "kunskoppi"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "temp, riugas"
+      ],
+      "usages": [
+        {
+          "text": "Mõni teeb nihukest kunskoppi.",
+          "sources": []
+        }
+      ]
+    }
+  ]
+}
