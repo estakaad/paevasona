@@ -1,0 +1,46 @@
+{
+  "date": "2026-08-24",
+  "word": "vemmal",
+  "wordId": 255504,
+  "forms": {
+    "SgN": "vemmal",
+    "SgG": "vembla",
+    "SgP": "vemmalt"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "jämedam vits või malakas"
+      ],
+      "usages": [
+        {
+          "text": "Kuulda oli ainult vemmalde vihisemist ja löökide matsumist.",
+          "sources": []
+        }
+      ]
+    },
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "inimene, kes teeb vempe, üleannetusi, koerusi"
+      ],
+      "usages": [
+        {
+          "text": "Paraja vemblana tuntud ministrihärra leiab kuuldavasti aega ka vemmalvärsse sepistada.",
+          "sources": []
+        },
+        {
+          "text": "Poisivemmal.",
+          "sources": []
+        }
+      ]
+    }
+  ]
+}
