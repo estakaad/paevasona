@@ -5,8 +5,15 @@
     <link>https://xn--pevasna-5wa1n.ee/</link>
     <description>Eesti keele huvitavad ja harvad sõnad iga päev</description>
     <language>et</language>
-    <lastBuildDate>Mon, 24 Aug 2026 00:00:00 +0300</lastBuildDate>
+    <lastBuildDate>Tue, 25 Aug 2026 00:00:00 +0300</lastBuildDate>
     <atom:link href="https://xn--pevasna-5wa1n.ee/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>kanäe</title>
+      <link>https://xn--pevasna-5wa1n.ee/2026-08-25/</link>
+      <guid isPermaLink="true">https://xn--pevasna-5wa1n.ee/2026-08-25/</guid>
+      <pubDate>Tue, 25 Aug 2026 00:00:00 +0300</pubDate>
+      <description>esineb imestust, üllatust, vahel ka pahameelt väljendavates ütlustes</description>
+    </item>
     <item>
       <title>vemmal</title>
       <link>https://xn--pevasna-5wa1n.ee/2026-08-24/</link>
@@ -349,13 +356,6 @@
       <guid isPermaLink="true">https://xn--pevasna-5wa1n.ee/2026-07-07/</guid>
       <pubDate>Tue, 07 Jul 2026 00:00:00 +0300</pubDate>
       <description>(sõnadeta, üksluist) laulujoru ajama</description>
-    </item>
-    <item>
-      <title>supivalgus</title>
-      <link>https://xn--pevasna-5wa1n.ee/2026-07-06/</link>
-      <guid isPermaLink="true">https://xn--pevasna-5wa1n.ee/2026-07-06/</guid>
-      <pubDate>Mon, 06 Jul 2026 00:00:00 +0300</pubDate>
-      <description>(endisajal supile lisatud piima kohta, ka piima kohta üldse)</description>
     </item>
   </channel>
 </rss>
