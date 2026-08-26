@@ -1,0 +1,27 @@
+{
+  "date": "2026-08-26",
+  "word": "jumitult",
+  "wordId": 1618876,
+  "forms": {},
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "adv"
+      ],
+      "definitions": [
+        "väga (palju)"
+      ],
+      "usages": [
+        {
+          "text": "Tal on jumitult aega ja raha käes.",
+          "sources": []
+        },
+        {
+          "text": "Peab ikka jumitult hea supp olema, mida kaks portsu võtan.",
+          "sources": []
+        }
+      ]
+    }
+  ]
+}
