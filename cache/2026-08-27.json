@@ -1,0 +1,27 @@
+{
+  "date": "2026-08-27",
+  "word": "vedelvorst",
+  "wordId": 1336731,
+  "forms": {
+    "SgN": "vedelvorst",
+    "SgG": "vedelvorsti",
+    "SgP": "vedelvorsti"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "laisk, tööst ja kohustustest kõrvale hoidev inimene"
+      ],
+      "usages": [
+        {
+          "text": "Ma pole mingi vedelvorst, tahan olla esimene!",
+          "sources": []
+        }
+      ]
+    }
+  ]
+}
