@@ -1,0 +1,23 @@
+{
+  "date": "2026-08-28",
+  "word": "jeevel",
+  "wordId": 1265301,
+  "forms": {},
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "interj"
+      ],
+      "definitions": [
+        "(esineb imestust, üllatust, ehmatust väljendavates tunderõhulistes hüüatustes)"
+      ],
+      "usages": [
+        {
+          "text": "Oh sa jeevel, ma ei saa enam midagi aru!",
+          "sources": []
+        }
+      ]
+    }
+  ]
+}
