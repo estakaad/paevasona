@@ -1,0 +1,27 @@
+{
+  "date": "2026-08-29",
+  "word": "kirvesupp",
+  "wordId": 181903,
+  "forms": {
+    "SgN": "kirvesupp",
+    "SgG": "kirvesupi",
+    "SgP": "kirvesuppi"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "supp kättepuutuvatest juhuslikest komponentidest"
+      ],
+      "usages": [
+        {
+          "text": "Vaesel ajal õpetati lapsi varakult kas või kirvesuppi keetma.",
+          "sources": []
+        }
+      ]
+    }
+  ]
+}
