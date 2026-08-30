@@ -1,0 +1,27 @@
+{
+  "date": "2026-08-30",
+  "word": "aadamakahvel",
+  "wordId": 323730,
+  "forms": {
+    "SgN": "aadamakahvel",
+    "SgG": "aadamakahvli",
+    "SgP": "aadamakahvlit"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "sõrmed söömisvahendina"
+      ],
+      "usages": [
+        {
+          "text": "Sööme täna aadamakahvliga.",
+          "sources": []
+        }
+      ]
+    }
+  ]
+}
