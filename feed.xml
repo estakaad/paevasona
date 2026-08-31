@@ -5,8 +5,15 @@
     <link>https://xn--pevasna-5wa1n.ee/</link>
     <description>Eesti keele huvitavad ja harvad sõnad iga päev</description>
     <language>et</language>
-    <lastBuildDate>Sun, 30 Aug 2026 00:00:00 +0300</lastBuildDate>
+    <lastBuildDate>Mon, 31 Aug 2026 00:00:00 +0300</lastBuildDate>
     <atom:link href="https://xn--pevasna-5wa1n.ee/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>ede</title>
+      <link>https://xn--pevasna-5wa1n.ee/2026-08-31/</link>
+      <guid isPermaLink="true">https://xn--pevasna-5wa1n.ee/2026-08-31/</guid>
+      <pubDate>Mon, 31 Aug 2026 00:00:00 +0300</pubDate>
+      <description>hrl spordis edupunktide, edumaa vm soodustuse etteandmine (nt jooksudes edumaa, pallimängudes punktid)</description>
+    </item>
     <item>
       <title>aadamakahvel</title>
       <link>https://xn--pevasna-5wa1n.ee/2026-08-30/</link>
@@ -349,13 +356,6 @@
       <guid isPermaLink="true">https://xn--pevasna-5wa1n.ee/2026-07-13/</guid>
       <pubDate>Mon, 13 Jul 2026 00:00:00 +0300</pubDate>
       <description>inimene, kellel kunagi ei vea, alaline ebaõnnestuja</description>
-    </item>
-    <item>
-      <title>tolk</title>
-      <link>https://xn--pevasna-5wa1n.ee/2026-07-12/</link>
-      <guid isPermaLink="true">https://xn--pevasna-5wa1n.ee/2026-07-12/</guid>
-      <pubDate>Sun, 12 Jul 2026 00:00:00 +0300</pubDate>
-      <description>aru, mõistus, taip(amine)</description>
     </item>
   </channel>
 </rss>

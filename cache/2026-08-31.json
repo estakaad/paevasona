@@ -1,0 +1,27 @@
+{
+  "date": "2026-08-31",
+  "word": "ede",
+  "wordId": 162305,
+  "forms": {
+    "SgN": "ede",
+    "SgG": "ede",
+    "SgP": "edet"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "hrl spordis edupunktide, edumaa vm soodustuse etteandmine (nt jooksudes edumaa, pallimängudes punktid)"
+      ],
+      "usages": [
+        {
+          "text": "Vastane kükitas, andis Mikule edet.",
+          "sources": []
+        }
+      ]
+    }
+  ]
+}
