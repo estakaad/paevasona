@@ -1,0 +1,35 @@
+{
+  "date": "2026-09-01",
+  "word": "aldis",
+  "wordId": 156286,
+  "forms": {
+    "SgN": "aldis",
+    "SgG": "alti",
+    "SgP": "aldist"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "adj"
+      ],
+      "definitions": [
+        "(hingeliselt, vaimselt) millelegi vastuvõtlik, millekski valmis"
+      ],
+      "usages": [
+        {
+          "text": "Muutustele altid ettevõtjad.",
+          "sources": []
+        },
+        {
+          "text": "Müüja oli aldis suhtlema.",
+          "sources": []
+        },
+        {
+          "text": "Koostööaldis.",
+          "sources": []
+        }
+      ]
+    }
+  ]
+}

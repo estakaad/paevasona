@@ -5,8 +5,15 @@
     <link>https://xn--pevasna-5wa1n.ee/</link>
     <description>Eesti keele huvitavad ja harvad sõnad iga päev</description>
     <language>et</language>
-    <lastBuildDate>Mon, 31 Aug 2026 00:00:00 +0300</lastBuildDate>
+    <lastBuildDate>Tue, 01 Sep 2026 00:00:00 +0300</lastBuildDate>
     <atom:link href="https://xn--pevasna-5wa1n.ee/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>aldis</title>
+      <link>https://xn--pevasna-5wa1n.ee/2026-09-01/</link>
+      <guid isPermaLink="true">https://xn--pevasna-5wa1n.ee/2026-09-01/</guid>
+      <pubDate>Tue, 01 Sep 2026 00:00:00 +0300</pubDate>
+      <description>(hingeliselt, vaimselt) millelegi vastuvõtlik, millekski valmis</description>
+    </item>
     <item>
       <title>ede</title>
       <link>https://xn--pevasna-5wa1n.ee/2026-08-31/</link>
@@ -349,13 +356,6 @@
       <guid isPermaLink="true">https://xn--pevasna-5wa1n.ee/2026-07-14/</guid>
       <pubDate>Tue, 14 Jul 2026 00:00:00 +0300</pubDate>
       <description>hulgus, suli vm kahtlane isik</description>
-    </item>
-    <item>
-      <title>pigilind</title>
-      <link>https://xn--pevasna-5wa1n.ee/2026-07-13/</link>
-      <guid isPermaLink="true">https://xn--pevasna-5wa1n.ee/2026-07-13/</guid>
-      <pubDate>Mon, 13 Jul 2026 00:00:00 +0300</pubDate>
-      <description>inimene, kellel kunagi ei vea, alaline ebaõnnestuja</description>
     </item>
   </channel>
 </rss>
