@@ -1,0 +1,31 @@
+{
+  "date": "2026-09-02",
+  "word": "ahervare",
+  "wordId": 155291,
+  "forms": {
+    "SgN": "ahervare",
+    "SgG": "ahervareme",
+    "SgP": "ahervaret"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "põlenud hoone (kivi)jäänused"
+      ],
+      "usages": [
+        {
+          "text": "Imeilusast lossist oli järel vaid hale ahervare.",
+          "sources": []
+        },
+        {
+          "text": "Tondilossi meenutava ahervareme juurde on Sipe kooli vilistlased otsustanud panna mälestuskivi.",
+          "sources": []
+        }
+      ]
+    }
+  ]
+}
