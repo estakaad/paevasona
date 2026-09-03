@@ -1,0 +1,32 @@
+{
+  "date": "2026-09-03",
+  "word": "knirps",
+  "wordId": 182703,
+  "forms": {
+    "SgN": "knirps",
+    "SgG": "knirpsu",
+    "SgP": "knirpsu"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "väike poiss või tüdruk"
+      ],
+      "usages": [
+        {
+          "text": "Eks oleks ju palju lõbusam, kui niisugune väike knirps sul põlle veerest kinni hoiab ..",
+          "sources": [
+            {
+              "label": "Mats Mõtslane",
+              "detail": "Mats Mõtslane. Eesti kirjakeele arhiiv. Eesti Keele Instituut. 4,3 mln sedelit, kogutud 1960–2000."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
