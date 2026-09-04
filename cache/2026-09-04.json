@@ -1,0 +1,42 @@
+{
+  "date": "2026-09-04",
+  "word": "imb",
+  "wordId": 1470142,
+  "forms": {
+    "SgN": "imb",
+    "SgG": "imme",
+    "SgP": "imbe"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "noor naine (kes pole veel abielus) või naissoost laps",
+        "(kõnetlussõnana pöördumisel (vallaliste) noorte naiste poole)"
+      ],
+      "usages": [
+        {
+          "text": "Neiud tantsisid murulla, / Pääd kaharad kargelesid, / Immed kõik ilu pidasid.",
+          "sources": [
+            {
+              "label": "Villem Grüntal-Ridala 1930",
+              "detail": "Villem Grüntal-Ridala. Sõnajalg. – Sinine kari. Tartu: Noor-Eesti kirjastus 1930."
+            }
+          ]
+        },
+        {
+          "text": "Ise, immed ilusad, / lippame kõik laiali ..",
+          "sources": [
+            {
+              "label": "Betti Alver (tõlkija)",
+              "detail": "Betti Alver (tõlkija). Eesti kirjakeele arhiiv. Eesti Keele Instituut. 4,3 mln sedelit, kogutud 1960–2000."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

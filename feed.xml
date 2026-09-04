@@ -5,8 +5,15 @@
     <link>https://xn--pevasna-5wa1n.ee/</link>
     <description>Eesti keele huvitavad ja harvad sõnad iga päev</description>
     <language>et</language>
-    <lastBuildDate>Thu, 03 Sep 2026 00:00:00 +0300</lastBuildDate>
+    <lastBuildDate>Fri, 04 Sep 2026 00:00:00 +0300</lastBuildDate>
     <atom:link href="https://xn--pevasna-5wa1n.ee/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>imb</title>
+      <link>https://xn--pevasna-5wa1n.ee/2026-09-04/</link>
+      <guid isPermaLink="true">https://xn--pevasna-5wa1n.ee/2026-09-04/</guid>
+      <pubDate>Fri, 04 Sep 2026 00:00:00 +0300</pubDate>
+      <description>noor naine (kes pole veel abielus) või naissoost laps</description>
+    </item>
     <item>
       <title>knirps</title>
       <link>https://xn--pevasna-5wa1n.ee/2026-09-03/</link>
@@ -349,13 +356,6 @@
       <guid isPermaLink="true">https://xn--pevasna-5wa1n.ee/2026-07-17/</guid>
       <pubDate>Fri, 17 Jul 2026 00:00:00 +0300</pubDate>
       <description>tondinahast (sametitaolisest puuvillasest riidest) valmistatud</description>
-    </item>
-    <item>
-      <title>läbi-lõhki</title>
-      <link>https://xn--pevasna-5wa1n.ee/2026-07-16/</link>
-      <guid isPermaLink="true">https://xn--pevasna-5wa1n.ee/2026-07-16/</guid>
-      <pubDate>Thu, 16 Jul 2026 00:00:00 +0300</pubDate>
-      <description>täiel määral, täiesti, läbinisti</description>
     </item>
   </channel>
 </rss>
