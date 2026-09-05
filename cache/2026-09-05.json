@@ -1,0 +1,28 @@
+{
+  "date": "2026-09-05",
+  "word": "nõnge",
+  "wordId": 209665,
+  "forms": {
+    "SgN": "nõnge",
+    "SgG": "nõnge",
+    "SgP": "nõnget"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "adj"
+      ],
+      "definitions": [
+        "jonnakas ja järeleandmatu, visalt millegi juures püsiv",
+        "kangekaelne"
+      ],
+      "usages": [
+        {
+          "text": "Ohtu süvendab tema nõnge keeldumine tunnustada rahulepingut.",
+          "sources": []
+        }
+      ]
+    }
+  ]
+}
