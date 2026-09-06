@@ -1,0 +1,50 @@
+{
+  "date": "2026-09-06",
+  "word": "kirevane",
+  "wordId": 181537,
+  "forms": {
+    "SgN": "kirevane",
+    "SgG": "kirevase",
+    "SgP": "kirevast"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "leebe kirumissõna, mida kasutatakse millegi või kellegi üle pahandades, midagi taunides, harvemini imestuse või üllatuse korral"
+      ],
+      "usages": [
+        {
+          "text": "Sa kirevane nuhtlus!",
+          "sources": []
+        },
+        {
+          "text": "Ann, kirevane, sai teise koha!",
+          "sources": []
+        },
+        {
+          "text": "Kes kirevane neid ostma peaks?",
+          "sources": []
+        }
+      ]
+    },
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "kurat, pagan, põrguline"
+      ],
+      "usages": [
+        {
+          "text": "Oled kord sõrme andud, kipub kirevane vägisi käe kaasa kiskuma.",
+          "sources": []
+        }
+      ]
+    }
+  ]
+}

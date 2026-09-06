@@ -5,8 +5,15 @@
     <link>https://xn--pevasna-5wa1n.ee/</link>
     <description>Eesti keele huvitavad ja harvad sõnad iga päev</description>
     <language>et</language>
-    <lastBuildDate>Sat, 05 Sep 2026 00:00:00 +0300</lastBuildDate>
+    <lastBuildDate>Sun, 06 Sep 2026 00:00:00 +0300</lastBuildDate>
     <atom:link href="https://xn--pevasna-5wa1n.ee/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>kirevane</title>
+      <link>https://xn--pevasna-5wa1n.ee/2026-09-06/</link>
+      <guid isPermaLink="true">https://xn--pevasna-5wa1n.ee/2026-09-06/</guid>
+      <pubDate>Sun, 06 Sep 2026 00:00:00 +0300</pubDate>
+      <description>leebe kirumissõna, mida kasutatakse millegi või kellegi üle pahandades, midagi taunides, harvemini imestuse või üllatuse korral</description>
+    </item>
     <item>
       <title>nõnge</title>
       <link>https://xn--pevasna-5wa1n.ee/2026-09-05/</link>
@@ -349,13 +356,6 @@
       <guid isPermaLink="true">https://xn--pevasna-5wa1n.ee/2026-07-19/</guid>
       <pubDate>Sun, 19 Jul 2026 00:00:00 +0300</pubDate>
       <description>tahumatu, matslik, ebaviisakas inimene</description>
-    </item>
-    <item>
-      <title>parlanks</title>
-      <link>https://xn--pevasna-5wa1n.ee/2026-07-18/</link>
-      <guid isPermaLink="true">https://xn--pevasna-5wa1n.ee/2026-07-18/</guid>
-      <pubDate>Sat, 18 Jul 2026 00:00:00 +0300</pubDate>
-      <description>tasakaal</description>
     </item>
   </channel>
 </rss>
