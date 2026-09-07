@@ -1,0 +1,31 @@
+{
+  "date": "2026-09-07",
+  "word": "krööm",
+  "wordId": 186901,
+  "forms": {
+    "SgN": "krööm",
+    "SgG": "kröömi",
+    "SgP": "kröömi"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "väike hulk, vähene määr"
+      ],
+      "usages": [
+        {
+          "text": "Kõik on viimse kröömini valmis mõeldud.",
+          "sources": []
+        },
+        {
+          "text": "Ma ei tea sellest kröömigi.",
+          "sources": []
+        }
+      ]
+    }
+  ]
+}
