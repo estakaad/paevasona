@@ -1,0 +1,27 @@
+{
+  "date": "2026-09-09",
+  "word": "hoopsasti",
+  "wordId": 1441748,
+  "forms": {},
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "adv"
+      ],
+      "definitions": [
+        "kiiresti, suure hooga"
+      ],
+      "usages": [
+        {
+          "text": "Lumi sulas hoopsasti.",
+          "sources": []
+        },
+        {
+          "text": "Kapsad on lühikese ajaga hoopsasti kosunud.",
+          "sources": []
+        }
+      ]
+    }
+  ]
+}

@@ -5,8 +5,22 @@
     <link>https://xn--pevasna-5wa1n.ee/</link>
     <description>Eesti keele huvitavad ja harvad sõnad iga päev</description>
     <language>et</language>
-    <lastBuildDate>Mon, 07 Sep 2026 00:00:00 +0300</lastBuildDate>
+    <lastBuildDate>Wed, 09 Sep 2026 00:00:00 +0300</lastBuildDate>
     <atom:link href="https://xn--pevasna-5wa1n.ee/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>hoopsasti</title>
+      <link>https://xn--pevasna-5wa1n.ee/2026-09-09/</link>
+      <guid isPermaLink="true">https://xn--pevasna-5wa1n.ee/2026-09-09/</guid>
+      <pubDate>Wed, 09 Sep 2026 00:00:00 +0300</pubDate>
+      <description>kiiresti, suure hooga</description>
+    </item>
+    <item>
+      <title>patsilutikas</title>
+      <link>https://xn--pevasna-5wa1n.ee/2026-09-08/</link>
+      <guid isPermaLink="true">https://xn--pevasna-5wa1n.ee/2026-09-08/</guid>
+      <pubDate>Tue, 08 Sep 2026 00:00:00 +0300</pubDate>
+      <description>pisik, batsill</description>
+    </item>
     <item>
       <title>krööm</title>
       <link>https://xn--pevasna-5wa1n.ee/2026-09-07/</link>
@@ -342,20 +356,6 @@
       <guid isPermaLink="true">https://xn--pevasna-5wa1n.ee/2026-07-22/</guid>
       <pubDate>Wed, 22 Jul 2026 00:00:00 +0300</pubDate>
       <description>segane, mitte tõsiselt võetav jutt, jama, totrus</description>
-    </item>
-    <item>
-      <title>sübariit</title>
-      <link>https://xn--pevasna-5wa1n.ee/2026-07-21/</link>
-      <guid isPermaLink="true">https://xn--pevasna-5wa1n.ee/2026-07-21/</guid>
-      <pubDate>Tue, 21 Jul 2026 00:00:00 +0300</pubDate>
-      <description>luksuslikku eluviisi ja meelelisi mõnusid harrastav elunautija</description>
-    </item>
-    <item>
-      <title>hea-parem</title>
-      <link>https://xn--pevasna-5wa1n.ee/2026-07-20/</link>
-      <guid isPermaLink="true">https://xn--pevasna-5wa1n.ee/2026-07-20/</guid>
-      <pubDate>Mon, 20 Jul 2026 00:00:00 +0300</pubDate>
-      <description>maitsev suupiste, joogi- või söögipoolis</description>
     </item>
   </channel>
 </rss>

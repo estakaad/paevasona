@@ -1,0 +1,27 @@
+{
+  "date": "2026-09-08",
+  "word": "patsilutikas",
+  "wordId": 214422,
+  "forms": {
+    "SgN": "patsilutikas",
+    "SgG": "patsilutika",
+    "SgP": "patsilutikat"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "pisik, batsill"
+      ],
+      "usages": [
+        {
+          "text": "Kiisul on vist mingid patsilutikad.",
+          "sources": []
+        }
+      ]
+    }
+  ]
+}
