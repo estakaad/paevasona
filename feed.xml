@@ -5,8 +5,15 @@
     <link>https://xn--pevasna-5wa1n.ee/</link>
     <description>Eesti keele huvitavad ja harvad sõnad iga päev</description>
     <language>et</language>
-    <lastBuildDate>Wed, 09 Sep 2026 00:00:00 +0300</lastBuildDate>
+    <lastBuildDate>Thu, 10 Sep 2026 00:00:00 +0300</lastBuildDate>
     <atom:link href="https://xn--pevasna-5wa1n.ee/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>kõhuvari</title>
+      <link>https://xn--pevasna-5wa1n.ee/2026-09-10/</link>
+      <guid isPermaLink="true">https://xn--pevasna-5wa1n.ee/2026-09-10/</guid>
+      <pubDate>Thu, 10 Sep 2026 00:00:00 +0300</pubDate>
+      <description>toit, söök</description>
+    </item>
     <item>
       <title>hoopsasti</title>
       <link>https://xn--pevasna-5wa1n.ee/2026-09-09/</link>
@@ -349,13 +356,6 @@
       <guid isPermaLink="true">https://xn--pevasna-5wa1n.ee/2026-07-23/</guid>
       <pubDate>Thu, 23 Jul 2026 00:00:00 +0300</pubDate>
       <description>(kaardimängu, mängukaartide kohta)</description>
-    </item>
-    <item>
-      <title>umbluu</title>
-      <link>https://xn--pevasna-5wa1n.ee/2026-07-22/</link>
-      <guid isPermaLink="true">https://xn--pevasna-5wa1n.ee/2026-07-22/</guid>
-      <pubDate>Wed, 22 Jul 2026 00:00:00 +0300</pubDate>
-      <description>segane, mitte tõsiselt võetav jutt, jama, totrus</description>
     </item>
   </channel>
 </rss>

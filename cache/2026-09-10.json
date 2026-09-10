@@ -1,0 +1,32 @@
+{
+  "date": "2026-09-10",
+  "word": "kõhuvari",
+  "wordId": 188941,
+  "forms": {
+    "SgN": "kõhuvari",
+    "SgG": "kõhuvarju",
+    "SgP": "kõhuvarju"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "toit, söök"
+      ],
+      "usages": [
+        {
+          "text": "On kasvanud suude hulk toas kui ka laudas, nõudes aina pea- ja kõhuvarju.",
+          "sources": [
+            {
+              "label": "A. H. Tammsaare",
+              "detail": "A. H. Tammsaare. Eesti kirjakeele arhiiv. Eesti Keele Instituut. 4,3 mln sedelit, kogutud 1960–2000."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
