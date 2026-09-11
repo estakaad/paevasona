@@ -1,0 +1,22 @@
+{
+  "date": "2026-09-11",
+  "word": "kilb",
+  "wordId": 180984,
+  "forms": {
+    "SgN": "kilb",
+    "SgG": "kilva",
+    "SgP": "kilba"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "sportlik või meelelahutuslik küsimustele vastamise võistlus, mis eeldab mitmekülgseid teadmisi ja head mälu"
+      ],
+      "usages": []
+    }
+  ]
+}
