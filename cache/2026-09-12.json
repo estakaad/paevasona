@@ -1,0 +1,31 @@
+{
+  "date": "2026-09-12",
+  "word": "konnapiiritus",
+  "wordId": 383124,
+  "forms": {
+    "SgN": "konnapiiritus",
+    "SgG": "konnapiirituse",
+    "SgP": "konnapiiritust"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "vesi joogina"
+      ],
+      "usages": [
+        {
+          "text": "Kõige odavam jook on konnapiiritus.",
+          "sources": []
+        },
+        {
+          "text": "Olen siiski maalaps ja mulle ei maitse Mustamäe konnapiiritus.",
+          "sources": []
+        }
+      ]
+    }
+  ]
+}
