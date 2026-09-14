@@ -1,0 +1,31 @@
+{
+  "date": "2026-09-14",
+  "word": "kukepea",
+  "wordId": 187228,
+  "forms": {},
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "väljendab, et miski on kergesti, lihtsalt tehtav või tundub tühine, tähtsusetu (kasutatakse hrl üleolekuga, praalivalt)"
+      ],
+      "usages": [
+        {
+          "text": "Helsingis on kukepea vaadata päevas neli-viis filmi.",
+          "sources": []
+        },
+        {
+          "text": "Pesu pesemine? – Kukepea!",
+          "sources": []
+        },
+        {
+          "text": "Kardan oma tervise pärast, kõik muu on kukepea.",
+          "sources": []
+        }
+      ]
+    }
+  ]
+}
