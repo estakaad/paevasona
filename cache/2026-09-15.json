@@ -1,0 +1,27 @@
+{
+  "date": "2026-09-15",
+  "word": "rihmavahe",
+  "wordId": 455863,
+  "forms": {
+    "SgN": "rihmavahe",
+    "SgG": "rihmavahe",
+    "SgP": "rihmavahet"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "(söömise-joomise, mao jt seedeelunditega seotud nälja-, valu- vm aistingute kohta)"
+      ],
+      "usages": [
+        {
+          "text": "Taat tuli kodu poole, õlut oli rihmavahe tihedasti täis.",
+          "sources": []
+        }
+      ]
+    }
+  ]
+}
