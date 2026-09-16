@@ -1,0 +1,31 @@
+{
+  "date": "2026-09-16",
+  "word": "teps",
+  "wordId": 481689,
+  "forms": {},
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "adv"
+      ],
+      "definitions": [
+        "(rõhutava sõnana:) mitte vähimalgi määral"
+      ],
+      "usages": [
+        {
+          "text": "Tegelikult pole see teps mitte nii.",
+          "sources": []
+        },
+        {
+          "text": "Ma tunnistan, et ei valda seda teps.",
+          "sources": []
+        },
+        {
+          "text": "Töö pole teps mitte tehtud.",
+          "sources": []
+        }
+      ]
+    }
+  ]
+}
