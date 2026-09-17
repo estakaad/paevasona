@@ -1,0 +1,22 @@
+{
+  "date": "2026-09-17",
+  "word": "hola",
+  "wordId": 1415150,
+  "forms": {
+    "SgN": "hola",
+    "SgG": "hola",
+    "SgP": "hola"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "rahvamuusika tänapäevased seaded ja nende laadis loodud muusika"
+      ],
+      "usages": []
+    }
+  ]
+}
