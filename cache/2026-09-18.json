@@ -1,0 +1,22 @@
+{
+  "date": "2026-09-18",
+  "word": "bivakk",
+  "wordId": 160180,
+  "forms": {
+    "SgN": "bivakk",
+    "SgG": "bivaki",
+    "SgP": "bivakki"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "sportlik, sõjaline või matkajate välilaager"
+      ],
+      "usages": []
+    }
+  ]
+}
