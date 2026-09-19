@@ -1,0 +1,28 @@
+{
+  "date": "2026-09-19",
+  "word": "untsantsakas",
+  "wordId": 251452,
+  "forms": {
+    "SgN": "untsantsakas",
+    "SgG": "untsantsaka",
+    "SgP": "untsantsakat"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "linnainimene, linliku elulaadiga inimene",
+        "kerglane, tühine inimene"
+      ],
+      "usages": [
+        {
+          "text": "Linna untsantsakas minestab laudalõhnast.",
+          "sources": []
+        }
+      ]
+    }
+  ]
+}
