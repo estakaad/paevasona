@@ -1,0 +1,37 @@
+{
+  "date": "2026-09-20",
+  "word": "etažeer",
+  "wordId": 165216,
+  "forms": {
+    "SgN": "etažeer",
+    "SgG": "etažeeri",
+    "SgP": "etažeeri"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "väike riiul raamatute või iluasjade jaoks",
+        "jalgadel riiul"
+      ],
+      "usages": [
+        {
+          "text": "Mul on etažeeri peal terve hulk tillukesi kujusid.",
+          "sources": []
+        },
+        {
+          "text": ".. lugesin mõnda umbropsu võetud köidet Dostojevski revolutsioonieelsetest kogutud teostest, mis teiste sama vanade kuldkirjaga .. köiidete kõrval seisid etažeeril ..",
+          "sources": [
+            {
+              "label": "Jüri Ojamaa 2005, lk 116",
+              "detail": "Leonid Tsõpkin. Suvi Baden-Badenis. Vene keelest tõlkinud Jüri Ojamaa. Tallinn: Tänapäev."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
