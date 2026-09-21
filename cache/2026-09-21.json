@@ -1,0 +1,31 @@
+{
+  "date": "2026-09-21",
+  "word": "elaan",
+  "wordId": 163244,
+  "forms": {
+    "SgN": "elaan",
+    "SgG": "elaani",
+    "SgP": "elaani"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "hoogne ja intensiivne, (elurõõmsat) energiat täis, millestki vaimustunud olek"
+      ],
+      "usages": [
+        {
+          "text": "Vaat seal on alles elaani – kirgi, intriige ja huumorit!",
+          "sources": []
+        },
+        {
+          "text": "Mahemuusika asemel kõlab nüüd elaanist pulbitsev kitarrirokk.",
+          "sources": []
+        }
+      ]
+    }
+  ]
+}
