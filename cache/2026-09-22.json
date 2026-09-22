@@ -1,0 +1,31 @@
+{
+  "date": "2026-09-22",
+  "word": "toi",
+  "wordId": 245224,
+  "forms": {
+    "SgN": "toi",
+    "SgG": "toi",
+    "SgP": "toid"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "vana mees"
+      ],
+      "usages": [
+        {
+          "text": "Mina, vana toi, olen oma ajanatukese peaaegu ära elanud.",
+          "sources": []
+        },
+        {
+          "text": "Vanamehetoi.",
+          "sources": []
+        }
+      ]
+    }
+  ]
+}
