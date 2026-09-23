@@ -1,0 +1,74 @@
+{
+  "date": "2026-09-23",
+  "word": "pära",
+  "wordId": 223585,
+  "forms": {
+    "SgN": "pära",
+    "SgG": "pära",
+    "SgP": "pära"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "sõiduvahendi vm eseme tagumine osa või ots"
+      ],
+      "usages": [
+        {
+          "text": "Paadi päras oli auk.",
+          "sources": []
+        },
+        {
+          "text": "Auto pärasse on ehitatud kaks kappi riiete jaoks.",
+          "sources": []
+        },
+        {
+          "text": "Pussnoa pära.",
+          "sources": []
+        }
+      ]
+    },
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "kauge, tagumine või kõrvaline koht"
+      ],
+      "usages": [
+        {
+          "text": "Meremudarikast roostikku näeb ka Kopli lahe päras.",
+          "sources": []
+        }
+      ]
+    },
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "millegi jäänused, riismed, millegi ülejäänud osa",
+        "vedeliku põhja vajunud paks või soga"
+      ],
+      "usages": [
+        {
+          "text": "Juuretiseks kasutatakse eelmise õlle pära.",
+          "sources": []
+        },
+        {
+          "text": "Seebikeetmisel järelejäänud pära.",
+          "sources": []
+        },
+        {
+          "text": "Teepära.",
+          "sources": []
+        }
+      ]
+    }
+  ]
+}
