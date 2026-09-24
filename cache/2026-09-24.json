@@ -1,0 +1,28 @@
+{
+  "date": "2026-09-24",
+  "word": "essugi",
+  "wordId": 203260,
+  "forms": {},
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "adv"
+      ],
+      "definitions": [
+        "üldse mitte, sugugi mitte",
+        "(üldse) mitte midagi, mitte vähimatki"
+      ],
+      "usages": [
+        {
+          "text": "Me ei saanud sest filmist mitte essugi aru.",
+          "sources": []
+        },
+        {
+          "text": "Ma ei oska Sulle mitte essugi soovitada.",
+          "sources": []
+        }
+      ]
+    }
+  ]
+}
