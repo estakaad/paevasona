@@ -5,8 +5,15 @@
     <link>https://xn--pevasna-5wa1n.ee/</link>
     <description>Eesti keele huvitavad ja harvad sõnad iga päev</description>
     <language>et</language>
-    <lastBuildDate>Thu, 24 Sep 2026 00:00:00 +0300</lastBuildDate>
+    <lastBuildDate>Fri, 25 Sep 2026 00:00:00 +0300</lastBuildDate>
     <atom:link href="https://xn--pevasna-5wa1n.ee/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>bonistika</title>
+      <link>https://xn--pevasna-5wa1n.ee/2026-09-25/</link>
+      <guid isPermaLink="true">https://xn--pevasna-5wa1n.ee/2026-09-25/</guid>
+      <pubDate>Fri, 25 Sep 2026 00:00:00 +0300</pubDate>
+      <description>paberraha kogumine harrastusalana</description>
+    </item>
     <item>
       <title>essugi</title>
       <link>https://xn--pevasna-5wa1n.ee/2026-09-24/</link>
@@ -349,13 +356,6 @@
       <guid isPermaLink="true">https://xn--pevasna-5wa1n.ee/2026-08-07/</guid>
       <pubDate>Fri, 07 Aug 2026 00:00:00 +0300</pubDate>
       <description>(väljendites sünnituse ja sünnitusjärgse aja kohta)</description>
-    </item>
-    <item>
-      <title>mitu-setu</title>
-      <link>https://xn--pevasna-5wa1n.ee/2026-08-06/</link>
-      <guid isPermaLink="true">https://xn--pevasna-5wa1n.ee/2026-08-06/</guid>
-      <pubDate>Thu, 06 Aug 2026 00:00:00 +0300</pubDate>
-      <description>(ebamääraselt:) õige mitu</description>
     </item>
   </channel>
 </rss>
