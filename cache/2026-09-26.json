@@ -1,0 +1,27 @@
+{
+  "date": "2026-09-26",
+  "word": "nagamann",
+  "wordId": 206851,
+  "forms": {
+    "SgN": "nagamann",
+    "SgG": "nagamanni",
+    "SgP": "nagamanni"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "(elav, hakkaja, üleannetu) poiss või nooruk"
+      ],
+      "usages": [
+        {
+          "text": "Reykjavikis pidavat iga nagamann mingis bändis mängima.",
+          "sources": []
+        }
+      ]
+    }
+  ]
+}
