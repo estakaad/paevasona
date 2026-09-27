@@ -1,0 +1,27 @@
+{
+  "date": "2026-09-27",
+  "word": "muts",
+  "wordId": 204918,
+  "forms": {
+    "SgN": "muts",
+    "SgG": "mutsu",
+    "SgP": "mutsu"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "aru, taip"
+      ],
+      "usages": [
+        {
+          "text": "Nagu Põhja- ja Lõuna-Eesti keeled: ühes mõistus, teises muts.",
+          "sources": []
+        }
+      ]
+    }
+  ]
+}
