@@ -1,0 +1,31 @@
+{
+  "date": "2026-09-28",
+  "word": "luuslank",
+  "wordId": 404909,
+  "forms": {
+    "SgN": "luuslank",
+    "SgG": "luuslangi",
+    "SgP": "luuslanki"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "logelemine, mõnus tööta äraolemine"
+      ],
+      "usages": [
+        {
+          "text": "Luuslangi vedajaid siia kooli ei oodata.",
+          "sources": []
+        },
+        {
+          "text": "Kodukontor – kas luuslank argipäeval või produktiivsuspuhang ja keskkonnasääst?",
+          "sources": []
+        }
+      ]
+    }
+  ]
+}

@@ -5,8 +5,15 @@
     <link>https://xn--pevasna-5wa1n.ee/</link>
     <description>Eesti keele huvitavad ja harvad sõnad iga päev</description>
     <language>et</language>
-    <lastBuildDate>Sun, 27 Sep 2026 00:00:00 +0300</lastBuildDate>
+    <lastBuildDate>Mon, 28 Sep 2026 00:00:00 +0300</lastBuildDate>
     <atom:link href="https://xn--pevasna-5wa1n.ee/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>luuslank</title>
+      <link>https://xn--pevasna-5wa1n.ee/2026-09-28/</link>
+      <guid isPermaLink="true">https://xn--pevasna-5wa1n.ee/2026-09-28/</guid>
+      <pubDate>Mon, 28 Sep 2026 00:00:00 +0300</pubDate>
+      <description>logelemine, mõnus tööta äraolemine</description>
+    </item>
     <item>
       <title>muts</title>
       <link>https://xn--pevasna-5wa1n.ee/2026-09-27/</link>
@@ -349,13 +356,6 @@
       <guid isPermaLink="true">https://xn--pevasna-5wa1n.ee/2026-08-10/</guid>
       <pubDate>Mon, 10 Aug 2026 00:00:00 +0300</pubDate>
       <description>(ungari keele ja ungaripärase kohta)</description>
-    </item>
-    <item>
-      <title>ülevise</title>
-      <link>https://xn--pevasna-5wa1n.ee/2026-08-09/</link>
-      <guid isPermaLink="true">https://xn--pevasna-5wa1n.ee/2026-08-09/</guid>
-      <pubDate>Sun, 09 Aug 2026 00:00:00 +0300</pubDate>
-      <description>õlgadel kantav riietusese (nt sõba, suurrätt, pleed)</description>
     </item>
   </channel>
 </rss>
