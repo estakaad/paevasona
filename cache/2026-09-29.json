@@ -1,0 +1,36 @@
+{
+  "date": "2026-09-29",
+  "word": "sinekuur",
+  "wordId": 233859,
+  "forms": {
+    "SgN": "sinekuur",
+    "SgG": "sinekuuri",
+    "SgP": "sinekuuri"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "vähe vaeva nõudev tulus amet"
+      ],
+      "usages": [
+        {
+          "text": "Teenekaid poliitikuid ilma sinekuurideta ei jäetud.",
+          "sources": []
+        },
+        {
+          "text": "On ju teada, kuidas kunstiinimesed end mitmesugustes valimisnimekirjades üles seada lasevad, vahel ka lootusest saada sel kombel mõnd püsiametit või sinekuuri, mis virelemisele lõpu teeks.",
+          "sources": [
+            {
+              "label": "Mihkel Mutt",
+              "detail": "Mihkel Mutt. Eesti kirjakeele arhiiv. Eesti Keele Instituut. 4,3 mln sedelit, kogutud 1960–2000."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
