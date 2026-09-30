@@ -1,0 +1,47 @@
+{
+  "date": "2026-09-30",
+  "word": "küpsiküüsi",
+  "wordId": 1467652,
+  "forms": {},
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "adv"
+      ],
+      "definitions": [
+        "kogu hingest, jäägitult",
+        "ahnelt, kiirustades"
+      ],
+      "usages": [
+        {
+          "text": "Dogan vandus alla ja haaras pakutud tehingust küpsiküüsi kinni.",
+          "sources": [
+            {
+              "label": "Lii Tõnismann 1994",
+              "detail": "John Grisham. Kamber. Inglise keelest tõlkinud Lii Tõnismann. Tallinn: Varrak, 1994."
+            }
+          ]
+        },
+        {
+          "text": "Härra von Kremer viibis nii küpsiküüsi oma seesmise murrangu juures, et ta nädalaga sassi läks ja laupäeval, teda reedeks pidades, Särgveresse unustas sõitmata.",
+          "sources": [
+            {
+              "label": "Eduard Vilde 2016 [1916]",
+              "detail": "Eduard Vilde. Mäeküla piimamees. Tallinn: Critera VMG, 2016. (Esmatrükk: Mõte, 1916.)"
+            }
+          ]
+        },
+        {
+          "text": "Moor oli küpsiküüsi töö kallal.",
+          "sources": [
+            {
+              "label": "Aino Pervik 1973",
+              "detail": "Aino Pervik. Kunksmoor. Tallinn: Eesti Raamat, 1973."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
