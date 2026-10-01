@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-01",
+  "word": "etüi",
+  "wordId": 165406,
+  "forms": {
+    "SgN": "etüi",
+    "SgG": "etüi",
+    "SgP": "etüid"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "kaanega väike karp või toos hrl suitsude hoidmiseks"
+      ],
+      "usages": [
+        {
+          "text": "Sigaretietüi.",
+          "sources": []
+        }
+      ]
+    }
+  ]
+}
