@@ -1,0 +1,33 @@
+{
+  "date": "2026-10-02",
+  "word": "uih-aih",
+  "wordId": 250890,
+  "forms": {},
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "interj",
+        "adj",
+        "adv"
+      ],
+      "definitions": [
+        "väljendab virisemist, peenutsemist, eblakust vm"
+      ],
+      "usages": [
+        {
+          "text": "Aga kui tuled ratsutama, et siis ei oleks uih! ja aih!",
+          "sources": []
+        },
+        {
+          "text": "Ei ole ma mingi uih-aih vanaproua, ikka tavaline maainimene.",
+          "sources": []
+        },
+        {
+          "text": "Uih! Aih! Mõtle, lahutatud naine!",
+          "sources": []
+        }
+      ]
+    }
+  ]
+}
