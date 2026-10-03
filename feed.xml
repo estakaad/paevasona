@@ -5,8 +5,15 @@
     <link>https://xn--pevasna-5wa1n.ee/</link>
     <description>Eesti keele huvitavad ja harvad sõnad iga päev</description>
     <language>et</language>
-    <lastBuildDate>Fri, 02 Oct 2026 00:00:00 +0300</lastBuildDate>
+    <lastBuildDate>Sat, 03 Oct 2026 00:00:00 +0300</lastBuildDate>
     <atom:link href="https://xn--pevasna-5wa1n.ee/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>nääl</title>
+      <link>https://xn--pevasna-5wa1n.ee/2026-10-03/</link>
+      <guid isPermaLink="true">https://xn--pevasna-5wa1n.ee/2026-10-03/</guid>
+      <pubDate>Sat, 03 Oct 2026 00:00:00 +0300</pubDate>
+      <description>abikaasa vend (mehe seisukohast)</description>
+    </item>
     <item>
       <title>uih-aih</title>
       <link>https://xn--pevasna-5wa1n.ee/2026-10-02/</link>
@@ -349,13 +356,6 @@
       <guid isPermaLink="true">https://xn--pevasna-5wa1n.ee/2026-08-15/</guid>
       <pubDate>Sat, 15 Aug 2026 00:00:00 +0300</pubDate>
       <description>inimestes, loomades, loodus- vm esemeis peituv maagiline vägi või mõjuvõim</description>
-    </item>
-    <item>
-      <title>käli</title>
-      <link>https://xn--pevasna-5wa1n.ee/2026-08-14/</link>
-      <guid isPermaLink="true">https://xn--pevasna-5wa1n.ee/2026-08-14/</guid>
-      <pubDate>Fri, 14 Aug 2026 00:00:00 +0300</pubDate>
-      <description>abikaasa õde (mehe seisukohast)</description>
     </item>
   </channel>
 </rss>
