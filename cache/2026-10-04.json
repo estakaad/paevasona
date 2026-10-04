@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-04",
+  "word": "kromlehh",
+  "wordId": 186655,
+  "forms": {
+    "SgN": "kromlehh",
+    "SgG": "kromlehhi",
+    "SgP": "kromlehhi"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "mitmest kontsentrilisest või ühest suurte püstkivide ringist koosnev noorema kiviaja (kultus)ehitis"
+      ],
+      "usages": [
+        {
+          "text": "Kõige paremini on säilinud Stonehenge'i kromlehh Lõuna-Inglismaal Salisbury külje all.",
+          "sources": []
+        },
+        {
+          "text": "Euroopa vanim rajatis – kromlehh – koosneb 11 reast kivist, mis on paralleelsed.",
+          "sources": []
+        }
+      ]
+    }
+  ]
+}
