@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-05",
+  "word": "väitama",
+  "wordId": 504602,
+  "forms": {
+    "IndPrSg3": "väitab",
+    "Sup": "väitama",
+    "Inf": "väidata"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "v"
+      ],
+      "definitions": [
+        "pingutama, eriti sünnitamisel"
+      ],
+      "usages": [
+        {
+          "text": "Nõrga nägemise pärast ei tohtinud ta tuhude ajal kaasa väidata.",
+          "sources": []
+        }
+      ]
+    }
+  ]
+}
