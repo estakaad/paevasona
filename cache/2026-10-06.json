@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-06",
+  "word": "sabarakk",
+  "wordId": 230257,
+  "forms": {
+    "SgN": "sabarakk",
+    "SgG": "sabaraku",
+    "SgP": "sabarakku"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "kaasajooksik, kellegi truualamlik kannupoiss"
+      ],
+      "usages": [
+        {
+          "text": "Minu küüditajad olid eestlased, NKVD sabarakud.",
+          "sources": []
+        }
+      ]
+    }
+  ]
+}
