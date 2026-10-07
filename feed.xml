@@ -5,8 +5,15 @@
     <link>https://xn--pevasna-5wa1n.ee/</link>
     <description>Eesti keele huvitavad ja harvad sõnad iga päev</description>
     <language>et</language>
-    <lastBuildDate>Tue, 06 Oct 2026 00:00:00 +0300</lastBuildDate>
+    <lastBuildDate>Wed, 07 Oct 2026 00:00:00 +0300</lastBuildDate>
     <atom:link href="https://xn--pevasna-5wa1n.ee/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>lell</title>
+      <link>https://xn--pevasna-5wa1n.ee/2026-10-07/</link>
+      <guid isPermaLink="true">https://xn--pevasna-5wa1n.ee/2026-10-07/</guid>
+      <pubDate>Wed, 07 Oct 2026 00:00:00 +0300</pubDate>
+      <description>isapoolne onu, isa vend</description>
+    </item>
     <item>
       <title>sabarakk</title>
       <link>https://xn--pevasna-5wa1n.ee/2026-10-06/</link>
@@ -349,13 +356,6 @@
       <guid isPermaLink="true">https://xn--pevasna-5wa1n.ee/2026-08-19/</guid>
       <pubDate>Wed, 19 Aug 2026 00:00:00 +0300</pubDate>
       <description>(rõhutab, tõstab esile, kinnitab midagi:) just, nimelt, täpselt, just nii</description>
-    </item>
-    <item>
-      <title>tutske</title>
-      <link>https://xn--pevasna-5wa1n.ee/2026-08-18/</link>
-      <guid isPermaLink="true">https://xn--pevasna-5wa1n.ee/2026-08-18/</guid>
-      <pubDate>Tue, 18 Aug 2026 00:00:00 +0300</pubDate>
-      <description>lahe, mõnus, tubli</description>
     </item>
   </channel>
 </rss>

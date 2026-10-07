@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-07",
+  "word": "lell",
+  "wordId": 194013,
+  "forms": {
+    "SgN": "lell",
+    "SgG": "lelle",
+    "SgP": "lelle"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "isapoolne onu, isa vend"
+      ],
+      "usages": [
+        {
+          "text": "Muidugi ei kuulanud ma lell Valduri, selle elust kibestunud mehe hoiatust.",
+          "sources": []
+        },
+        {
+          "text": "Vend Sigismundi ja lellede Hans Heinrichi ja Karl Johanni nõusolekul müüs ta mõisa 21 000 rublaga alampolkovnik Eduard Joachim Jordanile.",
+          "sources": []
+        }
+      ]
+    }
+  ]
+}
