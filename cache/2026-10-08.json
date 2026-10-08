@@ -1,0 +1,32 @@
+{
+  "date": "2026-10-08",
+  "word": "peps",
+  "wordId": 215515,
+  "forms": {
+    "SgN": "peps",
+    "SgG": "pepsi",
+    "SgP": "pepsi"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "adj"
+      ],
+      "definitions": [
+        "üleliia nõudlik ja valiv",
+        "(tehtult) peenutsev"
+      ],
+      "usages": [
+        {
+          "text": "Riina on söögi asjus väga peps.",
+          "sources": []
+        },
+        {
+          "text": "Tal on pepsi kohvikutanta hääl.",
+          "sources": []
+        }
+      ]
+    }
+  ]
+}
