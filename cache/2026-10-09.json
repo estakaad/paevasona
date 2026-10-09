@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-09",
+  "word": "taskutiisikus",
+  "wordId": 242520,
+  "forms": {
+    "SgN": "taskutiisikus",
+    "SgG": "taskutiisikuse",
+    "SgP": "taskutiisikust"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "(rahapuuduse kohta)"
+      ],
+      "usages": [
+        {
+          "text": "Taskutiisikusest tingitud depressiooni vastu aitab vaid rahasüst.",
+          "sources": []
+        }
+      ]
+    }
+  ]
+}
