@@ -1,0 +1,61 @@
+{
+  "date": "2026-10-10",
+  "word": "uri",
+  "wordId": 251542,
+  "forms": {
+    "SgN": "uri",
+    "SgG": "urja",
+    "SgP": "urja"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "kellegi tõttu, millegi läbi kannatanu, kahjustatu või hukkunu"
+      ],
+      "usages": [
+        {
+          "text": ".. too lõhnalilli, viirukit, iidajast teada urjasid / ja rõivaid, riistu kuldseid ka ..",
+          "sources": [
+            {
+              "label": "Uku Masing",
+              "detail": "Uku Masing. Eesti kirjakeele arhiiv. Eesti Keele Instituut. 4,3 mln sedelit, kogutud 1960–2000."
+            }
+          ]
+        },
+        {
+          "text": ".. mullakihti vaevalt rutuga peideti / sõdur, kes haavatuna lahingus suri – / üks noist tuhandeist – mõttetu uri.",
+          "sources": [
+            {
+              "label": "Karl Eduard Sööt",
+              "detail": "Karl Eduard Sööt. Eesti kirjakeele arhiiv. Eesti Keele Instituut. 4,3 mln sedelit, kogutud 1960–2000."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "tuli, milles põletati ohvriande"
+      ],
+      "usages": [
+        {
+          "text": "Mu süda leegib täna nagu uri, / võib-olla homme aga tuhk on leel.",
+          "sources": [
+            {
+              "label": "Imbi Kolla",
+              "detail": "Imbi Kolla. Eesti kirjakeele arhiiv. Eesti Keele Instituut. 4,3 mln sedelit, kogutud 1960–2000."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
