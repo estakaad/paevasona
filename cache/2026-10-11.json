@@ -1,0 +1,28 @@
+{
+  "date": "2026-10-11",
+  "word": "esprii",
+  "wordId": 165155,
+  "forms": {
+    "SgN": "esprii",
+    "SgG": "esprii",
+    "SgP": "espriid"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "vaimukas jutt, teravmeelne ütlemine",
+        "teravmeelne vaim"
+      ],
+      "usages": [
+        {
+          "text": "Mihkli sõnavõtud on alati lausa kiiranud espriid.",
+          "sources": []
+        }
+      ]
+    }
+  ]
+}
