@@ -1,0 +1,32 @@
+{
+  "date": "2026-10-12",
+  "word": "henseldama",
+  "wordId": 1413576,
+  "forms": {
+    "Sup": "henseldama",
+    "Inf": "henseldada",
+    "IndPrSg3": "henseldab"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "v"
+      ],
+      "definitions": [
+        "ekvaatori esmakordseid ületajaid vastava kombe kohaselt ristima"
+      ],
+      "usages": [
+        {
+          "text": "Kuna keegi meist polnud seda meritsi varem teinud [= ekvaatorit ületanud], tuli mul õigel ajal vöörikantslis koht sisse võtta, et siis teistest pisut varem lõunapoolkerale jõudnuna mehi henseldada.",
+          "sources": [
+            {
+              "label": "Mart Saarso 1999-2000",
+              "detail": "Mart Saarso. Kapten Saarso kirjad ookeanilt: teine kiri. 1999-2000. http://vana.loodusajakiri.ee/eesti_loodus/EL/vanaweb/0004/kapten.html"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
