@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-13",
+  "word": "jõss",
+  "wordId": 1619353,
+  "forms": {
+    "SgN": "jõss",
+    "SgG": "jõssi",
+    "SgP": "jõssi"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "väike tüse poiss või mees"
+      ],
+      "usages": [
+        {
+          "text": "Poiss on mul vahva, tore jõss.",
+          "sources": []
+        }
+      ]
+    }
+  ]
+}
