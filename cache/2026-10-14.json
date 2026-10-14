@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-14",
+  "word": "mait",
+  "wordId": 199818,
+  "forms": {
+    "SgN": "mait",
+    "SgG": "maida",
+    "SgP": "maita"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "leebe kirumissõna, mida kasutatakse millegi või kellegi üle pahandades, midagi taunides, harvemini imestuse või üllatuse korral"
+      ],
+      "usages": [
+        {
+          "text": "Mait küll, kui hästi lõhnab!",
+          "sources": []
+        },
+        {
+          "text": "Assa mait, mis vaade!",
+          "sources": []
+        }
+      ]
+    }
+  ]
+}
