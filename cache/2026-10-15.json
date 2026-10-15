@@ -1,0 +1,32 @@
+{
+  "date": "2026-10-15",
+  "word": "murikas",
+  "wordId": 1409454,
+  "forms": {
+    "SgN": "murikas",
+    "SgG": "murika",
+    "SgP": "murikat"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "suur lõigatud või murtud tükk leiba"
+      ],
+      "usages": [
+        {
+          "text": "Toob poest kenakese murika leiba ..",
+          "sources": [
+            {
+              "label": "Oskar Luts",
+              "detail": "Oskar Luts. Eesti kirjakeele arhiiv. Eesti Keele Instituut. 4,3 mln sedelit, kogutud 1960–2000."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
