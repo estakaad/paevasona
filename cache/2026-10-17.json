@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-17",
+  "word": "lollikannel",
+  "wordId": 196156,
+  "forms": {
+    "SgN": "lollikannel",
+    "SgG": "lollikandle",
+    "SgP": "lollikannelt"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "arvelaud"
+      ],
+      "usages": []
+    }
+  ]
+}
