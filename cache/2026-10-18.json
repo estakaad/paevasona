@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-18",
+  "word": "lauluõli",
+  "wordId": 193347,
+  "forms": {
+    "SgN": "lauluõli",
+    "SgG": "lauluõli",
+    "SgP": "lauluõli"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "(alkohoolse joogi kohta)"
+      ],
+      "usages": [
+        {
+          "text": "Viin pole mitte ainult lauluõli, vaid ka tantsuõli.",
+          "sources": []
+        },
+        {
+          "text": "Matkale võeti kaasa lauluraamatud ning parajalt lauluõli.",
+          "sources": []
+        }
+      ]
+    }
+  ]
+}
