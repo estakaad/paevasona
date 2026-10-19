@@ -1,0 +1,32 @@
+{
+  "date": "2026-10-19",
+  "word": "lemm",
+  "wordId": 194026,
+  "forms": {
+    "SgN": "lemm",
+    "SgG": "lemme",
+    "SgP": "lemme"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "taime väike osake (nt õieleht, helves)"
+      ],
+      "usages": [
+        {
+          "text": "Kõik taevas õitseb. / Pilvehekist / lemm lemme järel udeneb.",
+          "sources": [
+            {
+              "label": "Ellen Niit 1978, lk 121",
+              "detail": "Ellen Niit. Maailma pidevus. Tallinn: Eesti Raamat, 1978."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
