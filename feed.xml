@@ -5,8 +5,15 @@
     <link>https://xn--pevasna-5wa1n.ee/</link>
     <description>Eesti keele huvitavad ja harvad sõnad iga päev</description>
     <language>et</language>
-    <lastBuildDate>Mon, 19 Oct 2026 00:00:00 +0300</lastBuildDate>
+    <lastBuildDate>Tue, 20 Oct 2026 00:00:00 +0300</lastBuildDate>
     <atom:link href="https://xn--pevasna-5wa1n.ee/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>tohuvabohu</title>
+      <link>https://xn--pevasna-5wa1n.ee/2026-10-20/</link>
+      <guid isPermaLink="true">https://xn--pevasna-5wa1n.ee/2026-10-20/</guid>
+      <pubDate>Tue, 20 Oct 2026 00:00:00 +0300</pubDate>
+      <description>tohutu segadus, suur korralagedus, äge möll</description>
+    </item>
     <item>
       <title>lemm</title>
       <link>https://xn--pevasna-5wa1n.ee/2026-10-19/</link>
@@ -349,13 +356,6 @@
       <guid isPermaLink="true">https://xn--pevasna-5wa1n.ee/2026-09-01/</guid>
       <pubDate>Tue, 01 Sep 2026 00:00:00 +0300</pubDate>
       <description>(hingeliselt, vaimselt) millelegi vastuvõtlik, millekski valmis</description>
-    </item>
-    <item>
-      <title>ede</title>
-      <link>https://xn--pevasna-5wa1n.ee/2026-08-31/</link>
-      <guid isPermaLink="true">https://xn--pevasna-5wa1n.ee/2026-08-31/</guid>
-      <pubDate>Mon, 31 Aug 2026 00:00:00 +0300</pubDate>
-      <description>hrl spordis edupunktide, edumaa vm soodustuse etteandmine (nt jooksudes edumaa, pallimängudes punktid)</description>
     </item>
   </channel>
 </rss>
