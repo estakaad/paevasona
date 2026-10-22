@@ -1,0 +1,37 @@
+{
+  "date": "2026-10-22",
+  "word": "olbama",
+  "wordId": 1257048,
+  "forms": {
+    "Sup": "olbama",
+    "Inf": "olvata",
+    "IndPrSg3": "olbab"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "v"
+      ],
+      "definitions": [
+        "tähelepanelikult jälgima",
+        "tähelepanekuid tegema, midagi märkama"
+      ],
+      "usages": [
+        {
+          "text": "Iga ema olbab oma lapse arengut.",
+          "sources": []
+        },
+        {
+          "text": "Kui olbasin seda viimast selget tunnust oma sõbra vaimuhämmeldusest, suutsin vaevu pisaraid tagasi hoida.",
+          "sources": [
+            {
+              "label": "Johannes Aavik",
+              "detail": "Johannes Aavik"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
