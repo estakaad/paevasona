@@ -5,8 +5,15 @@
     <link>https://xn--pevasna-5wa1n.ee/</link>
     <description>Eesti keele huvitavad ja harvad sõnad iga päev</description>
     <language>et</language>
-    <lastBuildDate>Thu, 22 Oct 2026 00:00:00 +0300</lastBuildDate>
+    <lastBuildDate>Fri, 23 Oct 2026 00:00:00 +0300</lastBuildDate>
     <atom:link href="https://xn--pevasna-5wa1n.ee/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>abüssaal</title>
+      <link>https://xn--pevasna-5wa1n.ee/2026-10-23/</link>
+      <guid isPermaLink="true">https://xn--pevasna-5wa1n.ee/2026-10-23/</guid>
+      <pubDate>Fri, 23 Oct 2026 00:00:00 +0300</pubDate>
+      <description>veekiht, mis asub ookeani või mere pinnast rohkem kui 3000 meetrit sügavamal</description>
+    </item>
     <item>
       <title>olbama</title>
       <link>https://xn--pevasna-5wa1n.ee/2026-10-22/</link>
@@ -349,13 +356,6 @@
       <guid isPermaLink="true">https://xn--pevasna-5wa1n.ee/2026-09-04/</guid>
       <pubDate>Fri, 04 Sep 2026 00:00:00 +0300</pubDate>
       <description>noor naine (kes pole veel abielus) või naissoost laps</description>
-    </item>
-    <item>
-      <title>knirps</title>
-      <link>https://xn--pevasna-5wa1n.ee/2026-09-03/</link>
-      <guid isPermaLink="true">https://xn--pevasna-5wa1n.ee/2026-09-03/</guid>
-      <pubDate>Thu, 03 Sep 2026 00:00:00 +0300</pubDate>
-      <description>väike poiss või tüdruk</description>
     </item>
   </channel>
 </rss>

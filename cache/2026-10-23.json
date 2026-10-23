@@ -1,0 +1,32 @@
+{
+  "date": "2026-10-23",
+  "word": "abüssaal",
+  "wordId": 154896,
+  "forms": {
+    "SgN": "abüssaal",
+    "SgG": "abüssaali",
+    "SgP": "abüssaali"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "veekiht, mis asub ookeani või mere pinnast rohkem kui 3000 meetrit sügavamal",
+        "väga sügav meri"
+      ],
+      "usages": [
+        {
+          "text": "Läänemeres abüssaal puudub.",
+          "sources": []
+        },
+        {
+          "text": "Abüssaalis pole fotosünteesivaid organisme, sest seal pole valgust.",
+          "sources": []
+        }
+      ]
+    }
+  ]
+}
