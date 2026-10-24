@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-24",
+  "word": "ajuvesi",
+  "wordId": 155857,
+  "forms": {
+    "SgN": "ajuvesi",
+    "SgG": "ajuvee",
+    "SgP": "ajuvett"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "rannikul tugeva tuule toimel tõusnud veetase ja mere või siseveekogude kaldale ajutiselt tõusnud vesi"
+      ],
+      "usages": [
+        {
+          "text": "Oodata on edelatuule edasist tugevnemist ning on võimalik ka ohtlik ajuvesi.",
+          "sources": []
+        }
+      ]
+    }
+  ]
+}
