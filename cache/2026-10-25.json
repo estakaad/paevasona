@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-25",
+  "word": "tondinahk",
+  "wordId": 245578,
+  "forms": {
+    "SgN": "tondinahk",
+    "SgG": "tondinaha",
+    "SgP": "tondinahka"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "paks sametitaoline puuvillane riie (nt raamatuköideteks, tööriiete valmistamiseks)"
+      ],
+      "usages": []
+    }
+  ]
+}
