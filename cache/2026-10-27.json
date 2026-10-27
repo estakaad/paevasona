@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-27",
+  "word": "laiskliisu",
+  "wordId": 192368,
+  "forms": {
+    "SgN": "laiskliisu",
+    "SgG": "laiskliisu",
+    "SgP": "laiskliisut"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "rest, millele pestud nõud kuivama asetatakse"
+      ],
+      "usages": [
+        {
+          "text": "Hommikuti köögis ma kolistan, sest ma teen putru hommikusöögiks ja loomulikult keegi laiskliisut õhtul tühjaks ei tõsta.",
+          "sources": []
+        }
+      ]
+    }
+  ]
+}
