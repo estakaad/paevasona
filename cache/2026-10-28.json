@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-28",
+  "word": "mahlamüts",
+  "wordId": 2176166,
+  "forms": {
+    "SgN": "mahlamüts",
+    "SgG": "mahlamütsi",
+    "SgP": "mahlamütsi"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "(halvustavalt poisikese, algaja vms kohta)"
+      ],
+      "usages": [
+        {
+          "text": "Eesti laul - hunnik moodsaid riideid, eriefekte, vaheklippe, LED-ekraane, noori mahlamütse ja totakaid lugusid.",
+          "sources": []
+        },
+        {
+          "text": "Päris mahlamütside liigaks Hiina esiliigat nimetada ei saa.",
+          "sources": []
+        }
+      ]
+    }
+  ]
+}
