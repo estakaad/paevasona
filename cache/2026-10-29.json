@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-29",
+  "word": "sehvt",
+  "wordId": 232056,
+  "forms": {
+    "SgN": "sehvt",
+    "SgG": "sehvti",
+    "SgP": "sehvti"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "tihe, lähedane suhtlemine kellegagi (nt äri ajades või kurameerides)"
+      ],
+      "usages": [
+        {
+          "text": "Harald pidavat Mandaga sehvti pidama.",
+          "sources": []
+        }
+      ]
+    }
+  ]
+}
