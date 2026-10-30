@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-30",
+  "word": "pordikordisti",
+  "wordId": 1344941,
+  "forms": {
+    "SgN": "pordikordisti",
+    "SgG": "pordikordisti",
+    "SgP": "pordikordistit"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "sülearvuti vm seadme lauapealne lisaplokk, milles on akulaadur, lisaketas ja laiendmoodulid"
+      ],
+      "usages": [
+        {
+          "text": "Võrreldes varasemalt arvele võetud varaga registreerime edaspidi ka monitorid, printerid ja arvutite pordikordistid.",
+          "sources": []
+        }
+      ]
+    }
+  ]
+}
