@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-31",
+  "word": "sänikael",
+  "wordId": 239272,
+  "forms": {
+    "SgN": "sänikael",
+    "SgG": "sänikaela",
+    "SgP": "sänikaela"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "(põikpäise, isemeelse, sõnakuulmatu inimene kohta, ka kirumissõnana)"
+      ],
+      "usages": [
+        {
+          "text": "Elatise kättesaamiseks peab naine selle sänikaela ise üles otsima.",
+          "sources": []
+        }
+      ]
+    }
+  ]
+}
