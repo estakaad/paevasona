@@ -5,8 +5,15 @@
     <link>https://xn--pevasna-5wa1n.ee/</link>
     <description>Eesti keele huvitavad ja harvad sõnad iga päev</description>
     <language>et</language>
-    <lastBuildDate>Sat, 31 Oct 2026 00:00:00 +0300</lastBuildDate>
+    <lastBuildDate>Sun, 01 Nov 2026 00:00:00 +0200</lastBuildDate>
     <atom:link href="https://xn--pevasna-5wa1n.ee/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>piripardani</title>
+      <link>https://xn--pevasna-5wa1n.ee/2026-11-01/</link>
+      <guid isPermaLink="true">https://xn--pevasna-5wa1n.ee/2026-11-01/</guid>
+      <pubDate>Sun, 01 Nov 2026 00:00:00 +0200</pubDate>
+      <description>(ääretasa, pilgeni täis oleku või sellise täitumise kohta)</description>
+    </item>
     <item>
       <title>sänikael</title>
       <link>https://xn--pevasna-5wa1n.ee/2026-10-31/</link>
@@ -349,13 +356,6 @@
       <guid isPermaLink="true">https://xn--pevasna-5wa1n.ee/2026-09-13/</guid>
       <pubDate>Sun, 13 Sep 2026 00:00:00 +0300</pubDate>
       <description>(hüüatus pahameelt, rahulolematust väljendades)</description>
-    </item>
-    <item>
-      <title>konnapiiritus</title>
-      <link>https://xn--pevasna-5wa1n.ee/2026-09-12/</link>
-      <guid isPermaLink="true">https://xn--pevasna-5wa1n.ee/2026-09-12/</guid>
-      <pubDate>Sat, 12 Sep 2026 00:00:00 +0300</pubDate>
-      <description>vesi joogina</description>
     </item>
   </channel>
 </rss>

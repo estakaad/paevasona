@@ -1,0 +1,23 @@
+{
+  "date": "2026-11-01",
+  "word": "piripardani",
+  "wordId": 217526,
+  "forms": {},
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "adv"
+      ],
+      "definitions": [
+        "(ääretasa, pilgeni täis oleku või sellise täitumise kohta)"
+      ],
+      "usages": [
+        {
+          "text": "Saal oli rahvast piripardani täis.",
+          "sources": []
+        }
+      ]
+    }
+  ]
+}
