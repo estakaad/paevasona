@@ -5,8 +5,15 @@
     <link>https://xn--pevasna-5wa1n.ee/</link>
     <description>Eesti keele huvitavad ja harvad sõnad iga päev</description>
     <language>et</language>
-    <lastBuildDate>Sun, 01 Nov 2026 00:00:00 +0200</lastBuildDate>
+    <lastBuildDate>Mon, 02 Nov 2026 00:00:00 +0200</lastBuildDate>
     <atom:link href="https://xn--pevasna-5wa1n.ee/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>kilplus</title>
+      <link>https://xn--pevasna-5wa1n.ee/2026-11-02/</link>
+      <guid isPermaLink="true">https://xn--pevasna-5wa1n.ee/2026-11-02/</guid>
+      <pubDate>Mon, 02 Nov 2026 00:00:00 +0200</pubDate>
+      <description>(kohtlase või rumala, kilplase moodi ebaotstarbeka tegutsemise kohta)</description>
+    </item>
     <item>
       <title>piripardani</title>
       <link>https://xn--pevasna-5wa1n.ee/2026-11-01/</link>
@@ -349,13 +356,6 @@
       <guid isPermaLink="true">https://xn--pevasna-5wa1n.ee/2026-09-14/</guid>
       <pubDate>Mon, 14 Sep 2026 00:00:00 +0300</pubDate>
       <description>väljendab, et miski on kergesti, lihtsalt tehtav või tundub tühine, tähtsusetu (kasutatakse hrl üleolekuga, praalivalt)</description>
-    </item>
-    <item>
-      <title>seebiks</title>
-      <link>https://xn--pevasna-5wa1n.ee/2026-09-13/</link>
-      <guid isPermaLink="true">https://xn--pevasna-5wa1n.ee/2026-09-13/</guid>
-      <pubDate>Sun, 13 Sep 2026 00:00:00 +0300</pubDate>
-      <description>(hüüatus pahameelt, rahulolematust väljendades)</description>
     </item>
   </channel>
 </rss>

@@ -1,0 +1,31 @@
+{
+  "date": "2026-11-02",
+  "word": "kilplus",
+  "wordId": 181110,
+  "forms": {
+    "SgN": "kilplus",
+    "SgG": "kilpluse",
+    "SgP": "kilplust"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "(kohtlase või rumala, kilplase moodi ebaotstarbeka tegutsemise kohta)"
+      ],
+      "usages": [
+        {
+          "text": "Ehtne kilplus!",
+          "sources": []
+        },
+        {
+          "text": "Lauslollus oleks diagnoos, mitte kilplus.",
+          "sources": []
+        }
+      ]
+    }
+  ]
+}
