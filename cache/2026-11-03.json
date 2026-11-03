@@ -1,0 +1,32 @@
+{
+  "date": "2026-11-03",
+  "word": "pilgar",
+  "wordId": 217003,
+  "forms": {
+    "SgN": "pilgar",
+    "SgG": "pilgari",
+    "SgP": "pilgarit"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "lõbus pidu, lustlik oleng",
+        "lõbutsemine, pidutsemine"
+      ],
+      "usages": [
+        {
+          "text": "Pilgar kestis hommikuni.",
+          "sources": []
+        },
+        {
+          "text": "Kogu eelnenud noorus oli üksainus pikk ja pöörane pilgar.",
+          "sources": []
+        }
+      ]
+    }
+  ]
+}
