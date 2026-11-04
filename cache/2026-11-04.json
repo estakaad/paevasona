@@ -1,0 +1,66 @@
+{
+  "date": "2026-11-04",
+  "word": "rüpp",
+  "wordId": 229904,
+  "forms": {
+    "SgN": "rüpp",
+    "SgG": "rüpe",
+    "SgP": "rüppe"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "hrl naise alakeha ja reite kujundatud nurk istumisel"
+      ],
+      "usages": [
+        {
+          "text": "Naine istus, käed rüpes.",
+          "sources": []
+        }
+      ]
+    },
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "seeliku, särgi või põlle ülestõstetud alaosaga kujundatud ruum millegi hoidmiseks, kandmiseks"
+      ],
+      "usages": [
+        {
+          "text": "Ema tuli aiast, rüpp õunu täis.",
+          "sources": []
+        }
+      ]
+    },
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "loote asukoht ema kehas"
+      ],
+      "usages": [
+        {
+          "text": "Naise rüpp jäi ahtraks.",
+          "sources": []
+        },
+        {
+          "text": ".. otse enne sinu sündimist nägi su ema und: tema rüpest tuleb ilmale teine Achilleus.",
+          "sources": [
+            {
+              "label": "Leo Metsar",
+              "detail": "Leo Metsar. Eesti kirjakeele arhiiv. Eesti Keele Instituut. 4,3 mln sedelit, kogutud 1960–2000."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
