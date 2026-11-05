@@ -1,0 +1,27 @@
+{
+  "date": "2026-11-05",
+  "word": "ulaharitlane",
+  "wordId": 251081,
+  "forms": {
+    "SgN": "ulaharitlane",
+    "SgG": "ulaharitlase",
+    "SgP": "ulaharitlast"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "mittetöötav või sageli jõude elav haritlane"
+      ],
+      "usages": [
+        {
+          "text": "Valli baar pole sugugi ainult keskea­kriisis vaevlevate ulaharitlaste viimne päästeparv, vaid eluterve organism.",
+          "sources": []
+        }
+      ]
+    }
+  ]
+}
