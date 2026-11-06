@@ -1,0 +1,27 @@
+{
+  "date": "2026-11-06",
+  "word": "leinarant",
+  "wordId": 193884,
+  "forms": {
+    "SgN": "leinarant",
+    "SgG": "leinarandi",
+    "SgP": "leinaranti"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "(küünealusesse kogunenud mustuse, küünemusta kohta)"
+      ],
+      "usages": [
+        {
+          "text": "Vanniskäigust hoolimata on küünte alla jäänud leinarandid.",
+          "sources": []
+        }
+      ]
+    }
+  ]
+}

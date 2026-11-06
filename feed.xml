@@ -5,8 +5,15 @@
     <link>https://xn--pevasna-5wa1n.ee/</link>
     <description>Eesti keele huvitavad ja harvad sõnad iga päev</description>
     <language>et</language>
-    <lastBuildDate>Thu, 05 Nov 2026 00:00:00 +0200</lastBuildDate>
+    <lastBuildDate>Fri, 06 Nov 2026 00:00:00 +0200</lastBuildDate>
     <atom:link href="https://xn--pevasna-5wa1n.ee/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>leinarant</title>
+      <link>https://xn--pevasna-5wa1n.ee/2026-11-06/</link>
+      <guid isPermaLink="true">https://xn--pevasna-5wa1n.ee/2026-11-06/</guid>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 +0200</pubDate>
+      <description>(küünealusesse kogunenud mustuse, küünemusta kohta)</description>
+    </item>
     <item>
       <title>ulaharitlane</title>
       <link>https://xn--pevasna-5wa1n.ee/2026-11-05/</link>
@@ -349,13 +356,6 @@
       <guid isPermaLink="true">https://xn--pevasna-5wa1n.ee/2026-09-18/</guid>
       <pubDate>Fri, 18 Sep 2026 00:00:00 +0300</pubDate>
       <description>sportlik, sõjaline või matkajate välilaager</description>
-    </item>
-    <item>
-      <title>hola</title>
-      <link>https://xn--pevasna-5wa1n.ee/2026-09-17/</link>
-      <guid isPermaLink="true">https://xn--pevasna-5wa1n.ee/2026-09-17/</guid>
-      <pubDate>Thu, 17 Sep 2026 00:00:00 +0300</pubDate>
-      <description>rahvamuusika tänapäevased seaded ja nende laadis loodud muusika</description>
     </item>
   </channel>
 </rss>
