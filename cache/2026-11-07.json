@@ -1,0 +1,22 @@
+{
+  "date": "2026-11-07",
+  "word": "lillaprilla",
+  "wordId": 195269,
+  "forms": {
+    "SgN": "lillaprilla",
+    "SgG": "lillaprilla",
+    "SgP": "lillaprillat"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "kaaliumpermanganaadi lahus"
+      ],
+      "usages": []
+    }
+  ]
+}

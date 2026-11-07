@@ -5,8 +5,15 @@
     <link>https://xn--pevasna-5wa1n.ee/</link>
     <description>Eesti keele huvitavad ja harvad sõnad iga päev</description>
     <language>et</language>
-    <lastBuildDate>Fri, 06 Nov 2026 00:00:00 +0200</lastBuildDate>
+    <lastBuildDate>Sat, 07 Nov 2026 00:00:00 +0200</lastBuildDate>
     <atom:link href="https://xn--pevasna-5wa1n.ee/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>lillaprilla</title>
+      <link>https://xn--pevasna-5wa1n.ee/2026-11-07/</link>
+      <guid isPermaLink="true">https://xn--pevasna-5wa1n.ee/2026-11-07/</guid>
+      <pubDate>Sat, 07 Nov 2026 00:00:00 +0200</pubDate>
+      <description>kaaliumpermanganaadi lahus</description>
+    </item>
     <item>
       <title>leinarant</title>
       <link>https://xn--pevasna-5wa1n.ee/2026-11-06/</link>
@@ -349,13 +356,6 @@
       <guid isPermaLink="true">https://xn--pevasna-5wa1n.ee/2026-09-19/</guid>
       <pubDate>Sat, 19 Sep 2026 00:00:00 +0300</pubDate>
       <description>linnainimene, linliku elulaadiga inimene</description>
-    </item>
-    <item>
-      <title>bivakk</title>
-      <link>https://xn--pevasna-5wa1n.ee/2026-09-18/</link>
-      <guid isPermaLink="true">https://xn--pevasna-5wa1n.ee/2026-09-18/</guid>
-      <pubDate>Fri, 18 Sep 2026 00:00:00 +0300</pubDate>
-      <description>sportlik, sõjaline või matkajate välilaager</description>
     </item>
   </channel>
 </rss>
