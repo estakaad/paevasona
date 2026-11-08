@@ -1,0 +1,36 @@
+{
+  "date": "2026-11-08",
+  "word": "flüügel",
+  "wordId": 1414119,
+  "forms": {
+    "SgN": "flüügel",
+    "SgG": "flüügli",
+    "SgP": "flüüglit"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "tiivakujulise rõhtasendis kõlakastiga klaver"
+      ],
+      "usages": [
+        {
+          "text": "Toomas oli löökpillide peal ja trummi taga, Allan mängis trompetit ja flüüglit.",
+          "sources": []
+        },
+        {
+          "text": "Koljal piisas esimesel õhtupoolikul all saalis valge flüügli taha istuda ja sihvakad portselansõrmed klahvide kohale tõsta, kui sa teadsid, et see pilt (Kolja pani silmad kinni ja võttis pisut konarlikult esimesed akordid) jääb sind kauaks ajaks jälitama.",
+          "sources": [
+            {
+              "label": "Kai Aareleid 2011",
+              "detail": "Kai Aareleid. Vene veri. Tallinn: Varrak, 2011."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
