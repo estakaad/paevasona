@@ -1,0 +1,41 @@
+{
+  "date": "2026-11-09",
+  "word": "hepik",
+  "wordId": 169018,
+  "forms": {
+    "SgN": "hepik",
+    "SgG": "hepiku",
+    "SgP": "hepikut"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "adj"
+      ],
+      "definitions": [
+        "edev, eputav",
+        "hellitatud, pirtsakas"
+      ],
+      "usages": [
+        {
+          "text": "Nõustugem, ta võib olla edev ja hepik, ta võib liialdada, näidetega üle soolata, aga just nõnda sunnib ta end kuulama.",
+          "sources": []
+        },
+        {
+          "text": "Kaasaegses hepikus seltskonnavestluses on seks teemana pigem taunitav kui teretulnud.",
+          "sources": []
+        },
+        {
+          "text": ".. nad jalutavad hepikus jutus mööda ilusaid jalgteid ..",
+          "sources": [
+            {
+              "label": "Eduard Vilde",
+              "detail": "Eduard Vilde. Eesti kirjakeele arhiiv. Eesti Keele Instituut. 4,3 mln sedelit, kogutud 1960–2000."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
