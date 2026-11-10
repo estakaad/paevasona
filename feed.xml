@@ -5,8 +5,15 @@
     <link>https://xn--pevasna-5wa1n.ee/</link>
     <description>Eesti keele huvitavad ja harvad sõnad iga päev</description>
     <language>et</language>
-    <lastBuildDate>Mon, 09 Nov 2026 00:00:00 +0200</lastBuildDate>
+    <lastBuildDate>Tue, 10 Nov 2026 00:00:00 +0200</lastBuildDate>
     <atom:link href="https://xn--pevasna-5wa1n.ee/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>hong</title>
+      <link>https://xn--pevasna-5wa1n.ee/2026-11-10/</link>
+      <guid isPermaLink="true">https://xn--pevasna-5wa1n.ee/2026-11-10/</guid>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0200</pubDate>
+      <description>suur vana mänd</description>
+    </item>
     <item>
       <title>hepik</title>
       <link>https://xn--pevasna-5wa1n.ee/2026-11-09/</link>
@@ -349,13 +356,6 @@
       <guid isPermaLink="true">https://xn--pevasna-5wa1n.ee/2026-09-22/</guid>
       <pubDate>Tue, 22 Sep 2026 00:00:00 +0300</pubDate>
       <description>vana mees</description>
-    </item>
-    <item>
-      <title>elaan</title>
-      <link>https://xn--pevasna-5wa1n.ee/2026-09-21/</link>
-      <guid isPermaLink="true">https://xn--pevasna-5wa1n.ee/2026-09-21/</guid>
-      <pubDate>Mon, 21 Sep 2026 00:00:00 +0300</pubDate>
-      <description>hoogne ja intensiivne, (elurõõmsat) energiat täis, millestki vaimustunud olek</description>
     </item>
   </channel>
 </rss>

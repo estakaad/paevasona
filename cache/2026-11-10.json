@@ -1,0 +1,27 @@
+{
+  "date": "2026-11-10",
+  "word": "hong",
+  "wordId": 169909,
+  "forms": {
+    "SgN": "hong",
+    "SgG": "honga",
+    "SgP": "honga"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "suur vana mänd"
+      ],
+      "usages": [
+        {
+          "text": "Kasvukohast olenevalt võib mänd kasvada hiiglaslikuks hongaks või jääda kääbuseks.",
+          "sources": []
+        }
+      ]
+    }
+  ]
+}
