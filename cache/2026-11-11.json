@@ -1,0 +1,27 @@
+{
+  "date": "2026-11-11",
+  "word": "mativõtja",
+  "wordId": 1379773,
+  "forms": {
+    "SgN": "mativõtja",
+    "SgG": "mativõtja",
+    "SgP": "mativõtjat"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "millegi pealt kasu lõikaja"
+      ],
+      "usages": [
+        {
+          "text": "Eestisse jõudva kodutehnika pealt teenisid oma tulu kõikvõimalikud vahendajad, aga praeguseks on selliste mativõtjate hulk vähenenud.",
+          "sources": []
+        }
+      ]
+    }
+  ]
+}
