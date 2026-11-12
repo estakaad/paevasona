@@ -1,0 +1,35 @@
+{
+  "date": "2026-11-12",
+  "word": "kuldvillak",
+  "wordId": 187390,
+  "forms": {
+    "SgN": "kuldvillak",
+    "SgG": "kuldvillaku",
+    "SgP": "kuldvillakut"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "(Vana-Kreeka mütoloogias:) õnne toov kuldne jääranahk"
+      ],
+      "usages": []
+    },
+    {
+      "dataset": "eki",
+      "pos": [],
+      "definitions": [
+        "miski ihaldatav, midagi väga head"
+      ],
+      "usages": [
+        {
+          "text": "Naine ei saa kuidagi oma mehele ette heita, et too pole talle kuldvillakut toonud.",
+          "sources": []
+        }
+      ]
+    }
+  ]
+}
