@@ -1,0 +1,27 @@
+{
+  "date": "2026-11-13",
+  "word": "kööga",
+  "wordId": 190742,
+  "forms": {},
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "adv"
+      ],
+      "definitions": [
+        "(tulemuselt) ebaõnnestunud, nurjunud, edasiseks kõlbmatu"
+      ],
+      "usages": [
+        {
+          "text": "Vahest ehk paar-kolm suve peavadki vastu ja siis on kööga.",
+          "sources": []
+        },
+        {
+          "text": "Eestis on kalaga kööga, meri on solgitud.",
+          "sources": []
+        }
+      ]
+    }
+  ]
+}

@@ -5,8 +5,15 @@
     <link>https://xn--pevasna-5wa1n.ee/</link>
     <description>Eesti keele huvitavad ja harvad sõnad iga päev</description>
     <language>et</language>
-    <lastBuildDate>Thu, 12 Nov 2026 00:00:00 +0200</lastBuildDate>
+    <lastBuildDate>Fri, 13 Nov 2026 00:00:00 +0200</lastBuildDate>
     <atom:link href="https://xn--pevasna-5wa1n.ee/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>kööga</title>
+      <link>https://xn--pevasna-5wa1n.ee/2026-11-13/</link>
+      <guid isPermaLink="true">https://xn--pevasna-5wa1n.ee/2026-11-13/</guid>
+      <pubDate>Fri, 13 Nov 2026 00:00:00 +0200</pubDate>
+      <description>(tulemuselt) ebaõnnestunud, nurjunud, edasiseks kõlbmatu</description>
+    </item>
     <item>
       <title>kuldvillak</title>
       <link>https://xn--pevasna-5wa1n.ee/2026-11-12/</link>
@@ -349,13 +356,6 @@
       <guid isPermaLink="true">https://xn--pevasna-5wa1n.ee/2026-09-25/</guid>
       <pubDate>Fri, 25 Sep 2026 00:00:00 +0300</pubDate>
       <description>paberraha kogumine harrastusalana</description>
-    </item>
-    <item>
-      <title>essugi</title>
-      <link>https://xn--pevasna-5wa1n.ee/2026-09-24/</link>
-      <guid isPermaLink="true">https://xn--pevasna-5wa1n.ee/2026-09-24/</guid>
-      <pubDate>Thu, 24 Sep 2026 00:00:00 +0300</pubDate>
-      <description>üldse mitte, sugugi mitte</description>
     </item>
   </channel>
 </rss>
