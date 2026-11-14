@@ -5,8 +5,15 @@
     <link>https://xn--pevasna-5wa1n.ee/</link>
     <description>Eesti keele huvitavad ja harvad sõnad iga päev</description>
     <language>et</language>
-    <lastBuildDate>Fri, 13 Nov 2026 00:00:00 +0200</lastBuildDate>
+    <lastBuildDate>Sat, 14 Nov 2026 00:00:00 +0200</lastBuildDate>
     <atom:link href="https://xn--pevasna-5wa1n.ee/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>orastele</title>
+      <link>https://xn--pevasna-5wa1n.ee/2026-11-14/</link>
+      <guid isPermaLink="true">https://xn--pevasna-5wa1n.ee/2026-11-14/</guid>
+      <pubDate>Sat, 14 Nov 2026 00:00:00 +0200</pubDate>
+      <description>lootuse peale, millegi tulevikus saada loodetava peale</description>
+    </item>
     <item>
       <title>kööga</title>
       <link>https://xn--pevasna-5wa1n.ee/2026-11-13/</link>
@@ -349,13 +356,6 @@
       <guid isPermaLink="true">https://xn--pevasna-5wa1n.ee/2026-09-26/</guid>
       <pubDate>Sat, 26 Sep 2026 00:00:00 +0300</pubDate>
       <description>(elav, hakkaja, üleannetu) poiss või nooruk</description>
-    </item>
-    <item>
-      <title>bonistika</title>
-      <link>https://xn--pevasna-5wa1n.ee/2026-09-25/</link>
-      <guid isPermaLink="true">https://xn--pevasna-5wa1n.ee/2026-09-25/</guid>
-      <pubDate>Fri, 25 Sep 2026 00:00:00 +0300</pubDate>
-      <description>paberraha kogumine harrastusalana</description>
     </item>
   </channel>
 </rss>

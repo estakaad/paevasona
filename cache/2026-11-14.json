@@ -1,0 +1,23 @@
+{
+  "date": "2026-11-14",
+  "word": "orastele",
+  "wordId": 211546,
+  "forms": {},
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "vrm"
+      ],
+      "definitions": [
+        "lootuse peale, millegi tulevikus saada loodetava peale"
+      ],
+      "usages": [
+        {
+          "text": "Orastele rajatud plaan.",
+          "sources": []
+        }
+      ]
+    }
+  ]
+}
