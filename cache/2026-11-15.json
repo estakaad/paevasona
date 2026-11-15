@@ -1,0 +1,27 @@
+{
+  "date": "2026-11-15",
+  "word": "titevarbad",
+  "wordId": 483168,
+  "forms": {
+    "SgN": "titevarvas",
+    "SgG": "titevarba",
+    "SgP": "titevarvast"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "õlu või viin, millega vanasti kostitati lapse sünni puhul"
+      ],
+      "usages": [
+        {
+          "text": "Külalistele anti titevarbaid.",
+          "sources": []
+        }
+      ]
+    }
+  ]
+}
