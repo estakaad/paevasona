@@ -1,0 +1,28 @@
+{
+  "date": "2026-11-16",
+  "word": "inar",
+  "wordId": 1441768,
+  "forms": {
+    "SgN": "inar",
+    "SgG": "inara",
+    "SgP": "inarat"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "õhukeseks kulunud riie",
+        "kalts, räbal"
+      ],
+      "usages": [
+        {
+          "text": "Pole hilpu ega inarat seljas.",
+          "sources": []
+        }
+      ]
+    }
+  ]
+}
