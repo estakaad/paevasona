@@ -1,0 +1,31 @@
+{
+  "date": "2026-11-17",
+  "word": "kilda",
+  "wordId": 180993,
+  "forms": {},
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "postp"
+      ],
+      "definitions": [
+        "teatud rühma, liiki kuuluvaks, samalaadsete hulka"
+      ],
+      "usages": [
+        {
+          "text": "Kaldusin pigem kõhklejate kilda.",
+          "sources": []
+        },
+        {
+          "text": "Maja arvati linnavarana müüdavate objektide kilda.",
+          "sources": []
+        },
+        {
+          "text": "Arhitekt saab ennast positsioneerida ka kunstnike kilda.",
+          "sources": []
+        }
+      ]
+    }
+  ]
+}
