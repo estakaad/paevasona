@@ -1,0 +1,31 @@
+{
+  "date": "2026-11-18",
+  "word": "lõmm",
+  "wordId": 197586,
+  "forms": {
+    "SgN": "lõmm",
+    "SgG": "lõmmu",
+    "SgP": "lõmmu"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "puuhalg laastude või peergude kiskumiseks, ka kütteks"
+      ],
+      "usages": [
+        {
+          "text": "Lõmm kuivab ahjul.",
+          "sources": []
+        },
+        {
+          "text": "Korvi tegemiseks lõhutakse lõmm kirvega 1–2 cm paksusteks laastudeks.",
+          "sources": []
+        }
+      ]
+    }
+  ]
+}

@@ -5,8 +5,15 @@
     <link>https://xn--pevasna-5wa1n.ee/</link>
     <description>Eesti keele huvitavad ja harvad sõnad iga päev</description>
     <language>et</language>
-    <lastBuildDate>Tue, 17 Nov 2026 00:00:00 +0200</lastBuildDate>
+    <lastBuildDate>Wed, 18 Nov 2026 00:00:00 +0200</lastBuildDate>
     <atom:link href="https://xn--pevasna-5wa1n.ee/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>lõmm</title>
+      <link>https://xn--pevasna-5wa1n.ee/2026-11-18/</link>
+      <guid isPermaLink="true">https://xn--pevasna-5wa1n.ee/2026-11-18/</guid>
+      <pubDate>Wed, 18 Nov 2026 00:00:00 +0200</pubDate>
+      <description>puuhalg laastude või peergude kiskumiseks, ka kütteks</description>
+    </item>
     <item>
       <title>kilda</title>
       <link>https://xn--pevasna-5wa1n.ee/2026-11-17/</link>
@@ -349,13 +356,6 @@
       <guid isPermaLink="true">https://xn--pevasna-5wa1n.ee/2026-09-30/</guid>
       <pubDate>Wed, 30 Sep 2026 00:00:00 +0300</pubDate>
       <description>kogu hingest, jäägitult</description>
-    </item>
-    <item>
-      <title>sinekuur</title>
-      <link>https://xn--pevasna-5wa1n.ee/2026-09-29/</link>
-      <guid isPermaLink="true">https://xn--pevasna-5wa1n.ee/2026-09-29/</guid>
-      <pubDate>Tue, 29 Sep 2026 00:00:00 +0300</pubDate>
-      <description>vähe vaeva nõudev tulus amet</description>
     </item>
   </channel>
 </rss>
