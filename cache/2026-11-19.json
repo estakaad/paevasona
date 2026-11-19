@@ -1,0 +1,67 @@
+{
+  "date": "2026-11-19",
+  "word": "ambroosia",
+  "wordId": 156927,
+  "forms": {
+    "SgN": "ambroosia",
+    "SgG": "ambroosia",
+    "SgP": "ambroosiat"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "(Kreeka mütoloogias:) surematuks tegev jumalate toit, ka healõhnaline salv"
+      ],
+      "usages": [
+        {
+          "text": "Jumalad sõid ambroosiat ja jõid nektarit.",
+          "sources": []
+        }
+      ]
+    },
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "(millegi väga meeldiva kohta)"
+      ],
+      "usages": [
+        {
+          "text": "Muusika oli sulaselge ambroosia mu kõrvadele.",
+          "sources": []
+        }
+      ]
+    },
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "Ameerikast pärinev, umbrohuna kõigil mandreil levinud tiheda puhmana kasvav rohttaim või (pool)põõsas"
+      ],
+      "usages": [
+        {
+          "text": "Sel nädalal olid õhus peamised allergeenid puju, ambroosia ja kõrreliste õietolm.",
+          "sources": []
+        }
+      ]
+    },
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "seeneniidistik, mis kasvab puiduüraskite käikudes ja millest need putukad toituvad"
+      ],
+      "usages": []
+    }
+  ]
+}
