@@ -1,0 +1,46 @@
+{
+  "date": "2026-11-20",
+  "word": "tuuletallaja",
+  "wordId": 248752,
+  "forms": {
+    "SgN": "tuuletallaja",
+    "SgG": "tuuletallaja",
+    "SgP": "tuuletallajat"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "hakisuurune punakaspruun röövlind, kes saaki seirates rapleb õhus ühe koha peal (nagu sõtkuks midagi)"
+      ],
+      "usages": [
+        {
+          "text": "Kõrrepõllu kohal hõljus tuuletallaja.",
+          "sources": []
+        },
+        {
+          "text": "Tuuletallajat pole raske märgata, sest tihti istub ta telefonipostil või mõnel muul kõrgel kohal keset lagedat.",
+          "sources": []
+        }
+      ]
+    },
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "(tühja töö tegija, mitte tõsiselt võetava inimese kohta)"
+      ],
+      "usages": [
+        {
+          "text": "Marlon Brando kehastas filmis tuuletallajast noorukit.",
+          "sources": []
+        }
+      ]
+    }
+  ]
+}
