@@ -1,0 +1,55 @@
+{
+  "date": "2026-11-21",
+  "word": "pärgel",
+  "wordId": 223659,
+  "forms": {
+    "SgN": "pärgel",
+    "SgG": "pärgli",
+    "SgP": "pärglit"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "leebe kirumissõna, mida kasutatakse millegi või kellegi üle pahandades, midagi taunides, harvemini imestuse või üllatuse korral"
+      ],
+      "usages": [
+        {
+          "text": "Pärgel küll, redel ei ulata.",
+          "sources": []
+        },
+        {
+          "text": "Pärgel, kuidas ta kahetses selliseid hetki.",
+          "sources": []
+        },
+        {
+          "text": "Pärgel võtaks!",
+          "sources": []
+        }
+      ]
+    },
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "kurat, pagan, põrguline"
+      ],
+      "usages": [
+        {
+          "text": ".. see vanamees pole õige vanamees, vaid mõni põrgust väljatulnud pärgel.",
+          "sources": [
+            {
+              "label": "Juhan Jaik 1933",
+              "detail": "Juhan Jaik. Nõiakott. – Võrumaa jutud. 1933."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
