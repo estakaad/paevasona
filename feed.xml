@@ -5,8 +5,15 @@
     <link>https://xn--pevasna-5wa1n.ee/</link>
     <description>Eesti keele huvitavad ja harvad sõnad iga päev</description>
     <language>et</language>
-    <lastBuildDate>Sat, 21 Nov 2026 00:00:00 +0200</lastBuildDate>
+    <lastBuildDate>Sun, 22 Nov 2026 00:00:00 +0200</lastBuildDate>
     <atom:link href="https://xn--pevasna-5wa1n.ee/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>hõrakmari</title>
+      <link>https://xn--pevasna-5wa1n.ee/2026-11-22/</link>
+      <guid isPermaLink="true">https://xn--pevasna-5wa1n.ee/2026-11-22/</guid>
+      <pubDate>Sun, 22 Nov 2026 00:00:00 +0200</pubDate>
+      <description>aias kasvatatav punaste marjadega lehtpõõsas</description>
+    </item>
     <item>
       <title>pärgel</title>
       <link>https://xn--pevasna-5wa1n.ee/2026-11-21/</link>
@@ -349,13 +356,6 @@
       <guid isPermaLink="true">https://xn--pevasna-5wa1n.ee/2026-10-04/</guid>
       <pubDate>Sun, 04 Oct 2026 00:00:00 +0300</pubDate>
       <description>mitmest kontsentrilisest või ühest suurte püstkivide ringist koosnev noorema kiviaja (kultus)ehitis</description>
-    </item>
-    <item>
-      <title>nääl</title>
-      <link>https://xn--pevasna-5wa1n.ee/2026-10-03/</link>
-      <guid isPermaLink="true">https://xn--pevasna-5wa1n.ee/2026-10-03/</guid>
-      <pubDate>Sat, 03 Oct 2026 00:00:00 +0300</pubDate>
-      <description>abikaasa vend (mehe seisukohast)</description>
     </item>
   </channel>
 </rss>

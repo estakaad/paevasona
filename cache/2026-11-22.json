@@ -1,0 +1,22 @@
+{
+  "date": "2026-11-22",
+  "word": "hõrakmari",
+  "wordId": 170562,
+  "forms": {
+    "SgN": "hõrakmari",
+    "SgG": "hõrakmarja",
+    "SgP": "hõrakmarja"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "aias kasvatatav punaste marjadega lehtpõõsas"
+      ],
+      "usages": []
+    }
+  ]
+}
