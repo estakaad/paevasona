@@ -1,0 +1,42 @@
+{
+  "date": "2026-11-23",
+  "word": "seasilm",
+  "wordId": 231626,
+  "forms": {
+    "SgN": "seasilm",
+    "SgG": "seasilma",
+    "SgP": "seasilma"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "(inimese väikeste kissis silmade kohta)"
+      ],
+      "usages": [
+        {
+          "text": "Jõhkardi külmad seasilmad tekitasid hirmu.",
+          "sources": []
+        }
+      ]
+    },
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "(viletsalt valgustava lambi, varasemal ajal petrooleumilambi kohta)"
+      ],
+      "usages": [
+        {
+          "text": "Laes põles seasilm, ei saanud raamatutki lugeda.",
+          "sources": []
+        }
+      ]
+    }
+  ]
+}
