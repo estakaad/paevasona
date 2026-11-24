@@ -1,0 +1,27 @@
+{
+  "date": "2026-11-24",
+  "word": "vandiraiuja",
+  "wordId": 253962,
+  "forms": {
+    "SgN": "vandiraiuja",
+    "SgG": "vandiraiuja",
+    "SgP": "vandiraiujat"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "karile jooksnud laevade röövel (ka pilkenimetusena Hiiu- ja Saaremaa mõne piirkonna randlaste kohta)"
+      ],
+      "usages": [
+        {
+          "text": "Kihelkonna kandi vandiraiujad ja Saaremaa viikingid on olnud kuulsad ka ülemeremaades.",
+          "sources": []
+        }
+      ]
+    }
+  ]
+}
