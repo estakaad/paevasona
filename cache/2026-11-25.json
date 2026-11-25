@@ -1,0 +1,23 @@
+{
+  "date": "2026-11-25",
+  "word": "paaka",
+  "wordId": 212291,
+  "forms": {},
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "adv"
+      ],
+      "definitions": [
+        "kõvaks tükiks, kõvaks või koorikuliseks"
+      ],
+      "usages": [
+        {
+          "text": "Paaka külmunud muld.",
+          "sources": []
+        }
+      ]
+    }
+  ]
+}

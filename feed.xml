@@ -5,8 +5,15 @@
     <link>https://xn--pevasna-5wa1n.ee/</link>
     <description>Eesti keele huvitavad ja harvad sõnad iga päev</description>
     <language>et</language>
-    <lastBuildDate>Tue, 24 Nov 2026 00:00:00 +0200</lastBuildDate>
+    <lastBuildDate>Wed, 25 Nov 2026 00:00:00 +0200</lastBuildDate>
     <atom:link href="https://xn--pevasna-5wa1n.ee/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>paaka</title>
+      <link>https://xn--pevasna-5wa1n.ee/2026-11-25/</link>
+      <guid isPermaLink="true">https://xn--pevasna-5wa1n.ee/2026-11-25/</guid>
+      <pubDate>Wed, 25 Nov 2026 00:00:00 +0200</pubDate>
+      <description>kõvaks tükiks, kõvaks või koorikuliseks</description>
+    </item>
     <item>
       <title>vandiraiuja</title>
       <link>https://xn--pevasna-5wa1n.ee/2026-11-24/</link>
@@ -349,13 +356,6 @@
       <guid isPermaLink="true">https://xn--pevasna-5wa1n.ee/2026-10-07/</guid>
       <pubDate>Wed, 07 Oct 2026 00:00:00 +0300</pubDate>
       <description>isapoolne onu, isa vend</description>
-    </item>
-    <item>
-      <title>sabarakk</title>
-      <link>https://xn--pevasna-5wa1n.ee/2026-10-06/</link>
-      <guid isPermaLink="true">https://xn--pevasna-5wa1n.ee/2026-10-06/</guid>
-      <pubDate>Tue, 06 Oct 2026 00:00:00 +0300</pubDate>
-      <description>kaasajooksik, kellegi truualamlik kannupoiss</description>
     </item>
   </channel>
 </rss>
