@@ -1,0 +1,93 @@
+{
+  "date": "2026-11-26",
+  "word": "emapuu",
+  "wordId": 163916,
+  "forms": {
+    "SgN": "emapuu",
+    "SgG": "emapuu",
+    "SgP": "emapuud"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "puu, millelt saadakse paljundusmaterjali",
+        "puu oma võsude, seemnete suhtes"
+      ],
+      "usages": [
+        {
+          "text": "Jõulukuuskede istanduse emapuud valiti välja värvuse ja kuju järgi.",
+          "sources": []
+        },
+        {
+          "text": "Lindude abiga võivad noored toomingad tärgata emapuust väga kaugel.",
+          "sources": []
+        },
+        {
+          "text": "Kuna vaevakask on madalakasvuline, langeb enamik seemneid maha oma emapuu läheduses.",
+          "sources": []
+        }
+      ]
+    },
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "puulaeva või -paadi põhja pikisuunas läbiv tala, mille külge kinnitub paadi või laeva sõrestik"
+      ],
+      "usages": [
+        {
+          "text": "Laeva emapuu on kuusk, plangutus on männist ja kaared lehisest.",
+          "sources": []
+        },
+        {
+          "text": "Ellingus seisab võimas emapuu, mille peale kerkib traditsiooniline ligi 17-meetri pikkune kahemastiline kaljas.",
+          "sources": []
+        },
+        {
+          "text": "Kotermann asub laeva koos laeva emapuuga ja lahkub sealt laeva huku eel, olles enne sellest meeskonnale mingil moel märku andnud.",
+          "sources": []
+        }
+      ]
+    },
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "palk veskitiibade suuna muutmiseks"
+      ],
+      "usages": [
+        {
+          "text": "Taastatavasse tuulikusse jäävad vanast alles emapuu ja tammest tiivavõll.",
+          "sources": []
+        }
+      ]
+    },
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "see, millele või kellele toetutakse, mis või kes on kandev jõud"
+      ],
+      "usages": [
+        {
+          "text": "Eesti ühiskonnal ja rahval on mitu emapuud ja rahvusringhääling on üks neist.",
+          "sources": []
+        },
+        {
+          "text": "Ta on meil teatris emapuu – selline, kes ühendab eri põlvkondi ja suudab olla sada protsenti ka tänases päevas.",
+          "sources": []
+        }
+      ]
+    }
+  ]
+}
