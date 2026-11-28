@@ -5,8 +5,15 @@
     <link>https://xn--pevasna-5wa1n.ee/</link>
     <description>Eesti keele huvitavad ja harvad sõnad iga päev</description>
     <language>et</language>
-    <lastBuildDate>Fri, 27 Nov 2026 00:00:00 +0200</lastBuildDate>
+    <lastBuildDate>Sat, 28 Nov 2026 00:00:00 +0200</lastBuildDate>
     <atom:link href="https://xn--pevasna-5wa1n.ee/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>kirs</title>
+      <link>https://xn--pevasna-5wa1n.ee/2026-11-28/</link>
+      <guid isPermaLink="true">https://xn--pevasna-5wa1n.ee/2026-11-28/</guid>
+      <pubDate>Sat, 28 Nov 2026 00:00:00 +0200</pubDate>
+      <description>veel sulamata maasisene, ka maapealne jää või jäätükk</description>
+    </item>
     <item>
       <title>tibutagi</title>
       <link>https://xn--pevasna-5wa1n.ee/2026-11-27/</link>
@@ -349,13 +356,6 @@
       <guid isPermaLink="true">https://xn--pevasna-5wa1n.ee/2026-10-10/</guid>
       <pubDate>Sat, 10 Oct 2026 00:00:00 +0300</pubDate>
       <description>kellegi tõttu, millegi läbi kannatanu, kahjustatu või hukkunu</description>
-    </item>
-    <item>
-      <title>taskutiisikus</title>
-      <link>https://xn--pevasna-5wa1n.ee/2026-10-09/</link>
-      <guid isPermaLink="true">https://xn--pevasna-5wa1n.ee/2026-10-09/</guid>
-      <pubDate>Fri, 09 Oct 2026 00:00:00 +0300</pubDate>
-      <description>(rahapuuduse kohta)</description>
     </item>
   </channel>
 </rss>

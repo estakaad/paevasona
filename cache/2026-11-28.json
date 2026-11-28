@@ -1,0 +1,22 @@
+{
+  "date": "2026-11-28",
+  "word": "kirs",
+  "wordId": 181853,
+  "forms": {
+    "SgN": "kirs",
+    "SgG": "kirre",
+    "SgP": "kirt"
+  },
+  "lexemes": [
+    {
+      "dataset": "eki",
+      "pos": [
+        "s"
+      ],
+      "definitions": [
+        "veel sulamata maasisene, ka maapealne jää või jäätükk"
+      ],
+      "usages": []
+    }
+  ]
+}
